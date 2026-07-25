@@ -1,6 +1,6 @@
 # BAIC UAE Homepage Clone
 
-A Next.js recreation of the [baicuae.com](https://baicuae.com/) homepage.
+A Next.js recreation of [baicuae.com](https://baicuae.com/) — homepage structure, styling, and interactions matched to the live Nuxt site.
 
 ## Run locally
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3001](http://localhost:3001).
 
 ## Build for production
 
@@ -18,20 +18,36 @@ npm run build
 npm start
 ```
 
-## What's included
+## What’s included
 
-- **Homepage only** (`/`) — header, hero slider, car models, innovation/future/ability sections, connected vehicle, vision, overview, distributor, feature services, test drive form, and footer
-- **Live API data** from `baicserver.baicuae.com` with local JSON fallbacks in `src/data/`
-- **Static assets** from the original site in `public/images/`
-- **Fonts**: Poppins & Roboto (matching the original)
+Homepage (`/`) matches the live site order:
+
+1. Quick links
+2. Header (Models megamenu + Innovation / About / Newsroom / Connect)
+3. Hero banner slider (live BAIC offer creatives)
+4. **360° models** via iframe to `https://360.baicuae.com` (local recreation fallback)
+5. Capital Beauty teaser
+6. Services grid (R&D, Off-Road, History, Overview)
+7. Find BAIC / UAE map
+8. News feed
+9. Footer
+
+Secondary routes for navigation CTAs: test drive, contact, capital beauty, model pages, and the rest of the footer/header sitemap.
+
+## Data & assets
+
+- Live API: `baicserver.baicuae.com` with JSON fallbacks in `src/data/`
+- Mirrored homepage images in `public/images/api/`
+- Original Nuxt CSS in `public/baic-original.css`
+- Fonts: Poppins & Roboto (as on the original)
 
 ## Project structure
 
 ```
 src/
-  app/           # Next.js App Router (layout, page, globals.css)
-  components/    # Header, HeroSlider, CarModels, Footer, etc.
-  data/          # Fallback JSON from BAIC API
-  lib/           # API helpers and fetch utilities
-public/images/   # Background images, car animations, banners
+  app/           # App Router pages
+  components/    # Header, Hero, 360 embed, sections, forms, Footer
+  data/          # API JSON fallbacks + local image map
+  lib/           # fetch helpers, imageUrl, constants
+public/images/   # Banners, 360 frames, Nuxt section assets
 ```

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import type { HomepageData } from "@/lib/api";
-import { imageUrl } from "@/lib/constants";
+import { imageUrl, localPath } from "@/lib/constants";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -50,70 +50,57 @@ export default function HeroBanner({ homepage }: HeroBannerProps) {
   const items = slides(homepage);
 
   return (
-    <>
-      <section className="section-banner">
-        <div className="slider-banner">
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            loop
-          >
-            {items.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <picture>
-                  <source
-                    media="(max-width: 768px)"
-                    srcSet={imageUrl(slide.mobile)}
-                  />
-                  <Image
-                    src={imageUrl(slide.desktop)}
-                    alt={slide.title}
-                    width={1920}
-                    height={900}
-                    className="img-fluid"
-                    priority={index === 0}
-                    unoptimized
-                  />
-                </picture>
-                <div className="slider-info">
-                  <div>
-                    <h1>{slide.title}</h1>
-                    <h5>{slide.description}</h5>
-                    <div className="text-center slider-action-buttons">
-                      <Link
-                        href={slide.btn1Url}
-                        className="btn btn-outline-light"
-                        rel="noopener noreferrer"
-                      >
-                        {slide.btn1}
-                      </Link>
-                    </div>
-                    <div className="text-center slider-action-buttons">
-                      <Link
-                        href={slide.btn2Url}
-                        className="btn btn-light"
-                        rel="noopener noreferrer"
-                      >
-                        {slide.btn2}
-                      </Link>
-                    </div>
+    <section className="section-banner">
+      <div className="slider-banner">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          loop
+        >
+          {items.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcSet={imageUrl(slide.mobile)}
+                />
+                <Image
+                  src={imageUrl(slide.desktop)}
+                  alt={slide.title}
+                  width={1920}
+                  height={900}
+                  className="img-fluid"
+                  priority={index === 0}
+                  unoptimized
+                />
+              </picture>
+              <div className="slider-info">
+                <div>
+                  <h1>{slide.title}</h1>
+                  {slide.description ? <h5>{slide.description}</h5> : null}
+                  <div className="text-center slider-action-buttons">
+                    <Link
+                      href={localPath(slide.btn1Url)}
+                      className="btn btn-outline-light"
+                    >
+                      {slide.btn1}
+                    </Link>
+                  </div>
+                  <div className="text-center slider-action-buttons">
+                    <Link
+                      href={localPath(slide.btn2Url)}
+                      className="btn btn-light"
+                    >
+                      {slide.btn2}
+                    </Link>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
-
-      <div className="car-360-iframe-wrap">
-        <iframe
-          src="https://360.baicuae.com"
-          className="responsive-iframe"
-          title="BAIC 360 car viewer"
-          loading="lazy"
-        />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </>
+    </section>
   );
 }

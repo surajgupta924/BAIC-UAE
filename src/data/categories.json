@@ -1,1 +1,22 @@
-{"status":true,"message":"Model Category List Successfully Located.","data":[{"id":1,"name":"Off-Road","name_ar":"مركبات الطُّرق الوعرة","createdAt":"2024-06-14T09:18:23.000Z","updatedAt":"2024-08-29T08:47:48.000Z"},{"id":14,"name":"SUV","name_ar":"سيَّارة رياضيَّة متعدِّدة الأغراض","createdAt":"2024-06-20T13:32:09.000Z","updatedAt":"2024-08-29T08:57:06.000Z"},{"id":15,"name":"Sedan","name_ar":"سيدان","createdAt":"2024-06-20T13:32:19.000Z","updatedAt":"2024-11-27T13:48:27.000Z"}],"code":200}
+{
+  "status": true,
+  "message": "Model Category List Successfully Located.",
+  "data": [
+    {
+      "id": 1,
+      "name": "Off-Road",
+      "name_ar": "Off-Road"
+    },
+    {
+      "id": 14,
+      "name": "SUV",
+      "name_ar": "SUV"
+    },
+    {
+      "id": 20,
+      "name": "Arcfox",
+      "name_ar": "Arcfox"
+    }
+  ],
+  "code": 200
+}

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import QuickLinks from "@/components/QuickLinks";
 import HeroBanner from "@/components/HeroBanner";
+import Car360Embed from "@/components/Car360Embed";
 import CapitalBeauty from "@/components/CapitalBeauty";
 import ServicesSection from "@/components/ServicesSection";
 import LocationsSection from "@/components/LocationsSection";
@@ -29,6 +30,7 @@ export default async function Home() {
       <Header homepage={homepage} models={models} categories={categories} />
       <main className="habetlouta">
         <HeroBanner homepage={homepage} />
+        <Car360Embed />
         <CapitalBeauty data={capitalBeauty} />
         <ServicesSection />
         <LocationsSection />

@@ -15,7 +15,7 @@ export default function Footer({ homepage, models }: FooterProps) {
         <div className="footer-logo mb-5">
           <Image
             src={imageUrl(homepage.logo)}
-            alt="BAIC"
+            alt="BAIC Nigeria"
             width={200}
             height={60}
             className="img-fluid"
@@ -27,13 +27,26 @@ export default function Footer({ homepage, models }: FooterProps) {
             <div className="col">
               <h4>Models</h4>
               <div className="footerlinks">
-                <ul>
-                  {models.map((m) => (
-                    <li key={m.id}>
-                      <Link href={`/model/${m.name}`}>{m.name}</Link>
-                    </li>
-                  ))}
-                </ul>
+                {(["BAIC", "Arcfox"] as const).map((brand) => {
+                  const brandModels = models.filter(
+                    (m) => (m.brand ?? "BAIC") === brand,
+                  );
+                  if (brandModels.length === 0) return null;
+                  return (
+                    <div key={brand} className="mb-3">
+                      <strong className="d-block mb-1">{brand}</strong>
+                      <ul>
+                        {brandModels.map((m) => (
+                          <li key={m.id}>
+                            <Link href={`/model/${encodeURIComponent(m.name)}`}>
+                              {m.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="col">
@@ -127,6 +140,7 @@ export default function Footer({ homepage, models }: FooterProps) {
                   href={homepage.facebook_link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook"
                 >
                   <i className="fa-brands fa-facebook-f" />
                 </a>
@@ -135,9 +149,21 @@ export default function Footer({ homepage, models }: FooterProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ms-3"
+                  aria-label="Instagram"
                 >
                   <i className="fa-brands fa-instagram" />
                 </a>
+                {homepage.linkedin_link ? (
+                  <a
+                    href={homepage.linkedin_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ms-3"
+                    aria-label="LinkedIn"
+                  >
+                    <i className="fa-brands fa-linkedin-in" />
+                  </a>
+                ) : null}
               </div>
             </div>
           </div>

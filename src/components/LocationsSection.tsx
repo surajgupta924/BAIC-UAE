@@ -67,7 +67,7 @@ export default function LocationsSection() {
         <div className="row">
           <div className="col-sm-12">
             <div className="title text-center mb-5">
-              <h4 className="text-uppercase">Find Your BAIC in Your Country</h4>
+              <h4 className="text-uppercase">FIND YOUR BAIC IN YOUR COUNTRY</h4>
             </div>
           </div>
         </div>

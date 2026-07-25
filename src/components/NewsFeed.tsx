@@ -7,7 +7,7 @@ export default function NewsFeed() {
         <div className="row">
           <div className="col-sm-12">
             <div className="title text-center mb-4">
-              <h2 className="text-uppercase">News Feed</h2>
+              <h2 className="text-uppercase">NEWS FEED</h2>
             </div>
           </div>
         </div>

@@ -8,122 +8,157 @@ interface Car360ViewerProps {
   className?: string;
 }
 
-const FRAME_COUNT = 36;
-const PIXELS_PER_FRAME = 6;
+const PIXELS_PER_FRAME = 5;
 
 export default function Car360Viewer({
   frames,
   alt,
   className = "",
 }: Car360ViewerProps) {
+  const frameCount = frames.length;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  const [ready, setReady] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [showHint, setShowHint] = useState(true);
   const startXRef = useRef(0);
   const indexRef = useRef(0);
+  const draggingRef = useRef(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const framesKey = frames.join("|");
 
   useEffect(() => {
     indexRef.current = currentIndex;
   }, [currentIndex]);
 
   useEffect(() => {
-    if (frames.length === 0) return;
+    if (frameCount === 0) return;
 
     let cancelled = false;
-    setLoaded(false);
+    setReady(false);
     setCurrentIndex(0);
     indexRef.current = 0;
+    setShowHint(true);
 
-    Promise.all(
-      frames.map(
-        (src) =>
-          new Promise<void>((resolve, reject) => {
-            const img = new window.Image();
-            img.onload = () => resolve();
-            img.onerror = () => reject(new Error(src));
-            img.src = src;
-          }),
-      ),
-    )
-      .then(() => {
-        if (!cancelled) setLoaded(true);
-      })
-      .catch(() => {
-        if (!cancelled) setLoaded(true);
-      });
+    let loaded = 0;
+    const images: HTMLImageElement[] = [];
+
+    frames.forEach((src) => {
+      const img = new window.Image();
+      images.push(img);
+      const finish = () => {
+        loaded += 1;
+        // Show viewer as soon as the first few frames are ready
+        if (!cancelled && loaded >= Math.min(4, frameCount)) {
+          setReady(true);
+        }
+      };
+      img.onload = finish;
+      img.onerror = finish;
+      img.src = src;
+    });
+
+    const safety = window.setTimeout(() => {
+      if (!cancelled) setReady(true);
+    }, 2500);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(safety);
+      images.forEach((img) => {
+        img.onload = null;
+        img.onerror = null;
+      });
     };
-  }, [frames]);
+  }, [framesKey, frameCount, frames]);
 
-  const rotate = useCallback((clientX: number) => {
-    const delta = clientX - startXRef.current;
-    const step = Math.round(delta / PIXELS_PER_FRAME);
-    if (step === 0) return;
+  const rotateByDelta = useCallback(
+    (clientX: number) => {
+      if (frameCount < 2) return;
+      const delta = clientX - startXRef.current;
+      const step = Math.trunc(delta / PIXELS_PER_FRAME);
+      if (step === 0) return;
 
-    let next = indexRef.current + step;
-    if (next >= FRAME_COUNT) next %= FRAME_COUNT;
-    if (next < 0) next = ((next % FRAME_COUNT) + FRAME_COUNT) % FRAME_COUNT;
+      let next = indexRef.current + step;
+      next = ((next % frameCount) + frameCount) % frameCount;
+      indexRef.current = next;
+      setCurrentIndex(next);
+      startXRef.current = clientX;
+      setShowHint(false);
+    },
+    [frameCount],
+  );
 
-    indexRef.current = next;
-    setCurrentIndex(next);
-    startXRef.current = clientX;
-    setShowHint(false);
-  }, []);
+  useEffect(() => {
+    const onMove = (event: PointerEvent) => {
+      if (!draggingRef.current) return;
+      event.preventDefault();
+      rotateByDelta(event.clientX);
+    };
+    const onUp = () => {
+      if (!draggingRef.current) return;
+      draggingRef.current = false;
+      setIsDragging(false);
+    };
+    window.addEventListener("pointermove", onMove, { passive: false });
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onUp);
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onUp);
+    };
+  }, [rotateByDelta]);
 
   const onPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
       event.preventDefault();
-      wrapperRef.current?.setPointerCapture(event.pointerId);
+      draggingRef.current = true;
       setIsDragging(true);
       startXRef.current = event.clientX;
       setShowHint(false);
+      try {
+        wrapperRef.current?.setPointerCapture(event.pointerId);
+      } catch {
+        // ignore capture errors
+      }
     },
     [],
   );
 
-  const onPointerMove = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
-      if (!isDragging) return;
-      rotate(event.clientX);
-    },
-    [isDragging, rotate],
-  );
+  if (frameCount === 0) return null;
 
-  const endDrag = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    if (wrapperRef.current?.hasPointerCapture(event.pointerId)) {
-      wrapperRef.current.releasePointerCapture(event.pointerId);
-    }
-    setIsDragging(false);
-  }, []);
-
-  if (frames.length === 0) return null;
+  const canRotate = frameCount >= 2;
 
   return (
     <div
       ref={wrapperRef}
-      className={`car-360-viewer${isDragging ? " is-dragging" : ""} ${className}`.trim()}
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={endDrag}
-      onPointerLeave={endDrag}
-      onPointerCancel={endDrag}
+      className={`car-360-viewer${isDragging ? " is-dragging" : ""}${ready ? " is-ready" : ""}${canRotate ? "" : " is-static"} ${className}`.trim()}
+      onPointerDown={canRotate ? onPointerDown : undefined}
       role="img"
-      aria-label={`${alt} 360 degree view. Drag to rotate.`}
+      aria-label={
+        canRotate
+          ? `${alt} 360 degree view. Drag left or right to rotate.`
+          : `${alt} color view.`
+      }
     >
-      {!loaded && <div className="car-360-loading">Loading…</div>}
-      <img
-        src={frames[currentIndex] ?? frames[0]}
-        alt={alt}
-        className="img-fluid car-360-image"
-        draggable={false}
-      />
-      {showHint && loaded && (
+      {!ready && <div className="car-360-loading">Loading…</div>}
+
+      <div className="car-360-stage-inner">
+        {frames.map((src, index) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={`${src}-${index}`}
+            src={src}
+            alt={index === currentIndex ? alt : ""}
+            className={`car-360-frame${index === currentIndex ? " is-active" : ""}`}
+            draggable={false}
+          />
+        ))}
+      </div>
+
+      {showHint && ready && canRotate && (
         <div className="car-360-hint" aria-hidden>
-          <span>Drag to rotate</span>
+          <span>Drag to rotate 360°</span>
         </div>
       )}
     </div>

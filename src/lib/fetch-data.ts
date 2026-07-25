@@ -18,7 +18,7 @@ async function fetchWithFallback<T>(path: string, fallback: T): Promise<T> {
   try {
     const res = await fetch(`${API_BASE}/${path}`, {
       next: { revalidate: 3600 },
-      signal: AbortSignal.timeout(8000),
+      signal: AbortSignal.timeout(3000),
     });
     if (!res.ok) return fallback;
     const json = await res.json();
@@ -29,24 +29,17 @@ async function fetchWithFallback<T>(path: string, fallback: T): Promise<T> {
 }
 
 export async function getHomepage(): Promise<HomepageData> {
-  return fetchWithFallback<HomepageData>(
-    "homepage/1",
-    (homepageFile as { data: HomepageData }).data,
-  );
+  // Nigeria site uses local homepage banners (BJ60 / X7 / Arcfox T1).
+  return (homepageFile as { data: HomepageData }).data;
 }
 
+/** Nigeria BAIC + Arcfox lineup — always local, never UAE API. */
 export async function getModels(): Promise<VehicleModel[]> {
-  return fetchWithFallback<VehicleModel[]>(
-    "model",
-    (modelsFile as { data: VehicleModel[] }).data,
-  );
+  return (modelsFile as { data: VehicleModel[] }).data;
 }
 
 export async function getCategories(): Promise<ModelCategory[]> {
-  return fetchWithFallback<ModelCategory[]>(
-    "model-category",
-    (categoriesFile as { data: ModelCategory[] }).data,
-  );
+  return (categoriesFile as { data: ModelCategory[] }).data;
 }
 
 export async function getCapitalBeauty(): Promise<CapitalBeautyData> {

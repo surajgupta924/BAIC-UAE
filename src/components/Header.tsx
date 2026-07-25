@@ -2,8 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import type { HomepageData, ModelCategory, VehicleModel } from "@/lib/api";
+import { useEffect, useMemo, useState } from "react";
+import type {
+  HomepageData,
+  ModelCategory,
+  VehicleModel,
+} from "@/lib/api";
 import { imageUrl } from "@/lib/constants";
 
 interface HeaderProps {
@@ -12,12 +16,43 @@ interface HeaderProps {
   categories: ModelCategory[];
 }
 
+type OpenMenu =
+  | "models"
+  | "innovation"
+  | "about"
+  | "newsroom"
+  | "connect"
+  | "lang"
+  | null;
+
+const INNOVATION_LINKS = [
+  { href: "/capital-beauty", label: "Capital Beauty" },
+  { href: "/concept-car", label: "Concept Car" },
+  { href: "/off-road", label: "Off-Road" },
+  { href: "/research-development", label: "POWER" },
+];
+
+const ABOUT_LINKS = [
+  { href: "/overview", label: "Overview" },
+  { href: "/vision", label: "Vision" },
+  { href: "/history", label: "History" },
+  { href: "/after-sales-service", label: "After-Sales Service" },
+];
+
+const NEWSROOM_LINKS = [
+  { href: "/news-release", label: "News Release" },
+  { href: "/subcribe", label: "Subscribe" },
+  { href: "/media-contact", label: "Media Contact" },
+];
+
+const CONNECT_LINKS = [{ href: "/contact-us", label: "Contact Us" }];
+
 export default function Header({
   homepage,
   models,
   categories,
 }: HeaderProps) {
-  const [modelsOpen, setModelsOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<OpenMenu>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
@@ -28,21 +63,60 @@ export default function Header({
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  const closeMobileNav = () => setMobileNavOpen(false);
+  const closeAll = () => {
+    setOpenMenu(null);
+    setMobileNavOpen(false);
+  };
 
-  const modelsByCategory = categories.map((cat) => ({
-    ...cat,
-    models: models.filter((m) => m.categoryId === cat.id),
-  }));
+  const brandBlocks = useMemo(() => {
+    const brands: Array<"BAIC" | "Arcfox"> = ["BAIC", "Arcfox"];
+    return brands
+      .map((brand) => {
+        const brandModels = models.filter(
+          (m) => (m.brand ?? "BAIC") === brand,
+        );
+        const cats = categories
+          .map((cat) => ({
+            ...cat,
+            models: brandModels.filter((m) => m.categoryId === cat.id),
+          }))
+          .filter((cat) => cat.models.length > 0);
+        return { brand, categories: cats };
+      })
+      .filter((block) => block.categories.length > 0);
+  }, [models, categories]);
+
+  const DropdownLinks = ({
+    id,
+    links,
+  }: {
+    id: string;
+    links: { href: string; label: string }[];
+  }) =>
+    openMenu === id ? (
+      <ul className="dropdown-menu show" aria-labelledby={`dropdown-${id}`}>
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              className="dropdown-item"
+              href={link.href}
+              onClick={closeAll}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    ) : null;
 
   return (
     <header className="site-header sticky">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-          <Link className="navbar-brand logo" href="/">
+          <Link className="navbar-brand logo" href="/" onClick={closeAll}>
             <Image
               src={imageUrl(homepage.logo)}
-              alt="BAIC UAE"
+              alt="BAIC Nigeria"
               width={160}
               height={45}
               className="img-fluid"
@@ -67,99 +141,145 @@ export default function Header({
             <ul className="navbar-nav m-auto">
               <li
                 className="nav-item dropdown spacedItems"
-                onMouseEnter={() => setModelsOpen(true)}
-                onMouseLeave={() => setModelsOpen(false)}
+                onMouseEnter={() => setOpenMenu("models")}
+                onMouseLeave={() => setOpenMenu(null)}
               >
                 <Link
                   className="nav-link dropdown-toggle"
                   href="/"
-                  id="dropdownMenuModels"
+                  id="dropdown-models"
                   onClick={(e) => {
                     e.preventDefault();
-                    setModelsOpen((open) => !open);
+                    setOpenMenu((m) => (m === "models" ? null : "models"));
                   }}
                 >
                   Models
                 </Link>
-                {modelsOpen && (
+                {openMenu === "models" && (
                   <div
                     className="dropdown-menu megamenu show"
-                    aria-labelledby="dropdownMenuModels"
+                    aria-labelledby="dropdown-models"
                   >
                     <div className="container">
-                      {modelsByCategory.map((cat) => (
-                        <div key={cat.id} className="carmodels-type">
-                          <h4>{cat.name}</h4>
-                          <div className="row">
-                            {cat.models.map((model) => (
-                              <div
-                                key={model.id}
-                                className="col col-4 col-sm-3 col-lg-2"
-                              >
-                                <Link
-                                  className="modelbox"
-                                  href={`/model/${model.name}`}
-                                  onClick={closeMobileNav}
-                                >
-                                  <Image
-                                    src={imageUrl(model.image1)}
-                                    alt={model.name}
-                                    width={120}
-                                    height={80}
-                                    unoptimized
-                                  />
-                                  <span>{model.name}</span>
-                                </Link>
+                      {brandBlocks.map(({ brand, categories: brandCats }) => (
+                        <div key={brand} className="carmodels-brand">
+                          <h3 className="brand-heading">{brand}</h3>
+                          {brandCats.map((cat) => (
+                            <div key={`${brand}-${cat.id}`} className="carmodels-type">
+                              <h4>{cat.name}</h4>
+                              <div className="row">
+                                {cat.models.map((model) => (
+                                  <div
+                                    key={model.id}
+                                    className="col col-4 col-sm-3 col-lg-2"
+                                  >
+                                    <Link
+                                      className="modelbox"
+                                      href={`/model/${encodeURIComponent(model.name)}`}
+                                      onClick={closeAll}
+                                    >
+                                      <Image
+                                        src={imageUrl(model.image1)}
+                                        alt={model.name}
+                                        width={120}
+                                        height={80}
+                                        unoptimized
+                                      />
+                                      <span>{model.name}</span>
+                                    </Link>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
+                            </div>
+                          ))}
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
               </li>
-              <li className="nav-item dropdown spacedItems">
-                <Link
+
+              <li
+                className="nav-item dropdown spacedItems"
+                onMouseEnter={() => setOpenMenu("innovation")}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                <button
+                  type="button"
                   className="nav-link dropdown-toggle"
-                  href="/"
-                  onClick={closeMobileNav}
+                  id="dropdown-innovation"
+                  onClick={() =>
+                    setOpenMenu((m) =>
+                      m === "innovation" ? null : "innovation",
+                    )
+                  }
                 >
                   Innovation
-                </Link>
+                </button>
+                <DropdownLinks id="innovation" links={INNOVATION_LINKS} />
               </li>
-              <li className="nav-item dropdown spacedItems">
-                <Link
+
+              <li
+                className="nav-item dropdown spacedItems"
+                onMouseEnter={() => setOpenMenu("about")}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                <button
+                  type="button"
                   className="nav-link dropdown-toggle"
-                  href="/"
-                  onClick={closeMobileNav}
+                  id="dropdown-about"
+                  onClick={() =>
+                    setOpenMenu((m) => (m === "about" ? null : "about"))
+                  }
                 >
                   About
-                </Link>
+                </button>
+                <DropdownLinks id="about" links={ABOUT_LINKS} />
               </li>
-              <li className="nav-item dropdown spacedItems">
-                <Link
+
+              <li
+                className="nav-item dropdown spacedItems"
+                onMouseEnter={() => setOpenMenu("newsroom")}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                <button
+                  type="button"
                   className="nav-link dropdown-toggle"
-                  href="/"
-                  onClick={closeMobileNav}
+                  id="dropdown-newsroom"
+                  onClick={() =>
+                    setOpenMenu((m) =>
+                      m === "newsroom" ? null : "newsroom",
+                    )
+                  }
                 >
                   Newsroom
-                </Link>
+                </button>
+                <DropdownLinks id="newsroom" links={NEWSROOM_LINKS} />
               </li>
-              <li className="nav-item dropdown spacedItems">
-                <Link
+
+              <li
+                className="nav-item dropdown spacedItems"
+                onMouseEnter={() => setOpenMenu("connect")}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                <button
+                  type="button"
                   className="nav-link dropdown-toggle"
-                  href="/"
-                  onClick={closeMobileNav}
+                  id="dropdown-connect"
+                  onClick={() =>
+                    setOpenMenu((m) => (m === "connect" ? null : "connect"))
+                  }
                 >
                   Connect
-                </Link>
+                </button>
+                <DropdownLinks id="connect" links={CONNECT_LINKS} />
               </li>
+
               <li className="nav-item navredhover spacedItems">
                 <Link
                   className="nav-link navredhover"
                   href="/our-service"
-                  onClick={closeMobileNav}
+                  onClick={closeAll}
                 >
                   Service
                 </Link>
@@ -170,19 +290,40 @@ export default function Header({
                   href="https://www.baicglobal.com/worldwide"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={closeMobileNav}
+                  onClick={closeAll}
                 >
                   Worldwide
                 </a>
               </li>
             </ul>
-            <div className="dropdown d-flex ms-auto">
+            <div
+              className="dropdown d-flex ms-auto"
+              onMouseEnter={() => setOpenMenu("lang")}
+              onMouseLeave={() => setOpenMenu(null)}
+            >
               <button
                 className="btn btn-transparent dropdown-toggle border-0"
                 type="button"
+                onClick={() =>
+                  setOpenMenu((m) => (m === "lang" ? null : "lang"))
+                }
               >
                 EN
               </button>
+              {openMenu === "lang" && (
+                <ul className="dropdown-menu dropdown-menu-end show">
+                  <li>
+                    <button type="button" className="dropdown-item active">
+                      EN
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" className="dropdown-item" disabled>
+                      AR
+                    </button>
+                  </li>
+                </ul>
+              )}
             </div>
           </div>
         </div>

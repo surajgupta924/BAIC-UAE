@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Car360Viewer from "@/components/Car360Viewer";
 import catalog from "@/data/car360-catalog.json";
-import { getCar360Frames } from "@/lib/car360";
+import { getAvailableColorIndexes, getCar360Frames } from "@/lib/car360";
 import "@/styles/car360-section.css";
 
 interface CatalogColor {
@@ -31,27 +31,71 @@ function parseRgb(rgb: string): string {
   return rgb.split("/")[0].trim();
 }
 
+function framesForModel(
+  model: CatalogModel,
+  color: CatalogColor | null,
+  swatchIndex: number,
+): string[] {
+  const frameIndex = color?.frameIndex ?? 0;
+
+  // Try catalog frameIndex first (matches live 360 colorN folders).
+  const byFrameIndex = getCar360Frames(model.displayName, frameIndex);
+  if (byFrameIndex && byFrameIndex.length >= 1) return byFrameIndex;
+
+  const bySwatchOrder = getCar360Frames(model.displayName, swatchIndex);
+  if (bySwatchOrder && bySwatchOrder.length >= 1) return bySwatchOrder;
+
+  const byTitle = getCar360Frames(model.title, frameIndex);
+  if (byTitle && byTitle.length >= 1) return byTitle;
+
+  const fallback = getCar360Frames(model.displayName, 0);
+  if (fallback && fallback.length >= 1) return fallback;
+
+  const still = color?.previewUrl || model.vehicleUrl || model.thumbUrl;
+  return still ? [still] : [];
+}
+
+/** Keep swatches that have a matching frame pack when available; else all. */
+function colorsForModel(model: CatalogModel): CatalogColor[] {
+  const available = new Set([
+    ...getAvailableColorIndexes(model.displayName),
+    ...getAvailableColorIndexes(model.title),
+  ]);
+
+  if (available.size <= 1) {
+    // Only one frame pack — show a single swatch to avoid fake color changes.
+    return model.colors.length
+      ? [model.colors[0]]
+      : [{ rgb: "#888", frameIndex: 0, previewUrl: model.vehicleUrl }];
+  }
+
+  const matched = model.colors.filter((c) => available.has(c.frameIndex));
+  return matched.length > 0 ? matched : model.colors;
+}
+
 export default function Car360Section() {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
-  const [activeModelIndex, setActiveModelIndex] = useState(1);
+  const [activeModelIndex, setActiveModelIndex] = useState(0);
   const [colorIndex, setColorIndex] = useState(0);
 
   const activeCategory = categories[activeCategoryIndex];
   const activeModel = activeCategory.models[activeModelIndex];
-  const activeColor =
-    activeModel.colors[colorIndex] ?? activeModel.colors[0] ?? null;
+  const visibleColors = useMemo(
+    () => colorsForModel(activeModel),
+    [activeModel],
+  );
+  const safeColorIndex = Math.min(colorIndex, Math.max(visibleColors.length - 1, 0));
+  const activeColor = visibleColors[safeColorIndex] ?? visibleColors[0] ?? null;
   const isSingleModel = activeCategory.models.length === 1;
 
-  const frames = useMemo(() => {
-    if (!activeColor) return null;
-    return getCar360Frames(activeModel.title, activeColor.frameIndex);
-  }, [activeModel.title, activeColor]);
-
-  const staticImageUrl = activeColor?.previewUrl ?? activeModel.vehicleUrl;
+  const frames = useMemo(
+    () => framesForModel(activeModel, activeColor, safeColorIndex),
+    [activeModel, activeColor, safeColorIndex],
+  );
 
   const selectCategory = (index: number) => {
     setActiveCategoryIndex(index);
-    setActiveModelIndex(index === 0 ? 1 : 0);
+    setActiveModelIndex(0);
     setColorIndex(0);
   };
 
@@ -83,11 +127,8 @@ export default function Car360Section() {
             >
               {activeCategory.models.map((model, index) => (
                 <li
-                  key={model.title}
+                  key={`${model.displayName}-${index}`}
                   className={`model-item${index === activeModelIndex ? " active-car" : ""}`}
-                  style={{
-                    width: `${100 / activeCategory.models.length}%`,
-                  }}
                 >
                   <button
                     type="button"
@@ -104,9 +145,9 @@ export default function Car360Section() {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={model.thumbUrl}
-                          alt=""
-                          referrerPolicy="no-referrer"
+                          alt={model.displayName}
                           className="img-fluid"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -116,9 +157,9 @@ export default function Car360Section() {
             </ul>
 
             <div className="model-viewer-wrap">
-              {frames ? (
+              {frames.length > 0 ? (
                 <Car360Viewer
-                  key={`${activeModel.title}-${activeColor?.frameIndex ?? 0}`}
+                  key={`${activeModel.displayName}-${activeColor?.frameIndex ?? 0}-${safeColorIndex}-${frames[0]}`}
                   frames={frames}
                   alt={activeModel.displayName}
                   className="car-360-stage"
@@ -127,7 +168,11 @@ export default function Car360Section() {
                 <div className="model-static-image">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={staticImageUrl}
+                    src={
+                      activeColor?.previewUrl ??
+                      activeModel.vehicleUrl ??
+                      activeModel.thumbUrl
+                    }
                     alt={activeModel.displayName}
                     referrerPolicy="no-referrer"
                     className="img-fluid"
@@ -136,14 +181,14 @@ export default function Car360Section() {
               )}
             </div>
 
-            {activeModel.colors.length > 0 && (
+            {visibleColors.length > 1 && (
               <div className="model-color-wrap">
                 <ul className="color-list">
-                  {activeModel.colors.map((color, index) => (
-                    <li key={index} className="color-item">
+                  {visibleColors.map((color, index) => (
+                    <li key={`${color.rgb}-${color.frameIndex}`} className="color-item">
                       <button
                         type="button"
-                        className={`color-icon${index === colorIndex ? " active" : ""}`}
+                        className={`color-icon${index === safeColorIndex ? " active" : ""}`}
                         onClick={() => setColorIndex(index)}
                         aria-label={`Color option ${index + 1}`}
                       >

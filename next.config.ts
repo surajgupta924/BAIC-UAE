@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/car360/:path*",
+        destination: "https://www.baicuae.com/img/:path*",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
