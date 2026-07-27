@@ -34,20 +34,27 @@
 }
 
 .car-tab-item.active button {
-  color: #222;
+  color: #505051;
   font-weight: 600;
-  border-bottom: 2px solid #8b1a1a;
+  border-bottom: 2px solid #c9362e;
 }
 
+/* Match live 360.baicuae.com model strip */
 .model-list {
   display: flex;
   width: 100%;
-  margin: 24px 0 0;
+  margin: 30px 0 0;
   padding: 0 4.167vw;
   list-style: none;
   position: relative;
   z-index: 2;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.model-list::-webkit-scrollbar {
+  height: 3px;
 }
 
 .model-list-single {
@@ -61,8 +68,9 @@
   justify-content: center;
   position: relative;
   opacity: 0.5;
-  flex: 1 0 110px;
-  max-width: 180px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
 }
 
 .model-list-single .model-item {
@@ -79,23 +87,29 @@
   width: 100%;
   padding: 0;
   cursor: pointer;
+  position: relative;
+  overflow: visible;
 }
 
 .model-thumb-image-wrap {
   position: relative;
-  margin-top: 2vw;
-  max-width: 160px;
+  margin-top: 3vw;
+  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
 
 .model-thumb-image-wrap img {
   width: 100%;
   height: auto;
-  max-height: 90px;
+  max-height: 7.5vw;
+  min-height: 56px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
+  pointer-events: none;
 }
 
 .model-viewer-wrap {
@@ -127,26 +141,36 @@
 
 .model-name-wrap {
   width: 100%;
-  position: relative;
-  text-align: center;
-  pointer-events: none;
-}
-
-.model-list:not(.model-list-single) .model-name-wrap {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -4%;
+  top: -1%;
   z-index: 0;
+  text-align: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.model-list-single .model-name-wrap {
+  position: relative;
+  left: auto;
+  transform: none;
+  top: auto;
 }
 
 .model-name-text {
-  font-size: clamp(1.1rem, 2.2vw, 2.4em);
+  display: block;
+  font-size: clamp(0.85rem, 1.35vw, 1.65rem);
   color: #666;
   font-style: italic;
   opacity: 0.25;
   font-weight: 500;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  line-height: 1.1;
+  padding: 0 2px;
 }
 
 .model-item.active-car .model-name-text,
@@ -201,7 +225,7 @@
 .color-icon {
   border: 1px solid transparent;
   background: transparent;
-  padding: 0;
+  padding: 4px;
   cursor: pointer;
   line-height: 0;
 }
@@ -215,6 +239,7 @@
   width: 40px;
   height: 40px;
   border-radius: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
 }
 
 .section-banner {
@@ -223,6 +248,12 @@
 
 .section-banner + .index-model-section {
   margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .model-name-text {
+    font-size: clamp(0.8rem, 1.4vw, 1.35rem);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -236,14 +267,19 @@
     font-size: 18px;
   }
 
+  .car-tabs {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
   .model-viewer-wrap {
     height: 52vw;
     min-height: 260px;
   }
 
   .model-list {
-    padding: 20px 10px 10px;
-    margin-top: 12px;
+    padding: 30px 10px 10px;
+    margin-top: 0;
   }
 
   .model-list-single {
@@ -251,12 +287,33 @@
     padding-top: 0;
   }
 
+  .model-item {
+    flex: 0 0 110px;
+    min-width: 110px;
+    margin-right: 25px;
+    padding-top: 5%;
+  }
+
+  .model-item:last-child {
+    margin-right: 0;
+  }
+
+  .model-name-wrap {
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
   .model-name-text {
-    font-size: 1.2em;
+    font-size: 18px !important;
   }
 
   .model-thumb-image-wrap {
-    max-width: 110px;
+    margin-top: 0;
+  }
+
+  .model-thumb-image-wrap img {
+    max-height: 70px;
   }
 
   .color-icon .pie-color1 {

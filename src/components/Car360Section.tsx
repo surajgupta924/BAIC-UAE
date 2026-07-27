@@ -15,6 +15,7 @@ interface CatalogColor {
 interface CatalogModel {
   title: string;
   displayName: string;
+  stripLabel?: string;
   thumbUrl: string;
   vehicleUrl: string;
   colors: CatalogColor[];
@@ -137,7 +138,7 @@ export default function Car360Section() {
                   >
                     <div className="model-name-wrap">
                       <span className="model-name-text">
-                        {model.displayName}
+                        {model.stripLabel ?? model.displayName}
                       </span>
                     </div>
                     {!isSingleModel && (
@@ -148,6 +149,7 @@ export default function Car360Section() {
                           alt={model.displayName}
                           className="img-fluid"
                           loading="lazy"
+                          referrerPolicy="no-referrer"
                         />
                       </div>
                     )}
