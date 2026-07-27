@@ -526,8 +526,8 @@ body {
 
 .section-questionnaire .form-control,
 .section-questionnaire .form-select,
-.inner-page .form-control:not(.input-box),
-.inner-page .form-select:not(.form-box .form-select) {
+.inner-page .form-control,
+.inner-page .form-select {
   border-radius: 0;
   min-height: 48px;
 }
