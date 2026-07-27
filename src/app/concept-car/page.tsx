@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import ConceptCarPage from "@/components/ConceptCarPage";
+import { getConceptCar } from "@/lib/fetch-data";
 
 export const metadata = {
   title: "Concept Car | BAIC UAE",
+  description:
+    "Explore BAIC JOY concept vehicles that preview the future of design, electrification, and connected driving.",
 };
 
-export default function Page() {
+export default async function Page() {
+  const data = await getConceptCar();
+
   return (
-    <ContentPage title="Concept Car">
-      <p>Explore BAIC concept vehicles that preview the future of design, electrification, and connected driving.</p>
-    </ContentPage>
+    <SiteChrome>
+      <ConceptCarPage data={data} />
+    </SiteChrome>
   );
 }

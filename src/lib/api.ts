@@ -61,6 +61,36 @@ export interface CapitalBeautyData {
   image1Description: string;
 }
 
+export interface ConceptCarData {
+  bannerImage: string;
+  section_1_image: string;
+  section_1_title: string;
+  section_1_description: string;
+  section_2_image: string;
+  section_2_description: string;
+  section_4_main_description: string;
+  section_5_description: string;
+  section_6_description: string;
+  section_7_image: string;
+  section_7_title: string;
+  section_7_description: string;
+  section_8_image: string;
+  section_8_description: string;
+  section_9_image: string;
+  section_9_title: string;
+  section_10_image1: string;
+  section_10_title1: string;
+  section_10_image2: string;
+  section_10_title2: string;
+  section_10_image3: string;
+  section_10_title3: string;
+  section_10_image4: string;
+  section_10_title4: string;
+  meta_title?: string | null;
+  meta_description?: string | null;
+  meta_keywords?: string | null;
+}
+
 export interface NewsItem {
   id: number;
   title: string;

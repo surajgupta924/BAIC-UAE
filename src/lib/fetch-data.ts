@@ -1,5 +1,6 @@
 import type {
   CapitalBeautyData,
+  ConceptCarData,
   HomepageData,
   ModelCategory,
   ModelColor,
@@ -12,6 +13,7 @@ import homepageFile from "@/data/homepage.json";
 import modelsFile from "@/data/models.json";
 import categoriesFile from "@/data/categories.json";
 import capitalFile from "@/data/capital.json";
+import conceptCarFile from "@/data/concept-car.json";
 import newsFile from "@/data/news.json";
 
 async function fetchWithFallback<T>(path: string, fallback: T): Promise<T> {
@@ -46,6 +48,13 @@ export async function getCapitalBeauty(): Promise<CapitalBeautyData> {
   return fetchWithFallback<CapitalBeautyData>(
     "capital-beauty/1",
     (capitalFile as { data: CapitalBeautyData }).data,
+  );
+}
+
+export async function getConceptCar(): Promise<ConceptCarData> {
+  return fetchWithFallback<ConceptCarData>(
+    "concept-car/1",
+    (conceptCarFile as { data: ConceptCarData }).data,
   );
 }
 
