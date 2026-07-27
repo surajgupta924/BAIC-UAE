@@ -293,7 +293,18 @@ body {
     position: static;
     visibility: visible;
     transform: none;
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .site-header .dropdown-links {
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+
+  .site-header .dropdown-links .dropdown-item {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    text-align: left;
   }
 }
 
@@ -443,24 +454,25 @@ body {
 }
 
 .site-header .navbar-nav .dropdown-menu.megamenu {
-  background: rgba(245, 245, 245, 0.96);
+  background: rgba(255, 255, 255, 0.9);
   border: 0;
   border-radius: 0;
-  border-top: 1px solid #ebeef5;
   box-shadow: none;
   display: block;
   left: 0;
   margin: 0;
-  padding: 0.75rem 0 1rem;
+  padding: 0;
   position: absolute;
   top: 100%;
-  transform: none;
+  transform: translateZ(0);
   visibility: hidden;
   width: 100%;
   z-index: 1000;
 }
 
 .site-header .navbar-nav .dropdown-menu.megamenu.show {
+  transform: translateZ(0);
+  transition: all 1s cubic-bezier(0.2, 0.06, 0.05, 0.95);
   visibility: visible;
 }
 
@@ -471,34 +483,34 @@ body {
   color: #111;
 }
 
+/* Live site: centered horizontal link row (inline-block flow) */
 .site-header .dropdown-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 1140px;
+  display: block;
   margin: 0 auto;
-  padding: 0 12px;
-  text-align: left;
+  max-width: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .site-header .dropdown-links .dropdown-item {
   background: transparent;
   border-radius: 0;
   color: #222;
-  display: block;
+  display: inline-block;
   font-size: 14px;
   line-height: normal;
-  padding: 10px 16px;
-  text-align: left;
+  min-width: 0;
+  padding: 30px 20px;
+  text-align: center;
   width: auto;
-  min-width: 160px;
 }
 
 .site-header .dropdown-links .dropdown-item:hover,
 .site-header .dropdown-links .dropdown-item:focus,
 .site-header .dropdown-links .dropdown-item.is-active {
-  background: #e5e5e5;
-  color: #222;
+  background: transparent;
+  color: #d1251a;
 }
 
 .site-header .dropdown-menu:not(.megamenu) {
