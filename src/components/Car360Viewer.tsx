@@ -6,6 +6,8 @@ interface Car360ViewerProps {
   frames: string[];
   alt: string;
   className?: string;
+  /** When false, drag-to-rotate is disabled (e.g. during entrance animation). */
+  interactive?: boolean;
 }
 
 const PIXELS_PER_FRAME = 5;
@@ -14,6 +16,7 @@ export default function Car360Viewer({
   frames,
   alt,
   className = "",
+  interactive = true,
 }: Car360ViewerProps) {
   const frameCount = frames.length;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -111,6 +114,7 @@ export default function Car360Viewer({
 
   const onPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
+      if (!interactive) return;
       event.preventDefault();
       draggingRef.current = true;
       setIsDragging(true);
@@ -122,12 +126,12 @@ export default function Car360Viewer({
         // ignore capture errors
       }
     },
-    [],
+    [interactive],
   );
 
   if (frameCount === 0) return null;
 
-  const canRotate = frameCount >= 2;
+  const canRotate = frameCount >= 2 && interactive;
 
   return (
     <div

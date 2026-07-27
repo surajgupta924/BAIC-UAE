@@ -1,10 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Car360Viewer from "@/components/Car360Viewer";
 import catalog from "@/data/car360-catalog.json";
 import { getAvailableColorIndexes, getCar360Frames } from "@/lib/car360";
 import "@/styles/car360-section.css";
+
+const ENTER_MS = 380;
 
 interface CatalogColor {
   rgb: string;
@@ -76,6 +78,8 @@ export default function Car360Section() {
   // Live site defaults Off-road to BJ60 (second model)
   const [activeModelIndex, setActiveModelIndex] = useState(1);
   const [colorIndex, setColorIndex] = useState(0);
+  const [viewerEpoch, setViewerEpoch] = useState(0);
+  const [isEntering, setIsEntering] = useState(true);
 
   const activeCategory = categories[activeCategoryIndex];
   const models = activeCategory.models;
@@ -97,18 +101,37 @@ export default function Car360Section() {
     [activeModel, activeColor, safeColorIndex],
   );
 
+  useEffect(() => {
+    if (!isEntering) return;
+    const timer = window.setTimeout(() => setIsEntering(false), ENTER_MS);
+    return () => window.clearTimeout(timer);
+  }, [isEntering, viewerEpoch]);
+
+  const triggerEnter = () => {
+    setIsEntering(true);
+    setViewerEpoch((value) => value + 1);
+  };
+
   const selectCategory = (index: number) => {
     setActiveCategoryIndex(index);
-    // Prefer BJ60 when switching back to Off-road
     const nextModels = categories[index].models;
     const bj60 = nextModels.findIndex((m) => m.displayName === "BJ60");
     setActiveModelIndex(bj60 >= 0 ? bj60 : 0);
     setColorIndex(0);
+    triggerEnter();
   };
 
   const selectModel = (index: number) => {
+    if (index === safeModelIndex) return;
     setActiveModelIndex(index);
     setColorIndex(0);
+    triggerEnter();
+  };
+
+  const selectColor = (index: number) => {
+    if (index === safeColorIndex) return;
+    setColorIndex(index);
+    triggerEnter();
   };
 
   return (
@@ -130,7 +153,7 @@ export default function Car360Section() {
 
           <div className="car-content">
             <ul
-              className={`model-list${isSingleModel ? " model-list-single" : ""}`}
+              className={`model-list model-list-names-only${isSingleModel ? " model-list-single" : ""}`}
             >
               {models.map((model, index) => (
                 <li
@@ -142,35 +165,29 @@ export default function Car360Section() {
                     className="model-item-btn"
                     onClick={() => selectModel(index)}
                   >
-                    <div className="model-name-wrap">
-                      <span className="model-name-text">
-                        {model.stripLabel ?? model.displayName}
-                      </span>
-                    </div>
-                    {!isSingleModel && (
-                      <div className="model-thumb-image-wrap">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={model.thumbUrl}
-                          alt=""
-                          className="img-fluid"
-                          loading="lazy"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                    )}
+                    <span className="model-name-text">
+                      {model.stripLabel ?? model.displayName}
+                    </span>
                   </button>
                 </li>
               ))}
             </ul>
 
-            <div className="model-viewer-wrap">
+            <div
+              key={viewerEpoch}
+              className={`model-viewer-wrap${isEntering ? " is-entering" : " is-ready"}`}
+              onAnimationEnd={(event) => {
+                if (event.target !== event.currentTarget) return;
+                setIsEntering(false);
+              }}
+            >
               {frames.length > 0 ? (
                 <Car360Viewer
                   key={`${activeModel.displayName}-${activeColor?.frameIndex ?? 0}-${safeColorIndex}-${frames[0]}`}
                   frames={frames}
                   alt={activeModel.displayName}
                   className="car-360-stage"
+                  interactive={!isEntering}
                 />
               ) : (
                 <div className="model-static-image">
@@ -200,7 +217,7 @@ export default function Car360Section() {
                       <button
                         type="button"
                         className={`color-icon${index === safeColorIndex ? " active" : ""}`}
-                        onClick={() => setColorIndex(index)}
+                        onClick={() => selectColor(index)}
                         aria-label={`Color option ${index + 1}`}
                       >
                         <span
