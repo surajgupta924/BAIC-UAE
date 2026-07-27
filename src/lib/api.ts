@@ -143,6 +143,26 @@ export interface ResearchDevelopmentData {
   section14_image: string;
 }
 
+export interface OverviewData {
+  banner_image: string;
+  banner_title: string;
+  banner_description: string;
+  section1_image: string;
+  section1_title: string;
+  section1_description: string;
+  section2_image: string;
+  section2_image_title1: string;
+  section2_image_title2: string;
+  section2_title: string;
+  section2_description: string;
+  section3_image: string;
+  section3_title1: string;
+  section3_description1: string;
+  section3_title2: string;
+  section3_description2: string;
+  section3_description3: string;
+}
+
 export interface ConceptCarData {
   bannerImage: string;
   section_1_image: string;

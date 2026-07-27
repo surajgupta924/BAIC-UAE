@@ -6,6 +6,7 @@ import type {
   ModelColor,
   NewsItem,
   OffRoadData,
+  OverviewData,
   ResearchDevelopmentData,
   VehicleModel,
 } from "./api";
@@ -17,6 +18,7 @@ import categoriesFile from "@/data/categories.json";
 import capitalFile from "@/data/capital.json";
 import conceptCarFile from "@/data/concept-car.json";
 import offRoadFile from "@/data/off-road.json";
+import overviewFile from "@/data/overview.json";
 import researchFile from "@/data/research-development.json";
 import newsFile from "@/data/news.json";
 
@@ -66,6 +68,13 @@ export async function getOffRoad(): Promise<OffRoadData> {
   return fetchWithFallback<OffRoadData>(
     "off-road/1",
     (offRoadFile as { data: OffRoadData }).data,
+  );
+}
+
+export async function getOverview(): Promise<OverviewData> {
+  return fetchWithFallback<OverviewData>(
+    "overview/1",
+    (overviewFile as { data: OverviewData }).data,
   );
 }
 

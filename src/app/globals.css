@@ -366,6 +366,66 @@ body {
   min-height: 50vh;
 }
 
+/* Overview page (match baicuae.com) */
+.overview-page .about-service-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.overview-page .about-service-wrap .container {
+  position: relative;
+  z-index: 1;
+}
+
+.overview-page .pattern-overlay.circle-patten {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: radial-gradient(
+    circle at 10% 20%,
+    rgba(255, 255, 255, 0.55) 0,
+    rgba(255, 255, 255, 0.55) 8%,
+    transparent 9%
+  ),
+  radial-gradient(
+    circle at 90% 80%,
+    rgba(255, 255, 255, 0.4) 0,
+    rgba(255, 255, 255, 0.4) 6%,
+    transparent 7%
+  );
+}
+
+.overview-page .wrap-owner {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.overview-page .wrap-owner .product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overview-page .tilte-own h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+}
+
+.overview-page .section-title {
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+}
+
+.overview-page .section-disc,
+.overview-page .about-right-desc,
+.overview-page .content-overview {
+  color: #555;
+}
+
+.overview-page .page-heading-info p {
+  margin-bottom: 0.35rem;
+}
+
 /* Match baicuae.com full-width header megamenus */
 .site-header .nav-link.dropdown-toggle {
   background: transparent;

@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import OverviewPageView from "@/components/OverviewPage";
+import { getOverview } from "@/lib/fetch-data";
 
 export const metadata = {
   title: "Overview | BAIC UAE",
+  description:
+    "Explore top Chinese cars in UAE with BAIC. Discover Al Shaali Moto, exclusive distributor, and our network across the GCC.",
 };
 
-export default function Page() {
+export default async function OverviewPage() {
+  const data = await getOverview();
+
   return (
-    <ContentPage title="Overview">
-      <p>Discover BAIC's brand story, product philosophy, and commitment to drivers across the United Arab Emirates.</p>
-    </ContentPage>
+    <SiteChrome>
+      <OverviewPageView data={data} />
+    </SiteChrome>
   );
 }
