@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import NewsReleasePageView from "@/components/NewsReleasePage";
+import { getNews } from "@/lib/fetch-data";
 
 export const metadata = {
-  title: "News Release | BAIC UAE",
+  title: "News Release",
+  description:
+    "Discover new car offers in the UAE at BAIC – unbeatable deals on top-quality vehicles. Don’t miss special discounts!",
 };
 
-export default function Page() {
+export default async function NewsReleasePage() {
+  const items = await getNews();
+
   return (
-    <ContentPage title="News Release">
-      <p>Stay up to date with the latest BAIC UAE announcements, launches, and brand news.</p>
-    </ContentPage>
+    <SiteChrome>
+      <NewsReleasePageView items={items} />
+    </SiteChrome>
   );
 }

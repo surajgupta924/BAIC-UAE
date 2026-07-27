@@ -532,3 +532,55 @@ body {
   min-height: 48px;
 }
 
+/* Newsroom pages — match baicuae.com layout */
+.news-release-page .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.news-release-page .card-img-top {
+  height: 14rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.news-release-page .card-body {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.news-release-page .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.news-release-page .card-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-box .field-group .form-select {
+  box-shadow: none;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 36px;
+  min-height: 36px;
+  padding: 0;
+}
+
+@media (max-width: 991.98px) {
+  .page-heading-info-release,
+  .page-heading-info {
+    padding-left: 1.5rem;
+    width: 90%;
+  }
+
+  .page-heading-info-release h1,
+  .page-heading-info h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+}
+

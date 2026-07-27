@@ -1,13 +1,14 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import MediaContactPageView from "@/components/MediaContactPage";
 
 export const metadata = {
-  title: "Media Contact | BAIC UAE",
+  title: "Media Contact Page",
 };
 
-export default function Page() {
+export default function MediaContactPage() {
   return (
-    <ContentPage title="Media Contact">
-      <p>Media enquiries for BAIC UAE can be directed to Al Shaali Moto's communications team.</p>
-    </ContentPage>
+    <SiteChrome>
+      <MediaContactPageView />
+    </SiteChrome>
   );
 }

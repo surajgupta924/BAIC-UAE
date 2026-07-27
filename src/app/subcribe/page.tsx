@@ -1,13 +1,14 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import SubscribePageView from "@/components/SubscribePage";
 
 export const metadata = {
-  title: "Subscribe | BAIC UAE",
+  title: "Subscribe",
 };
 
-export default function Page() {
+export default function SubscribePage() {
   return (
-    <ContentPage title="Subscribe">
-      <p>Subscribe to receive BAIC UAE news, offers, and product updates directly to your inbox.</p>
-    </ContentPage>
+    <SiteChrome>
+      <SubscribePageView />
+    </SiteChrome>
   );
 }

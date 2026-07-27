@@ -230,10 +230,14 @@ export interface ConceptCarData {
 }
 
 export interface NewsItem {
-  id: number;
+  id: number | string;
   title: string;
+  title_ar?: string;
   subTitle: string;
+  subTitle_ar?: string;
+  description?: string;
   image: string;
+  otherNews?: boolean | string;
 }
 
 export interface ModelColor {
