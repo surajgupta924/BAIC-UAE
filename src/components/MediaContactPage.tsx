@@ -84,7 +84,11 @@ export default function MediaContactPageView() {
         <img src={BANNER} className="img-fluid" alt="" loading="eager" />
         <div className="page-heading-info">
           <div>
-            <h1 className="text-uppercase">MEDIA CONTACT</h1>
+            <h1 className="text-uppercase">
+              MEDIA
+              <br />
+              CONTACT
+            </h1>
           </div>
         </div>
       </section>
@@ -93,7 +97,7 @@ export default function MediaContactPageView() {
         <div className="container">
           <div className="row">
             <div className="col-sm-10 m-auto">
-              <div className="mb-5 text-center">
+              <div className="mb-5 text-center media-contact-intro">
                 <p>
                   Thank you for your support to BAIC,
                   <br /> Please leave your contact information and questions, we
@@ -110,7 +114,7 @@ export default function MediaContactPageView() {
               <form className="form" onSubmit={onSubmit} noValidate>
                 <div className="form-box">
                   <div className="field-group">
-                    <div className="row">
+                    <div className="row align-items-center">
                       <div className="col-sm-3">
                         <label htmlFor="mc-gender">Title</label>
                       </div>
@@ -135,7 +139,7 @@ export default function MediaContactPageView() {
                   </div>
 
                   <div className="field-group">
-                    <div className="row">
+                    <div className="row align-items-center">
                       <div className="col-sm-3">
                         <label htmlFor="mc-firstName">First Name</label>
                       </div>
@@ -157,7 +161,7 @@ export default function MediaContactPageView() {
                   </div>
 
                   <div className="field-group">
-                    <div className="row">
+                    <div className="row align-items-center">
                       <div className="col-sm-3">
                         <label htmlFor="mc-lastName">Last Name</label>
                       </div>
@@ -179,7 +183,7 @@ export default function MediaContactPageView() {
                   </div>
 
                   <div className="field-group">
-                    <div className="row">
+                    <div className="row align-items-center">
                       <div className="col-sm-3">
                         <label htmlFor="mc-email">Email</label>
                       </div>
