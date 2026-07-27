@@ -621,6 +621,39 @@ body {
   width: 100%;
 }
 
+/* Our Service — match baicuae.com cards */
+.our-service-page .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.our-service-page .card-img-top {
+  height: 14rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.our-service-page .card-body {
+  flex: 1 1 auto;
+}
+
+.our-service-page .card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.our-service-page .card-text {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.our-service-page .card-bottom .btn {
+  border-radius: 0;
+  min-width: 10rem;
+}
+
 /* Newsroom pages — match baicuae.com layout */
 .news-release-page .card {
   display: flex;

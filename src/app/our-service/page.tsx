@@ -1,13 +1,14 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import OurServicePageView from "@/components/OurServicePage";
 
 export const metadata = {
-  title: "Our Service | BAIC UAE",
+  title: "Our Service",
 };
 
-export default function Page() {
+export default function OurServicePage() {
   return (
-    <ContentPage title="Our Service">
-      <p>BAIC UAE service centres deliver genuine parts, skilled technicians, and the brand's long-term ownership promise including warranty support across the UAE.</p>
-    </ContentPage>
+    <SiteChrome>
+      <OurServicePageView />
+    </SiteChrome>
   );
 }
