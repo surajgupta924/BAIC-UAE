@@ -1,1 +1,44 @@
-{"status":true,"message":"Vision List Successfully Located.","data":[{"id":9,"title":"Brand Positioning","title_ar":"تحديد موضع العلامة التِّجاريَّة","subTitle":"Making Life Brighter","subTitle_ar":" جعل الحياة أكثر إشراقًا","image":"826_1719308298vision-banner1.png","createdAt":"2024-06-25T09:38:18.000Z","updatedAt":"2025-01-15T08:31:45.000Z"},{"id":10,"title":"Brand Slogan","title_ar":"شعار العلامة التِّجاريِّة","subTitle":"Always be with you","subTitle_ar":" دائمًا معك","image":"907_1719308372vision-banner2.png","createdAt":"2024-06-25T09:39:33.000Z","updatedAt":"2025-01-15T08:32:02.000Z"},{"id":11,"title":"Core Value","title_ar":"القيمة الأساسيَّة","subTitle":"Reliable","subTitle_ar":"الموثوقيَّة","image":"446_1719308388vision-banner3.png","createdAt":"2024-06-25T09:39:49.000Z","updatedAt":"2025-01-15T08:32:20.000Z"},{"id":12,"title":"Brand Tonality","title_ar":" نبرة صوت العلامة التِّجاريَّة ","subTitle":"Caring Confident Characteristic","subTitle_ar":"التَّميُّز، الثِّقة والرِّعاية ","image":"289_1719308409vision-banner4.png","createdAt":"2024-06-25T09:40:10.000Z","updatedAt":"2025-01-15T08:32:46.000Z"}],"code":200}
+{
+  "data": [
+    {
+      "id": 9,
+      "title": "Brand Positioning",
+      "title_ar": "تحديد موضع العلامة التِّجاريَّة",
+      "subTitle": "Making Life Brighter",
+      "subTitle_ar": " جعل الحياة أكثر إشراقًا",
+      "image": "826_1719308298vision-banner1.png",
+      "createdAt": "2024-06-25T09:38:18.000Z",
+      "updatedAt": "2025-01-15T08:31:45.000Z"
+    },
+    {
+      "id": 10,
+      "title": "Brand Slogan",
+      "title_ar": "شعار العلامة التِّجاريِّة",
+      "subTitle": "Always be with you",
+      "subTitle_ar": " دائمًا معك",
+      "image": "907_1719308372vision-banner2.png",
+      "createdAt": "2024-06-25T09:39:33.000Z",
+      "updatedAt": "2025-01-15T08:32:02.000Z"
+    },
+    {
+      "id": 11,
+      "title": "Core Value",
+      "title_ar": "القيمة الأساسيَّة",
+      "subTitle": "Reliable",
+      "subTitle_ar": "الموثوقيَّة",
+      "image": "446_1719308388vision-banner3.png",
+      "createdAt": "2024-06-25T09:39:49.000Z",
+      "updatedAt": "2025-01-15T08:32:20.000Z"
+    },
+    {
+      "id": 12,
+      "title": "Brand Tonality",
+      "title_ar": " نبرة صوت العلامة التِّجاريَّة ",
+      "subTitle": "Caring Confident Characteristic",
+      "subTitle_ar": "التَّميُّز، الثِّقة والرِّعاية ",
+      "image": "289_1719308409vision-banner4.png",
+      "createdAt": "2024-06-25T09:40:10.000Z",
+      "updatedAt": "2025-01-15T08:32:46.000Z"
+    }
+  ]
+}

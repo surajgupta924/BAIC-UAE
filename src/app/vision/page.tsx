@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import VisionPageView from "@/components/VisionPage";
+import { getVision } from "@/lib/fetch-data";
 
 export const metadata = {
   title: "Vision | BAIC UAE",
+  description:
+    "Discover BAIC’s future vision – innovation, sustainability, and excellence driving next-gen automotive solutions.",
 };
 
-export default function Page() {
+export default async function VisionPage() {
+  const items = await getVision();
+
   return (
-    <ContentPage title="Vision">
-      <p>BAIC's vision is to create intelligent mobility experiences that blend Capital Beauty design with real-world capability.</p>
-    </ContentPage>
+    <SiteChrome>
+      <VisionPageView items={items} />
+    </SiteChrome>
   );
 }

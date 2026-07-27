@@ -143,6 +143,15 @@ export interface ResearchDevelopmentData {
   section14_image: string;
 }
 
+export interface VisionItem {
+  id: number;
+  title: string;
+  title_ar?: string;
+  subTitle: string;
+  subTitle_ar?: string;
+  image: string;
+}
+
 export interface OverviewData {
   banner_image: string;
   banner_title: string;

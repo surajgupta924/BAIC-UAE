@@ -9,6 +9,7 @@ import type {
   OverviewData,
   ResearchDevelopmentData,
   VehicleModel,
+  VisionItem,
 } from "./api";
 import { API_BASE } from "./constants";
 
@@ -20,6 +21,7 @@ import conceptCarFile from "@/data/concept-car.json";
 import offRoadFile from "@/data/off-road.json";
 import overviewFile from "@/data/overview.json";
 import researchFile from "@/data/research-development.json";
+import visionFile from "@/data/vision.json";
 import newsFile from "@/data/news.json";
 
 async function fetchWithFallback<T>(path: string, fallback: T): Promise<T> {
@@ -75,6 +77,13 @@ export async function getOverview(): Promise<OverviewData> {
   return fetchWithFallback<OverviewData>(
     "overview/1",
     (overviewFile as { data: OverviewData }).data,
+  );
+}
+
+export async function getVision(): Promise<VisionItem[]> {
+  return fetchWithFallback<VisionItem[]>(
+    "vision",
+    (visionFile as { data: VisionItem[] }).data,
   );
 }
 
