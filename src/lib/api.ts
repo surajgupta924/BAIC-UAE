@@ -143,6 +143,25 @@ export interface ResearchDevelopmentData {
   section14_image: string;
 }
 
+export interface AfterSalesServiceData {
+  title: string;
+  subTitle: string;
+  bannerImage: string;
+  worldTitle: string;
+  worldSubTitle: string;
+  worldimage: string;
+  featureTitle: string;
+  featureSubTitle: string;
+  featureimage: string;
+}
+
+export interface FeatureServiceItem {
+  id: string | number;
+  title: string;
+  title_ar?: string;
+  image: string;
+}
+
 export interface HistoryItem {
   id: number;
   year: string;

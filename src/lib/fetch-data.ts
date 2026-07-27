@@ -1,6 +1,8 @@
 import type {
+  AfterSalesServiceData,
   CapitalBeautyData,
   ConceptCarData,
+  FeatureServiceItem,
   HistoryItem,
   HomepageData,
   ModelCategory,
@@ -17,8 +19,10 @@ import { API_BASE } from "./constants";
 import homepageFile from "@/data/homepage.json";
 import modelsFile from "@/data/models.json";
 import categoriesFile from "@/data/categories.json";
+import afterSalesFile from "@/data/after-sales-service.json";
 import capitalFile from "@/data/capital.json";
 import conceptCarFile from "@/data/concept-car.json";
+import featureServiceFile from "@/data/feature-service.json";
 import historyFile from "@/data/history.json";
 import offRoadFile from "@/data/off-road.json";
 import overviewFile from "@/data/overview.json";
@@ -93,6 +97,20 @@ export async function getHistory(): Promise<HistoryItem[]> {
   return fetchWithFallback<HistoryItem[]>(
     "history",
     (historyFile as { data: HistoryItem[] }).data,
+  );
+}
+
+export async function getAfterSalesService(): Promise<AfterSalesServiceData> {
+  return fetchWithFallback<AfterSalesServiceData>(
+    "after-sales-service/1",
+    (afterSalesFile as { data: AfterSalesServiceData }).data,
+  );
+}
+
+export async function getFeatureServices(): Promise<FeatureServiceItem[]> {
+  return fetchWithFallback<FeatureServiceItem[]>(
+    "feature-service",
+    (featureServiceFile as { data: FeatureServiceItem[] }).data,
   );
 }
 
