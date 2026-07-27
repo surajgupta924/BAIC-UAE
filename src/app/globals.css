@@ -568,6 +568,59 @@ body {
   padding: 0.55rem 1.5rem;
 }
 
+/* Contact Us — match baicuae.com */
+.contact-us-page .contact-page-section {
+  padding: 2.5rem 0 0.5rem;
+}
+
+.contact-us-page .contact-us-intro p {
+  color: #555;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-us-page .qabox-image img {
+  display: block;
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.contact-us-page .field-phonenumber {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.contact-us-page .field-phonenumber .country-code-static {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #000;
+  display: inline-flex;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 36px;
+  min-height: 36px;
+  padding: 0 0.5rem 0 0;
+  pointer-events: none;
+  width: auto;
+}
+
+.contact-us-page .field-phonenumber .input-box {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+.contact-us-page .contact-map-section iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
 /* Newsroom pages — match baicuae.com layout */
 .news-release-page .card {
   display: flex;
