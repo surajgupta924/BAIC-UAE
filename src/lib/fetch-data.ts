@@ -5,6 +5,8 @@ import type {
   ModelCategory,
   ModelColor,
   NewsItem,
+  OffRoadData,
+  ResearchDevelopmentData,
   VehicleModel,
 } from "./api";
 import { API_BASE } from "./constants";
@@ -14,6 +16,8 @@ import modelsFile from "@/data/models.json";
 import categoriesFile from "@/data/categories.json";
 import capitalFile from "@/data/capital.json";
 import conceptCarFile from "@/data/concept-car.json";
+import offRoadFile from "@/data/off-road.json";
+import researchFile from "@/data/research-development.json";
 import newsFile from "@/data/news.json";
 
 async function fetchWithFallback<T>(path: string, fallback: T): Promise<T> {
@@ -55,6 +59,20 @@ export async function getConceptCar(): Promise<ConceptCarData> {
   return fetchWithFallback<ConceptCarData>(
     "concept-car/1",
     (conceptCarFile as { data: ConceptCarData }).data,
+  );
+}
+
+export async function getOffRoad(): Promise<OffRoadData> {
+  return fetchWithFallback<OffRoadData>(
+    "off-road/1",
+    (offRoadFile as { data: OffRoadData }).data,
+  );
+}
+
+export async function getResearchDevelopment(): Promise<ResearchDevelopmentData> {
+  return fetchWithFallback<ResearchDevelopmentData>(
+    "research-and-development/1",
+    (researchFile as { data: ResearchDevelopmentData }).data,
   );
 }
 

@@ -1,1 +1,34 @@
-{"status":true,"message":"Capital Beauty got Successfully.","data":{"id":1,"bannerImage":"5_1718960557image1.jpeg","bannerTitle":" Capital Beauty","bannerTitle_ar":"جمال العاصمة","bannerSubTitle":"Redefined","bannerSubTitle_ar":"إعادة تعريف","image1":"151_1718608580cb-image.png","image1Description":"As the CAPITAL of China, Beijing embodies the unity of tradition and modernity, conveying a temperament of order, firmness, and trustworthiness, and symbolizing the confidence, glory, and dreams of Chinese culture.","image1Description_ar":"باعتبارها عاصمة الصِّين، تجمع بكِّين ما بين التَّقاليد والحداثة، وتعكس طابعًا من النِّظام والثَّبات والمصداقيَّة، كما وترمز إلى الثِّقة، المجد والأحلام في الثَّقافة الصِّينيَّة.","gdImage1":"805_1718608581gd1.png","gdImage2":"415_1718608581gd2.png","gdImage3":"182_1718608581gd3.png","gdImage4":"868_1718608581gd4.png","gdImage5":"476_1718608581gd5.png","image2":"132_1718608580modern-simplicity.png","image2Title":"MODERN SIMPLICITY","image2Title_ar":"البساطة العصريَّة: ","image2Description":"If one word could capture the essence of ancient Chinese painting and calligraphy culture, it would be BLANK. The use of white space is fundamental to this art form, representing a unique and distinctive Oriental expression technique.","image2Description_ar":"كلمة واحدة تلخِّص جوهر ثقافة الرَّسم والخطَّ الصِّينيّ القديم: \"الفراغ\". إنَّ استخدام المساحات البيضاء سمة أساسيَّة في هذا الفنّ، حيث تمثِّل تقنيَّة تعبير شرقيَّة فريدة ومميَّزة.","image3":"950_1718608580warm-experience.png","image3Title":"WARM EXPERIENCE","image3Title_ar":"تجربة دافئة","image3Description":"\"Purity of Confidence\" and \"Warm Wisdom\" define the design ethos of BAIC Group's BEIJING brand. Whether in exterior or interior design, the focus is on delivering a sense of boundless freedom to users, evoking positive emotions, and imbuing the brand's design with maturity and confidence through emotional value.","image3Description_ar":"\"نقاء الثِّقة\" و\"الحكمة الدافئة\"، قيمتان رسمتا فلسفة تصميم العلامة التجارية ل بيحين التَّابعة لمجموعة  BAIC\r\nسواءً في التَّصميم الخارجيّ أو الدَّاخليّ للعلامة، يتمحور حول تقديم شعور بالحريَّة اللَّامحدودة للمستخدمين، إثارة المشاعر الإيجابيَّة، وإضفاء طابع النُّضج والثِّقة من خلال إعلاء شأن القيمة العاطفيَّة  .\r\n","image4":"437_1718608580capital-banner.png","meta_description":null,"meta_title":null,"meta_keywords":null,"createdAt":"2024-06-14T05:57:33.000Z","updatedAt":"2025-07-17T09:30:48.000Z"},"code":200}
+{
+  "data": {
+    "id": 1,
+    "bannerImage": "5_1718960557image1.jpeg",
+    "bannerTitle": " Capital Beauty",
+    "bannerTitle_ar": "جمال العاصمة",
+    "bannerSubTitle": "Redefined",
+    "bannerSubTitle_ar": "إعادة تعريف",
+    "image1": "151_1718608580cb-image.png",
+    "image1Description": "As the CAPITAL of China, Beijing embodies the unity of tradition and modernity, conveying a temperament of order, firmness, and trustworthiness, and symbolizing the confidence, glory, and dreams of Chinese culture.",
+    "image1Description_ar": "باعتبارها عاصمة الصِّين، تجمع بكِّين ما بين التَّقاليد والحداثة، وتعكس طابعًا من النِّظام والثَّبات والمصداقيَّة، كما وترمز إلى الثِّقة، المجد والأحلام في الثَّقافة الصِّينيَّة.",
+    "gdImage1": "805_1718608581gd1.png",
+    "gdImage2": "415_1718608581gd2.png",
+    "gdImage3": "182_1718608581gd3.png",
+    "gdImage4": "868_1718608581gd4.png",
+    "gdImage5": "476_1718608581gd5.png",
+    "image2": "132_1718608580modern-simplicity.png",
+    "image2Title": "MODERN SIMPLICITY",
+    "image2Title_ar": "البساطة العصريَّة: ",
+    "image2Description": "If one word could capture the essence of ancient Chinese painting and calligraphy culture, it would be BLANK. The use of white space is fundamental to this art form, representing a unique and distinctive Oriental expression technique.",
+    "image2Description_ar": "كلمة واحدة تلخِّص جوهر ثقافة الرَّسم والخطَّ الصِّينيّ القديم: \"الفراغ\". إنَّ استخدام المساحات البيضاء سمة أساسيَّة في هذا الفنّ، حيث تمثِّل تقنيَّة تعبير شرقيَّة فريدة ومميَّزة.",
+    "image3": "950_1718608580warm-experience.png",
+    "image3Title": "WARM EXPERIENCE",
+    "image3Title_ar": "تجربة دافئة",
+    "image3Description": "\"Purity of Confidence\" and \"Warm Wisdom\" define the design ethos of BAIC Group's BEIJING brand. Whether in exterior or interior design, the focus is on delivering a sense of boundless freedom to users, evoking positive emotions, and imbuing the brand's design with maturity and confidence through emotional value.",
+    "image3Description_ar": "\"نقاء الثِّقة\" و\"الحكمة الدافئة\"، قيمتان رسمتا فلسفة تصميم العلامة التجارية ل بيحين التَّابعة لمجموعة  BAIC\r\nسواءً في التَّصميم الخارجيّ أو الدَّاخليّ للعلامة، يتمحور حول تقديم شعور بالحريَّة اللَّامحدودة للمستخدمين، إثارة المشاعر الإيجابيَّة، وإضفاء طابع النُّضج والثِّقة من خلال إعلاء شأن القيمة العاطفيَّة  .\r\n",
+    "image4": "437_1718608580capital-banner.png",
+    "meta_description": null,
+    "meta_title": null,
+    "meta_keywords": null,
+    "createdAt": "2024-06-14T05:57:33.000Z",
+    "updatedAt": "2025-07-17T09:30:48.000Z"
+  }
+}

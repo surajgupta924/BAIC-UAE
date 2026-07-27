@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import ResearchDevelopmentPageView from "@/components/ResearchDevelopmentPage";
+import { getResearchDevelopment } from "@/lib/fetch-data";
 
 export const metadata = {
   title: "Research & Development | BAIC UAE",
+  description:
+    "Discover BAIC's cutting-edge research and development in automotive technology and innovation.",
 };
 
-export default function Page() {
+export default async function ResearchDevelopmentPage() {
+  const data = await getResearchDevelopment();
+
   return (
-    <ContentPage title="Research & Development">
-      <p>BAIC invests heavily in research and development to deliver safer, smarter, and more capable vehicles for every terrain.</p>
-    </ContentPage>
+    <SiteChrome>
+      <ResearchDevelopmentPageView data={data} />
+    </SiteChrome>
   );
 }

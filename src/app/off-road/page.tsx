@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import OffRoadPageView from "@/components/OffRoadPage";
+import { getOffRoad } from "@/lib/fetch-data";
 
 export const metadata = {
-  title: "Off-Road Vehicle | BAIC UAE",
+  title: "Off-Road Vehicles | BAIC UAE",
+  description:
+    "Discover our rugged off-road vehicles built for adventure and performance.",
 };
 
-export default function Page() {
+export default async function OffRoadPage() {
+  const data = await getOffRoad();
+
   return (
-    <ContentPage title="Off-Road Vehicle">
-      <p>BAIC off-road vehicles are engineered for capability, durability, and confidence — from desert dunes to mountain trails.</p>
-    </ContentPage>
+    <SiteChrome>
+      <OffRoadPageView data={data} />
+    </SiteChrome>
   );
 }
