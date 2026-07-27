@@ -39,7 +39,6 @@ function framesForModel(
 ): string[] {
   const frameIndex = color?.frameIndex ?? 0;
 
-  // Try catalog frameIndex first (matches live 360 colorN folders).
   const byFrameIndex = getCar360Frames(model.displayName, frameIndex);
   if (byFrameIndex && byFrameIndex.length >= 1) return byFrameIndex;
 
@@ -56,7 +55,6 @@ function framesForModel(
   return still ? [still] : [];
 }
 
-/** Keep swatches that have a matching frame pack when available; else all. */
 function colorsForModel(model: CatalogModel): CatalogColor[] {
   const available = new Set([
     ...getAvailableColorIndexes(model.displayName),
@@ -64,7 +62,6 @@ function colorsForModel(model: CatalogModel): CatalogColor[] {
   ]);
 
   if (available.size <= 1) {
-    // Only one frame pack — show a single swatch to avoid fake color changes.
     return model.colors.length
       ? [model.colors[0]]
       : [{ rgb: "#888", frameIndex: 0, previewUrl: model.vehicleUrl }];
@@ -76,18 +73,24 @@ function colorsForModel(model: CatalogModel): CatalogColor[] {
 
 export default function Car360Section() {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
-  const [activeModelIndex, setActiveModelIndex] = useState(0);
+  // Live site defaults Off-road to BJ60 (second model)
+  const [activeModelIndex, setActiveModelIndex] = useState(1);
   const [colorIndex, setColorIndex] = useState(0);
 
   const activeCategory = categories[activeCategoryIndex];
-  const activeModel = activeCategory.models[activeModelIndex];
+  const models = activeCategory.models;
+  const safeModelIndex = Math.min(activeModelIndex, Math.max(models.length - 1, 0));
+  const activeModel = models[safeModelIndex];
   const visibleColors = useMemo(
     () => colorsForModel(activeModel),
     [activeModel],
   );
-  const safeColorIndex = Math.min(colorIndex, Math.max(visibleColors.length - 1, 0));
+  const safeColorIndex = Math.min(
+    colorIndex,
+    Math.max(visibleColors.length - 1, 0),
+  );
   const activeColor = visibleColors[safeColorIndex] ?? visibleColors[0] ?? null;
-  const isSingleModel = activeCategory.models.length === 1;
+  const isSingleModel = models.length === 1;
 
   const frames = useMemo(
     () => framesForModel(activeModel, activeColor, safeColorIndex),
@@ -96,7 +99,10 @@ export default function Car360Section() {
 
   const selectCategory = (index: number) => {
     setActiveCategoryIndex(index);
-    setActiveModelIndex(0);
+    // Prefer BJ60 when switching back to Off-road
+    const nextModels = categories[index].models;
+    const bj60 = nextModels.findIndex((m) => m.displayName === "BJ60");
+    setActiveModelIndex(bj60 >= 0 ? bj60 : 0);
     setColorIndex(0);
   };
 
@@ -126,10 +132,10 @@ export default function Car360Section() {
             <ul
               className={`model-list${isSingleModel ? " model-list-single" : ""}`}
             >
-              {activeCategory.models.map((model, index) => (
+              {models.map((model, index) => (
                 <li
                   key={`${model.displayName}-${index}`}
-                  className={`model-item${index === activeModelIndex ? " active-car" : ""}`}
+                  className={`model-item${index === safeModelIndex ? " active-car" : ""}`}
                 >
                   <button
                     type="button"
@@ -146,7 +152,7 @@ export default function Car360Section() {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={model.thumbUrl}
-                          alt={model.displayName}
+                          alt=""
                           className="img-fluid"
                           loading="lazy"
                           referrerPolicy="no-referrer"
@@ -183,11 +189,14 @@ export default function Car360Section() {
               )}
             </div>
 
-            {visibleColors.length > 1 && (
+            {visibleColors.length > 0 && (
               <div className="model-color-wrap">
                 <ul className="color-list">
                   {visibleColors.map((color, index) => (
-                    <li key={`${color.rgb}-${color.frameIndex}`} className="color-item">
+                    <li
+                      key={`${color.rgb}-${color.frameIndex}`}
+                      className="color-item"
+                    >
                       <button
                         type="button"
                         className={`color-icon${index === safeColorIndex ? " active" : ""}`}
