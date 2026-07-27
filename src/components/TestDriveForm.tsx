@@ -8,12 +8,16 @@ const MODELS = [
   "BJ40 C",
   "BJ40 PRO",
   "BJ30",
+  "BJ30e Smart Hybrid",
   "BJ40 SE",
   "F40",
   "X7",
   "X55 II",
+  "X55",
   "X35",
   "U5 PLUS",
+  "Arcfox T1",
+  "Arcfox T5",
 ];
 
 export default function TestDriveForm() {

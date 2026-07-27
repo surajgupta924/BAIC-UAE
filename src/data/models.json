@@ -1,224 +1,1583 @@
 {
   "status": true,
-  "message": "Nigeria model lineup.",
+  "message": "Full BAIC UAE + Nigeria/Arcfox lineup.",
   "data": [
     {
-      "id": 101,
+      "id": 4,
+      "name": "BJ80",
+      "name_ar": "BJ80",
+      "description": "Off-Road Capability, Assured Durability, Military-Grade Quality",
+      "description_ar": "قدرة فائقة على الطُّرق الوعرة، متانة مضمونة وجودة بمعايير عسكريَّة",
+      "image1": "/images/api/bj80.png",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "905_1721914179bj80 Ã©Â»Â Ã¤Â¿Â®Ã¦ÂÂ¹_20221028110007A013.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "",
+      "power": "206 ",
+      "torque": "420",
+      "wheelbase": "2800",
+      "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "373_ar1.jpg",
+          "image_en": "498_p1.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "352_ar2.jpg",
+          "image_en": "826_p2.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "130_ar3.jpg",
+          "image_en": "647_p3.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "291_ar4.jpg",
+          "image_en": "408_11.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "306_ar5.jpg",
+          "image_en": "118_12.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "984_ar7.jpg",
+          "image_en": "217_13.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "995_ar9.jpg",
+          "image_en": "770_14.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "865_ar6.jpg",
+          "image_en": "58_15.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "706_ar8.jpg",
+          "image_en": "182_16.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
+      "advancedSections": null,
+      "categoryId": 1,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T10:59:37.000Z",
+      "updatedAt": "2025-07-17T09:26:38.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
+    },
+    {
+      "id": 5,
       "name": "BJ60",
       "name_ar": "BJ60",
-      "description": "Premium off-road SUV with theatre-grade comfort and serious capability.",
-      "description_ar": "",
+      "description": "The Infinity theatre-grade luxury sound system along with the luxurious and comfortable first-class seats, provides an experience of indulgent comfort.",
+      "description_ar": "نظام الصَّوت الفاخر بجودة السينما من انفينتي، إلى جانب المقاعد الاستثنائيَّة من الدَّرجة الأولى، تجربة لا مثيل لها من الرَّاحة والرَّفاهيَّة المطلقة.",
       "image1": "/images/api/bj60.png",
-      "image2": "/images/api/bj60.png",
-      "power": "275",
-      "torque": "390",
-      "wheelbase": "2820",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 1,
-      "modelCategory": {
-        "id": 1,
-        "name": "Off-Road",
-        "name_ar": "Off-Road"
-      },
-      "brand": "BAIC",
-      "vr_link": "",
-      "modelAndConfiguration": "",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
       "image1_description_ar": "",
+      "image2": "426_1722261542BJ40 433.png",
       "image2_title": "",
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "https://www.baicglobal.com/vrbj60/",
+      "power": "196",
+      "torque": "406",
+      "wheelbase": "2820",
       "moreSections": null,
-      "advancedSections": null,
+      "designType": "advanced",
+      "normalSections": null,
+      "advancedSections": [
+        {
+          "section1": [
+            {
+              "image_ar": "208_i11.jpg",
+              "image_en": "607_i11.jpg",
+              "title_ar": " محور عجلة مصنوع من الألمنيوم",
+              "title_en": " ALUMINIUM ALLOY WHEEL HUB",
+              "description_ar": " عجلات كبيرة الحجم مقاس 18 بوصة او 20 بوصة.",
+              "description_en": "18 inch, 20 inch oversized wheels. "
+            },
+            {
+              "image_ar": "751_i12.jpg",
+              "image_en": "583_i12.jpg",
+              "title_ar": "أضائة خلفية LED",
+              "title_en": "LED TAILLIGHTS",
+              "description_ar": "عند التشغيل، تظهر تصاميم الفوانيس التجريدية على الأقنعة العلوية والسفلية لأضواء الفرامل من الجهة الداخلية.",
+              "description_en": "After lighting up, abstract lantern patterns appear on the upper and lower brake light masks on the inner side ."
+            },
+            {
+              "image_ar": "373_i13.jpg",
+              "image_en": "819_i13.jpg",
+              "title_ar": "غطاء الزجاج الخلفي المقاوم للمطر",
+              "title_en": "RAINPROOF SPARE TIRE COVER",
+              "description_ar": "الإلهام يأتي فى دعامة سهم سور الصين العظيم",
+              "description_en": "The mortise and tenon structure reflects the beaut of traditional Chinese technology ."
+            },
+            {
+              "image_ar": "95_i14.jpg",
+              "image_en": "317_i14.jpg",
+              "title_ar": "أضواء الشبكة الأمامية",
+              "title_en": "GRILLE LIGHTS",
+              "description_ar": "يعد مصباح الشبكة ذو الخمس فتحات التجسيد الاساسي لتصميم الاضاءة كإرث الفتحات المربعة الخمسة لعائلة مركبات بايك للطرق الوعرة .",
+              "description_en": "The 'five hole' grille light is the theme of the entire vehicle lighting design ."
+            }
+          ]
+        },
+        {
+          "section2": [
+            {
+              "image_ar": "630_bj3.jpg",
+              "image_en": "617_bj3.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "716_bj4.jpg",
+              "image_en": "701_bj4.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "438_bj1.jpg",
+              "image_en": "605_bj1.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "224_bj2.jpg",
+              "image_en": "285_bj2.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section3": [
+            {
+              "image_ar": "942_i23.jpg",
+              "image_en": "562_i23.jpg",
+              "title_ar": "ربط أربع شاشات",
+              "title_en": "Four-screen linkage",
+              "description_ar": "شاشة العرض الأمامية W-HUD، الأكثر ملاءمة لسيارات الطرق الوعرة، ومسافة تصوير تصل إلى 2.2 متر.",
+              "description_en": "Off-road features W-HUD head-up display, more suitable for off-road scenarios, imaging distance up to 2.2m."
+            },
+            {
+              "image_ar": "971_i21.jpg",
+              "image_en": "912_i21.jpg",
+              "title_ar": "تصميم الحافة",
+              "title_en": "Panoramic Sunroof",
+              "description_ar": "تأتي المجموعة الكاملة بفتحة سقف بانورامية شفافة تبلغ مساحتها 0.82 مترًا مربعًا.",
+              "description_en": "The full range comes standard with a transparent panoramic skylight of 0.82m²."
+            },
+            {
+              "image_ar": "858_i22.jpg",
+              "image_en": "967_i22.jpg",
+              "title_ar": "مساحة كبيرة",
+              "title_en": "Large Space",
+              "description_ar": "7/5 مقاعد لتلبية الاحتياجات المتنوعة، مع سهولة الوصول إلى الصف الثالث (7 مقاعد).",
+              "description_en": "7/5 seats for diverse needs, with a third row of easy access (7 seats)."
+            }
+          ]
+        },
+        {
+          "section4": [
+            {
+              "image_ar": "541_aze.jpg",
+              "image_en": "711_aze.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "425_bj3.jpg",
+              "image_en": "785_bj3.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "806_bj4.jpg",
+              "image_en": "243_bj4.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "349_bj6111.jpg",
+              "image_en": "796_bj6111.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        }
+      ],
+      "categoryId": 1,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
+      "createdAt": "2025-01-14T11:23:32.000Z",
+      "updatedAt": "2025-01-14T11:23:32.000Z",
       "modelCategoryId": null,
-      "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
     },
     {
-      "id": 102,
+      "id": 6,
+      "name": "BJ40 C",
+      "name_ar": "BJ40 C",
+      "description": "All Terrain Adoption, High Load-Carrying, Part-Time 4WD System",
+      "description_ar": "قدرة على التَّكيُّف مع جميع التَّضاريس، قدرة عالية على التَّحميل، نظام دفع رباعي جزئيّ",
+      "image1": "/images/api/bj40-c.png",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "624_172232456969-1.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": null,
+      "power": "184",
+      "torque": "350",
+      "wheelbase": "2745",
+      "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "830_BJ40C1.jpg",
+          "image_en": "329_BJ40C1.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "78_BJ40C2.jpg",
+          "image_en": "544_BJ40C2.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "523_BJ40C3.jpg",
+          "image_en": "966_BJ40C3.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "374_b6.jpg",
+          "image_en": "164_b6.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "691_b7.jpg",
+          "image_en": "920_b7.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "800_b1.jpg",
+          "image_en": "272_b1.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "706_b2.jpg",
+          "image_en": "541_b2.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "503_b3.jpg",
+          "image_en": "525_b3.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
+      "advancedSections": null,
+      "categoryId": 1,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T11:33:10.000Z",
+      "updatedAt": "2025-01-14T11:33:10.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
+    },
+    {
+      "id": 7,
       "name": "BJ40 PRO",
       "name_ar": "BJ40 PRO",
-      "description": "Rugged off-roader built for adventure, durability, and everyday confidence.",
-      "description_ar": "",
+      "description": "ELEGANCE MEETS EXPEDITION",
+      "description_ar": "اكتشف باناقة",
       "image1": "/images/api/bj40-pro.png",
-      "image2": "/images/api/bj40-pro.png",
-      "power": "221",
-      "torque": "380",
-      "wheelbase": "2745",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 1,
-      "modelCategory": {
-        "id": 1,
-        "name": "Off-Road",
-        "name_ar": "Off-Road"
-      },
-      "brand": "BAIC",
-      "vr_link": "",
-      "modelAndConfiguration": "",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
       "image1_description_ar": "",
+      "image2": "964_BJ40 plus.png",
       "image2_title": "",
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "https://www.baicglobal.com/vrbj40/",
+      "power": "241 HP",
+      "torque": "390 NM",
+      "wheelbase": "2.0 D",
       "moreSections": null,
-      "advancedSections": null,
-      "meta_description": null,
-      "meta_title": null,
-      "meta_keywords": null,
+      "designType": "advanced",
+      "normalSections": null,
+      "advancedSections": [
+        {
+          "section1": [
+            {
+              "image_ar": "108_Tire hub.jpg",
+              "image_en": "255_Tire hub.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "565_4.jpg",
+              "image_en": "625_4.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "37_1.jpg",
+              "image_en": "389_1.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "265_22.jpg",
+              "image_en": "51_22.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section2": [
+            {
+              "image_ar": "891_BJ40-Front end of the car-fin-1.jpg",
+              "image_en": "919_BJ40-Front end of the car-fin-1.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "30_BJ40-3extra.jpg",
+              "image_en": "302_BJ40-3extra.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "502_BJ40-right15.jpg",
+              "image_en": "410_BJ40-right15.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "625_BJ40-2extra.jpg",
+              "image_en": "996_BJ40-2extra.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section3": [
+            {
+              "image_ar": "730_7.jpg",
+              "image_en": "96_7.jpg",
+              "title_ar": "أول خمس شاشات على الطرق الوعرة",
+              "title_en": "Five-screen Linkage",
+              "description_ar": "شاشة ترفيه للركاب مقاس 12.8 بوصة أول شاشة زر تشغيل بقياس 1.92 بوصة في العالم مزودة بشريحة 815 الأكثر تطوراً في السيارة",
+              "description_en": "12.8-inch front passenger seat entertainment screen Global initiative 1.92-inch start key screen Provide the most advanced 815 engine chip."
+            },
+            {
+              "image_ar": "766_8.jpg",
+              "image_en": "554_8.jpg",
+              "title_ar": "التصميم الداخلي التكنولوجي",
+              "title_en": "Technology Trim Molding",
+              "description_ar": "منظر مفتوح عالي الجودة ومساحة واسعة ومريحة.",
+              "description_en": "Top broad vision, wide comfortable space."
+            },
+            {
+              "image_ar": "717_6.jpg",
+              "image_en": "639_6.jpg",
+              "title_ar": "عجلة قيادة متعددة الوظائف",
+              "title_en": "Multi-functional Steering Wheel",
+              "description_ar": "ثلاثة أوضاع للتوجيه: خفيف، وقياسي، ورياضي بثلاثة أوضاع لتجربة القيادة للتحكم الإلكتروني في 4 اتجاهات: دعم تعديل كهربائي لأعلى ولأسفل، وأمامي وخلفي",
+              "description_en": "Three-gear steering feel: three modes of driving experience, including light, standard, and sports; Steering wheel memory: intelligent memory of the current position, automatic adjustment."
+            }
+          ]
+        },
+        {
+          "section4": [
+            {
+              "image_ar": "619_Front seats.jpg",
+              "image_en": "739_Front seats.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "20_Intelligent field guide welcome.jpg",
+              "image_en": "932_Intelligent field guide welcome.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "656_1212.jpg",
+              "image_en": "558_1212.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "930_BJ40-2extra.jpg",
+              "image_en": "76_BJ40-2extra.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        }
+      ],
+      "categoryId": 1,
+      "meta_description": "",
+      "meta_title": "",
+      "meta_keywords": "",
+      "createdAt": "2025-07-05T13:43:57.000Z",
+      "updatedAt": "2025-07-31T14:13:45.000Z",
       "modelCategoryId": null,
-      "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
     },
     {
-      "id": 103,
+      "id": 8,
       "name": "BJ30",
       "name_ar": "BJ30",
-      "description": "Compact off-road SUV with bold design and versatile everyday performance.",
-      "description_ar": "",
+      "description": "The BJ30 blends bold design, advanced technology, and versatile performance, delivering comfort and reliability for city drives and off-road adventures.",
+      "description_ar": "تجمع بين التصميم الجريء والتقنيات المتطورة والأداء العملي لتوفر الراحة والاعتمادية في القيادة داخل المدن وخارجها.",
       "image1": "/images/api/bj30.png",
-      "image2": "/images/api/bj30.png",
-      "power": "188",
-      "torque": "305",
-      "wheelbase": "2735",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 1,
-      "modelCategory": {
-        "id": 1,
-        "name": "Off-Road",
-        "name_ar": "Off-Road"
-      },
-      "brand": "BAIC",
-      "vr_link": "",
-      "modelAndConfiguration": "",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
       "image1_description_ar": "",
+      "image2": "545_17347674362@2x.png",
       "image2_title": "",
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "https://www.baicglobal.com/vrbj30/",
+      "power": "138",
+      "torque": "305",
+      "wheelbase": "2820",
       "moreSections": null,
-      "advancedSections": null,
+      "designType": "advanced",
+      "normalSections": null,
+      "advancedSections": [
+        {
+          "section1": [
+            {
+              "image_ar": "841_bj30-i11.jpg",
+              "image_en": "743_bj30-i11.jpg",
+              "title_ar": "ألومنيوم بلونين غطاء العجلة",
+              "title_en": "Wheel hub aluminum bicolor",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "907_bj30-i12.jpg",
+              "image_en": "198_bj30-i12.jpg",
+              "title_ar": "أضائة خلفية LED",
+              "title_en": "LED Tail Light",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "117_bj30-i14.jpg",
+              "image_en": "750_bj30-i14.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "73_bj30-i13.jpg",
+              "image_en": "508_bj30-i13.jpg",
+              "title_ar": " شريط الإضاءة النهاريّة ذو الخمس فتحات يتميّز بجاذبية تكنولوجيّة وفائدة عمليّة.",
+              "title_en": "The five-hole daytime running light belt boasts both technological appeal and practical utility",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section2": [
+            {
+              "image_ar": "463_bj30-1.jpg",
+              "image_en": "279_bj30-1.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "440_bj30-2.jpg",
+              "image_en": "920_bj30-2.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "898_bj30-3.jpg",
+              "image_en": "946_bj30-3.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "187_bj30-4.jpg",
+              "image_en": "265_bj30-4.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "479_bj30-5.jpg",
+              "image_en": "953_bj30-5.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "249_bj30-6.jpg",
+              "image_en": "346_bj30-6.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section3": [
+            {
+              "image_ar": "270_bj30-s1.jpg",
+              "image_en": "203_bj30-s1.jpg",
+              "title_ar": "نظام ATS للتحكم بجميع التضاريس",
+              "title_en": "All-terrain control system (ATS)",
+              "description_ar": "يمكن لنظام التحكم في جميع التضاريس تحسين أنظمة التحكم المختلفة في السيارة تلقائيًا حتى تتمكن السيارة من التكيف مع التضاريس المختلفة.",
+              "description_en": "The all-terrain control system can automatically optimize various control systems of the vehicle so that the vehicle can adapt to different terrains."
+            },
+            {
+              "image_ar": "502_bj30-s2.jpg",
+              "image_en": "180_bj30-s2.jpg",
+              "title_ar": " مساحة تجميع مرنة",
+              "title_en": "Flexible combination space",
+              "description_ar": "يمكن طي المقاعد الأمامية والخلفية حسب الرغبة، وهي مناسبة لسيناريوهات الاستخدام المختلفة، مما يخلق مجموعة متنوعة من مساحات الراحة.",
+              "description_en": "The front and rear seats can be reclined freely, so as to adapt to different usage scenarios, and create a versatile leisure space."
+            },
+            {
+              "image_ar": "114_bj30-s3.jpg",
+              "image_en": "179_bj30-s3.jpg",
+              "title_ar": " مساحة تجميع مرنة",
+              "title_en": "Ambient light",
+              "description_ar": "يمكن طي المقاعد الأمامية والخلفية حسب الرغبة، وهي مناسبة لسيناريوهات الاستخدام المختلفة، مما يخلق مجموعة متنوعة من مساحات الراحة.",
+              "description_en": "Explore the beauty of dynamic light and shadow interplay. The 64-color ambient light moves to the rhythm of the melody, filling each trip with technological charm."
+            }
+          ]
+        },
+        {
+          "section4": [
+            {
+              "image_ar": "59_bj30-7.jpg",
+              "image_en": "478_bj30-7.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "345_bj30-8.jpg",
+              "image_en": "888_bj30-8.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        }
+      ],
+      "categoryId": 1,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
+      "createdAt": "2025-01-14T12:14:24.000Z",
+      "updatedAt": "2025-01-14T12:26:26.000Z",
       "modelCategoryId": null,
-      "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
     },
     {
-      "id": 104,
-      "name": "BJ30e Smart Hybrid",
-      "name_ar": "BJ30e Smart Hybrid",
-      "description": "Smart hybrid efficiency with BJ30 off-road character for Nigeria roads.",
-      "description_ar": "",
-      "image1": "/images/api/bj30e.png",
-      "image2": "/images/api/bj30e.png",
-      "power": "188",
-      "torque": "305",
-      "wheelbase": "2735",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 1,
-      "modelCategory": {
-        "id": 1,
-        "name": "Off-Road",
-        "name_ar": "Off-Road"
-      },
-      "brand": "BAIC",
-      "vr_link": "",
-      "modelAndConfiguration": "",
+      "id": 9,
+      "name": "BJ40 SE",
+      "name_ar": "BJ40 SE",
+      "description": "All-Wheel Drive, Three Differential Locks, Two-Door Design",
+      "description_ar": "نظام دفع رباعيّ، ثلاثة أقفال تفاضليَّة، تصميم بابين",
+      "image1": "/images/api/bj40-se.png",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
       "image1_description_ar": "",
+      "image2": "730_17196609154.png",
       "image2_title": "",
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": null,
+      "power": "165",
+      "torque": "380",
+      "wheelbase": "2465",
       "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "975_ar21.jpg",
+          "image_en": "482_p11.png",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "185_ar22.png",
+          "image_en": "770_p12.png",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "565_ar23.png",
+          "image_en": "492_21.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "440_ar24.jpg",
+          "image_en": "449_22.png",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "886_ar25.jpg",
+          "image_en": "471_23.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "743_ar26.jpg",
+          "image_en": "632_24.png",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "406_ar27.png",
+          "image_en": "43_8I6A9239 copy 2-min.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "364_ar28.jpg",
+          "image_en": "476_8I6A9322 copy-min.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
       "advancedSections": null,
+      "categoryId": 1,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
+      "createdAt": "2025-01-14T11:47:01.000Z",
+      "updatedAt": "2025-01-31T07:30:01.000Z",
       "modelCategoryId": null,
-      "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
+    },
+    {
+      "id": 10,
+      "name": "X7",
+      "name_ar": "X7",
+      "description": "With the cool and futuristic design,deliver a gravity-defying musical experience.",
+      "description_ar": "بتصميمه الرَّائع والمستقبليّ، يقدِّم تجربة موسيقيَّة تتحدَّى الجاذبيَّة",
+      "image1": "/images/api/x7.png",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "870_17194982711.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "https://www.baicglobal.com/vrx7/",
+      "power": "138",
+      "torque": "305",
+      "wheelbase": "2800",
+      "moreSections": null,
+      "designType": "advanced",
+      "normalSections": null,
+      "advancedSections": [
+        {
+          "section1": [
+            {
+              "image_ar": "521_x1.jpg",
+              "image_en": "400_x1.jpg",
+              "title_ar": "تصميم الحافة",
+              "title_en": "Rim design",
+              "description_ar": "يستخدم محور العجلة بقياس 19 بوصة صورة لجناح طائر رقمي، بخطوط نحيفة ودقيقة وشكل ثلاثي الأبعاد من اللون الأسود الزاهي، مما يشكل توازناً قوياً بين الشخصية البارزة والتكنولوجيا والأزياء.",
+              "description_en": "The 19-inch wheel hub uses the image of a digital flying wing, with slender and delicate lines and a three dimensional shape of bright black forming a strong personality combination, highlighting technology and fashion."
+            },
+            {
+              "image_ar": "373_x2.jpg",
+              "image_en": "387_x2.jpg",
+              "title_ar": "مفهوم تصميم الجمال العاصمي",
+              "title_en": "Capital Beauty Design Concept",
+              "description_ar": "تلتزم النمذجة بلغة عائلة جمال العاصمة، مع تنقيت خطوطها المميزة في النمذجة على نطاق واسع.",
+              "description_en": "The modeling adheres to the family language of Capital Beauty, refining its unique characteristic lines in the large-scale modeling."
+            },
+            {
+              "image_ar": "414_x3.jpg",
+              "image_en": "594_x3.jpg",
+              "title_ar": "تصميم إضاءة ذيل جناح القوة",
+              "title_en": "Kylin Wing Tail Light Design",
+              "description_ar": "المصباح الخلفي الجديد يلتزم بمفهوم التصميم العام، حيث أن المصفوفة الرقمية تشبه جناح الطائر جناح كيلين.",
+              "description_en": "The new tail light adheres to the overall design concept, the Digital Matrix is like a flying wing – Kylin Wing."
+            },
+            {
+              "image_ar": "60_x4.jpg",
+              "image_en": "225_x4.jpg",
+              "title_ar": "تصميم نظام العادم الرباعي الثنائي",
+              "title_en": "Bilateral Quadruple Exhaust Design",
+              "description_ar": "تصميم العادم الثنائي الرباعي يبرز الديناميكية والقوة لـ ALL NEW X7.",
+              "description_en": "Bilateral and quadruple exhaust design highlights dynamic and power of ALL NEW X7."
+            }
+          ]
+        },
+        {
+          "section2": [
+            {
+              "image_ar": "31_all2.jpg",
+              "image_en": "292_all2.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "70_all3.jpg",
+              "image_en": "572_all3.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "549_all6.jpg",
+              "image_en": "267_all6.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "504_796_x4.jpg",
+              "image_en": "965_796_x4.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section3": [
+            {
+              "image_ar": "490_690_all12.jpg",
+              "image_en": "609_690_all12.jpg",
+              "title_ar": "التحكم المتكامل في السرعة التكيفي (IACC)",
+              "title_en": "Integrated Adaptive Cruiser Control (IACC)",
+              "description_ar": "يتكيف بذكاء مع السرعة المحددة مسبقًا ويقوم تلقائيًا بتغيير الأهداف، مما يخفف الضغط عن قدميك ويسمح بتجربة قيادة أكثر استرخاءًا.",
+              "description_en": "It intelligently adapts to the preset speed and automatically switches targets, taking the load off your feet and allowing for a more relaxed  driving experience."
+            },
+            {
+              "image_ar": "264_82_all13.jpg",
+              "image_en": "102_82_all13.jpg",
+              "title_ar": "تحذير الانحراف عن المسار",
+              "title_en": "Lane Departure Warning (LDW)",
+              "description_ar": "يهدف إلى مساعدة السائقين على تقليل خطر الانحراف غير المقصود عن المسارات في الطرق السريعة، والطرق السريعة، والطرق الرئيسية من خلال تنبيهات بصرية وصوتية.",
+              "description_en": "It aims to help drivers minimize the risk of unintended lane departures on highways, expressways, and main roads by both visual and auditory alerts."
+            },
+            {
+              "image_ar": "953_i21.jpg",
+              "image_en": "313_i21.jpg",
+              "title_ar": "الكشف عن النقطة العمياء",
+              "title_en": "Blind Spot Detection (BSD)",
+              "description_ar": "أثناء القيادة، يستخدم نظام الكشف عن نقطة العميان رادار موجات المليمتر للكشف عن نقاط العميان في الجزء الخلفي من السيارة على كلا الجانبين، مما يقلل من خطر حوادث المرور الناجمة عن نقاط العميان.",
+              "description_en": "While driving, the blind spot detection system uses millimeter-wave radar to detect blind spots at the rear of the vehicle on both sides, reducing the risk of traffic accidents caused by blind spots."
+            },
+            {
+              "image_ar": "91_all14.jpg",
+              "image_en": "315_all14.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "531_all15.jpg",
+              "image_en": "53_all15.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        },
+        {
+          "section4": [
+            {
+              "image_ar": "119_all14.jpg",
+              "image_en": "826_all14.jpg",
+              "title_ar": "تحذير التصادم الأمامي",
+              "title_en": "Forward Collision Warning (FCW)",
+              "description_ar": "يُنبه السائق من خلال تحذيرات سمعية وبصرية عندما يصبح الاقتراب من السيارة الأمامية خطيرًا، مما يساعد السائق على الحفاظ على مسافة آمنة من السيارة الأمامية ومنع حوادث الاصطدام الخلفي.",
+              "description_en": "lt alerts the driver through auditory and visual warnings when the distance to the preceding vehicle becomes dangerously close, helping the driver maintain a safe distance from the vehicle ahead and prevent rear-end collisions."
+            },
+            {
+              "image_ar": "799_all15.jpg",
+              "image_en": "604_all15.jpg",
+              "title_ar": "الفرملة الطارئة الذاتية",
+              "title_en": "Autonomous Emergency Braking (AEB)",
+              "description_ar": "يكتشف المشاة أو المركبات أمام السيارة ويصدر إنذارًا في حالة وجود خطر اصطدام. تحكم في السلامة، لا تتبع للسيارات بالقرب منك.",
+              "description_en": "Autonomous Emergency Braking (AEB)"
+            },
+            {
+              "image_ar": "718_597_all8.jpg",
+              "image_en": "758_597_all8.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            },
+            {
+              "image_ar": "288_470_658_all7.jpg",
+              "image_en": "848_470_658_all7.jpg",
+              "title_ar": "",
+              "title_en": "",
+              "description_ar": "",
+              "description_en": ""
+            }
+          ]
+        }
+      ],
+      "categoryId": 14,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T12:59:56.000Z",
+      "updatedAt": "2025-01-31T10:39:18.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 14,
+        "name": "SUV",
+        "name_ar": "سيَّارة رياضيَّة متعدِّدة الأغراض",
+        "createdAt": "2024-06-20T13:32:09.000Z",
+        "updatedAt": "2024-08-29T08:57:06.000Z"
+      },
+      "brand": "BAIC"
+    },
+    {
+      "id": 11,
+      "name": "X55 II",
+      "name_ar": "X55 II",
+      "description": "Vogue Beast Arrival",
+      "description_ar": "الوحش الأنيق",
+      "image1": "/images/api/x55.png",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "156_1722262688SUV.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "https://www.baicglobal.com/x55/?car=X6&lang=en",
+      "power": "138/5500",
+      "torque": "275/1500-4500",
+      "wheelbase": "2735",
+      "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "516_ar41.jpg",
+          "image_en": "27_41.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "670_ar42.jpg",
+          "image_en": "201_42.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "477_ar44.jpg",
+          "image_en": "411_43.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "241_ar43.jpg",
+          "image_en": "122_44.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "113_ar45.jpg",
+          "image_en": "683_441.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "81_ar46.jpg",
+          "image_en": "281_45.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "986_ar47.jpg",
+          "image_en": "481_442.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "543_ar49.jpg",
+          "image_en": "749_443.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "972_ar48.jpg",
+          "image_en": "460_46.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
+      "advancedSections": null,
+      "categoryId": 14,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T13:22:02.000Z",
+      "updatedAt": "2025-01-15T11:09:45.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 14,
+        "name": "SUV",
+        "name_ar": "سيَّارة رياضيَّة متعدِّدة الأغراض",
+        "createdAt": "2024-06-20T13:32:09.000Z",
+        "updatedAt": "2024-08-29T08:57:06.000Z"
+      },
+      "brand": "BAIC"
     },
     {
       "id": 105,
       "name": "X55",
       "name_ar": "X55",
-      "description": "Stylish compact SUV with modern tech and confident on-road manners.",
-      "description_ar": "",
+      "description": "Vogue Beast Arrival",
+      "description_ar": "الوحش الأنيق",
       "image1": "/images/api/x55.png",
-      "image2": "/images/api/x55.png",
-      "power": "188",
-      "torque": "275",
-      "wheelbase": "2650",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 14,
-      "modelCategory": {
-        "id": 14,
-        "name": "SUV",
-        "name_ar": "SUV"
-      },
-      "brand": "BAIC",
-      "vr_link": "",
-      "modelAndConfiguration": "",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
       "image1_description_ar": "",
+      "image2": "156_1722262688SUV.png",
       "image2_title": "",
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "https://www.baicglobal.com/x55/?car=X6&lang=en",
+      "power": "138/5500",
+      "torque": "275/1500-4500",
+      "wheelbase": "2735",
       "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "516_ar41.jpg",
+          "image_en": "27_41.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "670_ar42.jpg",
+          "image_en": "201_42.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "477_ar44.jpg",
+          "image_en": "411_43.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "241_ar43.jpg",
+          "image_en": "122_44.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "113_ar45.jpg",
+          "image_en": "683_441.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "81_ar46.jpg",
+          "image_en": "281_45.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "986_ar47.jpg",
+          "image_en": "481_442.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "543_ar49.jpg",
+          "image_en": "749_443.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "972_ar48.jpg",
+          "image_en": "460_46.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
       "advancedSections": null,
+      "categoryId": 14,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
+      "createdAt": "2025-01-14T13:22:02.000Z",
+      "updatedAt": "2025-01-15T11:09:45.000Z",
       "modelCategoryId": null,
-      "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "modelCategory": {
+        "id": 14,
+        "name": "SUV",
+        "name_ar": "سيَّارة رياضيَّة متعدِّدة الأغراض",
+        "createdAt": "2024-06-20T13:32:09.000Z",
+        "updatedAt": "2024-08-29T08:57:06.000Z"
+      },
+      "brand": "BAIC"
     },
     {
-      "id": 106,
-      "name": "X7",
-      "name_ar": "X7",
-      "description": "Spacious family SUV combining comfort, presence, and everyday practicality.",
-      "description_ar": "",
-      "image1": "/images/api/x7.png",
-      "image2": "/images/api/x7.png",
-      "power": "221",
-      "torque": "300",
-      "wheelbase": "2800",
+      "id": 12,
+      "name": "X35",
+      "name_ar": "X35",
+      "description": "Safe, Enjoyable, High Quality Driving Experience",
+      "description_ar": "تجربة قيادة آمنة وممتعة عالية الجودة",
+      "image1": "/images/api/617_1719497184X35.png",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "882_1719494164x35 Ã¦Â£Â_20221028110708A019.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": null,
+      "power": "110(100)",
+      "torque": "210",
+      "wheelbase": "2570",
+      "moreSections": null,
       "designType": "normal",
-      "normalSections": [],
+      "normalSections": [
+        {
+          "image_ar": "897_ar51.jpg",
+          "image_en": "54_51.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "954_ar53.jpg",
+          "image_en": "541_52.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "88_ar56.jpg",
+          "image_en": "84_53.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "627_ar52.jpg",
+          "image_en": "130_54.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "862_ar54.jpg",
+          "image_en": "928_55.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "724_ar55.jpg",
+          "image_en": "569_56.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "808_ar57.jpg",
+          "image_en": "452_58.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
+      "advancedSections": null,
       "categoryId": 14,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T13:30:27.000Z",
+      "updatedAt": "2025-01-14T13:30:27.000Z",
+      "modelCategoryId": null,
       "modelCategory": {
         "id": 14,
         "name": "SUV",
-        "name_ar": "SUV"
+        "name_ar": "سيَّارة رياضيَّة متعدِّدة الأغراض",
+        "createdAt": "2024-06-20T13:32:09.000Z",
+        "updatedAt": "2024-08-29T08:57:06.000Z"
       },
-      "brand": "BAIC",
-      "vr_link": "",
+      "brand": "BAIC"
+    },
+    {
+      "id": 13,
+      "name": "U5 PLUS",
+      "name_ar": "U5 PLUS",
+      "description": "Excellent Coefficient of Drag Performance, Library-class Quiet Cabin",
+      "description_ar": "أداء ممتاز لمعامل السَّحب، وكابينة هادئة من الطِّراز المكتبيّ الفاخر",
+      "image1": "/images/api/514_1719498232U5_PLUS.jpeg",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "481_1721889188u5-plus_20220712151444A056.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
       "modelAndConfiguration": "",
+      "vr_link": null,
+      "power": "83",
+      "torque": "142",
+      "wheelbase": "2670",
+      "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "23_U5plusar1.jpg",
+          "image_en": "132_U5plus1.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "944_U5plusar2.jpg",
+          "image_en": "940_U5plus2.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "441_U5plusar3.jpg",
+          "image_en": "90_U5plus3.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "895_U5plusar4.jpg",
+          "image_en": "362_U5plus4.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "57_U5plusar5.jpg",
+          "image_en": "103_U5plus5.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "511_U5plusar6.jpg",
+          "image_en": "355_U5plus6.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "719_U5plusar7.jpg",
+          "image_en": "829_U5plus7.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
+      "advancedSections": null,
+      "categoryId": 15,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T13:36:15.000Z",
+      "updatedAt": "2025-02-05T05:47:00.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 15,
+        "name": "Sedan",
+        "name_ar": "سيدان",
+        "createdAt": "2024-06-20T13:32:19.000Z",
+        "updatedAt": "2024-11-27T13:48:27.000Z"
+      },
+      "brand": "BAIC"
+    },
+    {
+      "id": 17,
+      "name": "F40",
+      "name_ar": "F40",
+      "description": "All-new 2.0T Robust Power, A New Generation Of Electronically Controlled Time-shared All-wheel Drive",
+      "description_ar": "قوَّة جبَّارة بمحرِّك 2.0T، وجيل جديد من نظام الدَّفع الرُّباعيّ الإلكترونيّ، المُتحكَّم فيه بالتَّوقيت الجزئيّ.",
+      "image1": "/images/api/f40.png",
+      "image1_title": "",
+      "image1_title_ar": "",
+      "image1_description": "",
+      "image1_description_ar": "",
+      "image2": "20_17194982431.png",
+      "image2_title": "",
+      "image2_title_ar": "",
+      "image2_description": "",
+      "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": null,
+      "power": "165 ",
+      "torque": "380",
+      "wheelbase": "2465",
+      "moreSections": null,
+      "designType": "normal",
+      "normalSections": [
+        {
+          "image_ar": "907_ar31.jpg",
+          "image_en": "925_32.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "856_ar34.jpg",
+          "image_en": "837_33.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "201_ar33.jpg",
+          "image_en": "47_34.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "940_ar37.jpg",
+          "image_en": "64_35.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "355_ar39.jpg",
+          "image_en": "586_36.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        },
+        {
+          "image_ar": "402_ar40.jpg",
+          "image_en": "771_37.jpg",
+          "title_ar": "",
+          "title_en": "",
+          "description_ar": "",
+          "description_en": ""
+        }
+      ],
+      "advancedSections": null,
+      "categoryId": 1,
+      "meta_description": null,
+      "meta_title": null,
+      "meta_keywords": null,
+      "createdAt": "2025-01-14T11:57:18.000Z",
+      "updatedAt": "2025-01-14T11:57:18.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة",
+        "createdAt": "2024-06-14T09:18:23.000Z",
+        "updatedAt": "2024-08-29T08:47:48.000Z"
+      },
+      "brand": "BAIC"
+    },
+    {
+      "id": 104,
+      "name": "BJ30e Smart Hybrid",
+      "name_ar": "BJ30e Smart Hybrid",
+      "description": "Smart hybrid efficiency with BJ30 off-road character.",
+      "description_ar": "",
+      "image1": "/images/api/bj30e.png",
+      "image2": "/images/api/bj30e.png",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
@@ -227,14 +1586,28 @@
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "",
+      "power": "188",
+      "torque": "305",
+      "wheelbase": "2735",
       "moreSections": null,
+      "designType": "normal",
+      "normalSections": [],
       "advancedSections": null,
+      "categoryId": 1,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
-      "modelCategoryId": null,
       "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 1,
+        "name": "Off-Road",
+        "name_ar": "مركبات الطُّرق الوعرة"
+      },
+      "brand": "BAIC"
     },
     {
       "id": 201,
@@ -244,20 +1617,6 @@
       "description_ar": "",
       "image1": "/images/api/arcfox-t1.png",
       "image2": "/images/api/arcfox-t1.png",
-      "power": "140",
-      "torque": "220",
-      "wheelbase": "2770",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 20,
-      "modelCategory": {
-        "id": 20,
-        "name": "Arcfox",
-        "name_ar": "Arcfox"
-      },
-      "brand": "Arcfox",
-      "vr_link": "",
-      "modelAndConfiguration": "",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
@@ -266,14 +1625,28 @@
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "",
+      "power": "140",
+      "torque": "220",
+      "wheelbase": "2770",
       "moreSections": null,
+      "designType": "normal",
+      "normalSections": [],
       "advancedSections": null,
+      "categoryId": 20,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
-      "modelCategoryId": null,
       "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 20,
+        "name": "Arcfox",
+        "name_ar": "Arcfox"
+      },
+      "brand": "Arcfox"
     },
     {
       "id": 202,
@@ -283,20 +1656,6 @@
       "description_ar": "",
       "image1": "/images/api/arcfox-t5.png",
       "image2": "/images/api/arcfox-t5.png",
-      "power": "200",
-      "torque": "360",
-      "wheelbase": "2840",
-      "designType": "normal",
-      "normalSections": [],
-      "categoryId": 20,
-      "modelCategory": {
-        "id": 20,
-        "name": "Arcfox",
-        "name_ar": "Arcfox"
-      },
-      "brand": "Arcfox",
-      "vr_link": "",
-      "modelAndConfiguration": "",
       "image1_title": "",
       "image1_title_ar": "",
       "image1_description": "",
@@ -305,14 +1664,28 @@
       "image2_title_ar": "",
       "image2_description": "",
       "image2_description_ar": "",
+      "modelAndConfiguration": "",
+      "vr_link": "",
+      "power": "200",
+      "torque": "360",
+      "wheelbase": "2840",
       "moreSections": null,
+      "designType": "normal",
+      "normalSections": [],
       "advancedSections": null,
+      "categoryId": 20,
       "meta_description": null,
       "meta_title": null,
       "meta_keywords": null,
-      "modelCategoryId": null,
       "createdAt": "2026-07-25T00:00:00.000Z",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "modelCategoryId": null,
+      "modelCategory": {
+        "id": 20,
+        "name": "Arcfox",
+        "name_ar": "Arcfox"
+      },
+      "brand": "Arcfox"
     }
   ],
   "code": 200

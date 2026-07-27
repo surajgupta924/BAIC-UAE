@@ -5,12 +5,17 @@
     {
       "id": 1,
       "name": "Off-Road",
-      "name_ar": "Off-Road"
+      "name_ar": "مركبات الطُّرق الوعرة"
     },
     {
       "id": 14,
       "name": "SUV",
-      "name_ar": "SUV"
+      "name_ar": "سيَّارة رياضيَّة متعدِّدة الأغراض"
+    },
+    {
+      "id": 15,
+      "name": "Sedan",
+      "name_ar": "سيدان"
     },
     {
       "id": 20,
