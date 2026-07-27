@@ -37,7 +37,6 @@ const ABOUT_LINKS = [
   { href: "/overview", label: "Overview" },
   { href: "/vision", label: "Vision" },
   { href: "/history", label: "History" },
-  { href: "/csr", label: "CSR" },
   { href: "/after-sales-service", label: "After-Sales Service" },
 ];
 
@@ -49,8 +48,6 @@ const NEWSROOM_LINKS = [
 
 const CONNECT_LINKS = [
   { href: "/contact-us", label: "Contact Us" },
-  { href: "/distributor-center", label: "Distributor Center" },
-  { href: "/multimedia", label: "Download Center" },
 ];
 
 const INNOVATION_PATHS = INNOVATION_LINKS.map((l) => l.href);

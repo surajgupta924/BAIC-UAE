@@ -82,9 +82,6 @@ export default function Footer({ homepage, models }: FooterProps) {
                     <Link href="/history">History</Link>
                   </li>
                   <li>
-                    <Link href="/">CSR</Link>
-                  </li>
-                  <li>
                     <Link href="/after-sales-service">After-Sales Service</Link>
                   </li>
                 </ul>
@@ -112,12 +109,6 @@ export default function Footer({ homepage, models }: FooterProps) {
                 <ul>
                   <li>
                     <Link href="/contact-us">Contact Us</Link>
-                  </li>
-                  <li>
-                    <Link href="/distributor-center">Distributor Center</Link>
-                  </li>
-                  <li>
-                    <Link href="/multimedia">Download Center</Link>
                   </li>
                 </ul>
               </div>
