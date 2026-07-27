@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
 import type {
   HomepageData,
   ModelCategory,
@@ -36,6 +37,7 @@ const ABOUT_LINKS = [
   { href: "/overview", label: "Overview" },
   { href: "/vision", label: "Vision" },
   { href: "/history", label: "History" },
+  { href: "/csr", label: "CSR" },
   { href: "/after-sales-service", label: "After-Sales Service" },
 ];
 
@@ -45,13 +47,20 @@ const NEWSROOM_LINKS = [
   { href: "/media-contact", label: "Media Contact" },
 ];
 
-const CONNECT_LINKS = [{ href: "/contact-us", label: "Contact Us" }];
+const CONNECT_LINKS = [
+  { href: "/contact-us", label: "Contact Us" },
+  { href: "/distributor-center", label: "Distributor Center" },
+  { href: "/multimedia", label: "Download Center" },
+];
+
+const INNOVATION_PATHS = INNOVATION_LINKS.map((l) => l.href);
 
 export default function Header({
   homepage,
   models,
   categories,
 }: HeaderProps) {
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<OpenMenu>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -86,27 +95,35 @@ export default function Header({
       .filter((block) => block.categories.length > 0);
   }, [models, categories]);
 
-  const DropdownLinks = ({
+  const innovationActive =
+    INNOVATION_PATHS.some((path) => pathname?.startsWith(path)) ||
+    openMenu === "innovation";
+
+  const MegaLinks = ({
     id,
     links,
   }: {
-    id: string;
+    id: OpenMenu;
     links: { href: string; label: string }[];
   }) =>
     openMenu === id ? (
-      <ul className="dropdown-menu show" aria-labelledby={`dropdown-${id}`}>
-        {links.map((link) => (
-          <li key={link.href}>
+      <div
+        className="dropdown-menu megamenu show"
+        aria-labelledby={`dropdown-${id}`}
+      >
+        <div className="dropdown-links">
+          {links.map((link) => (
             <Link
-              className="dropdown-item"
+              key={link.href}
+              className={`dropdown-item${pathname === link.href ? " is-active" : ""}`}
               href={link.href}
               onClick={closeAll}
             >
               {link.label}
             </Link>
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+      </div>
     ) : null;
 
   return (
@@ -140,7 +157,7 @@ export default function Header({
           >
             <ul className="navbar-nav m-auto">
               <li
-                className="nav-item dropdown spacedItems"
+                className={`nav-item dropdown spacedItems${openMenu === "models" ? " show" : ""}`}
                 onMouseEnter={() => setOpenMenu("models")}
                 onMouseLeave={() => setOpenMenu(null)}
               >
@@ -165,7 +182,10 @@ export default function Header({
                         <div key={brand} className="carmodels-brand">
                           <h3 className="brand-heading">{brand}</h3>
                           {brandCats.map((cat) => (
-                            <div key={`${brand}-${cat.id}`} className="carmodels-type">
+                            <div
+                              key={`${brand}-${cat.id}`}
+                              className="carmodels-type"
+                            >
                               <h4>{cat.name}</h4>
                               <div className="row">
                                 {cat.models.map((model) => (
@@ -200,7 +220,7 @@ export default function Header({
               </li>
 
               <li
-                className="nav-item dropdown spacedItems"
+                className={`nav-item dropdown spacedItems${innovationActive ? " show" : ""}`}
                 onMouseEnter={() => setOpenMenu("innovation")}
                 onMouseLeave={() => setOpenMenu(null)}
               >
@@ -216,11 +236,11 @@ export default function Header({
                 >
                   Innovation
                 </button>
-                <DropdownLinks id="innovation" links={INNOVATION_LINKS} />
+                <MegaLinks id="innovation" links={INNOVATION_LINKS} />
               </li>
 
               <li
-                className="nav-item dropdown spacedItems"
+                className={`nav-item dropdown spacedItems${openMenu === "about" ? " show" : ""}`}
                 onMouseEnter={() => setOpenMenu("about")}
                 onMouseLeave={() => setOpenMenu(null)}
               >
@@ -234,11 +254,11 @@ export default function Header({
                 >
                   About
                 </button>
-                <DropdownLinks id="about" links={ABOUT_LINKS} />
+                <MegaLinks id="about" links={ABOUT_LINKS} />
               </li>
 
               <li
-                className="nav-item dropdown spacedItems"
+                className={`nav-item dropdown spacedItems${openMenu === "newsroom" ? " show" : ""}`}
                 onMouseEnter={() => setOpenMenu("newsroom")}
                 onMouseLeave={() => setOpenMenu(null)}
               >
@@ -254,11 +274,11 @@ export default function Header({
                 >
                   Newsroom
                 </button>
-                <DropdownLinks id="newsroom" links={NEWSROOM_LINKS} />
+                <MegaLinks id="newsroom" links={NEWSROOM_LINKS} />
               </li>
 
               <li
-                className="nav-item dropdown spacedItems"
+                className={`nav-item dropdown spacedItems${openMenu === "connect" ? " show" : ""}`}
                 onMouseEnter={() => setOpenMenu("connect")}
                 onMouseLeave={() => setOpenMenu(null)}
               >
@@ -272,7 +292,7 @@ export default function Header({
                 >
                   Connect
                 </button>
-                <DropdownLinks id="connect" links={CONNECT_LINKS} />
+                <MegaLinks id="connect" links={CONNECT_LINKS} />
               </li>
 
               <li className="nav-item navredhover spacedItems">
