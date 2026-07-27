@@ -1,6 +1,7 @@
 import type {
   CapitalBeautyData,
   ConceptCarData,
+  HistoryItem,
   HomepageData,
   ModelCategory,
   ModelColor,
@@ -18,6 +19,7 @@ import modelsFile from "@/data/models.json";
 import categoriesFile from "@/data/categories.json";
 import capitalFile from "@/data/capital.json";
 import conceptCarFile from "@/data/concept-car.json";
+import historyFile from "@/data/history.json";
 import offRoadFile from "@/data/off-road.json";
 import overviewFile from "@/data/overview.json";
 import researchFile from "@/data/research-development.json";
@@ -84,6 +86,13 @@ export async function getVision(): Promise<VisionItem[]> {
   return fetchWithFallback<VisionItem[]>(
     "vision",
     (visionFile as { data: VisionItem[] }).data,
+  );
+}
+
+export async function getHistory(): Promise<HistoryItem[]> {
+  return fetchWithFallback<HistoryItem[]>(
+    "history",
+    (historyFile as { data: HistoryItem[] }).data,
   );
 }
 

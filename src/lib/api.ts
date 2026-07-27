@@ -143,6 +143,14 @@ export interface ResearchDevelopmentData {
   section14_image: string;
 }
 
+export interface HistoryItem {
+  id: number;
+  year: string;
+  description: string;
+  description_ar?: string;
+  image: string;
+}
+
 export interface VisionItem {
   id: number;
   title: string;

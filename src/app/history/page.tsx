@@ -1,13 +1,19 @@
-import { ContentPage } from "@/components/ContentPage";
+import SiteChrome from "@/components/SiteChrome";
+import HistoryPageView from "@/components/HistoryPage";
+import { getHistory } from "@/lib/fetch-data";
 
 export const metadata = {
-  title: "BAIC History | BAIC UAE",
+  title: "History | BAIC UAE",
+  description:
+    "Find the best Chinese car brands at BAIC. Quality, innovation, and reliability in every vehicle.",
 };
 
-export default function Page() {
+export default async function HistoryPage() {
+  const items = await getHistory();
+
   return (
-    <ContentPage title="BAIC History">
-      <p>From its roots in Beijing to a global footprint, BAIC's history is defined by engineering ambition and continuous innovation.</p>
-    </ContentPage>
+    <SiteChrome>
+      <HistoryPageView items={items} />
+    </SiteChrome>
   );
 }
