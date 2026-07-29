@@ -1,0 +1,366 @@
+[
+  {
+    "name": "Off-road",
+    "models": [
+      {
+        "title": "BJ80",
+        "displayName": "BJ80",
+        "stripLabel": "BJ80",
+        "thumbUrl": "/images/car360-thumbs/BJ80.png",
+        "vehicleUrl": "/images/car360-thumbs/BJ80.png",
+        "colors": [
+          {
+            "rgb": "#060606",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/BJ80/color0.png"
+          },
+          {
+            "rgb": "#FBFAFA",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360-colors/BJ80/color1.png"
+          },
+          {
+            "rgb": "#A11616",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360-colors/BJ80/color2.png"
+          },
+          {
+            "rgb": "#14475F",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/BJ80/color3.png"
+          }
+        ]
+      },
+      {
+        "title": "BJ60",
+        "displayName": "BJ60",
+        "stripLabel": "BJ60",
+        "thumbUrl": "/images/car360-thumbs/BJ60.png",
+        "vehicleUrl": "/images/car360-thumbs/BJ60.png",
+        "colors": [
+          {
+            "rgb": "#8195A6",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/BJ60/color0.png"
+          },
+          {
+            "rgb": "#E8E8E8",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360-colors/BJ60/color1.png"
+          },
+          {
+            "rgb": "#2A2A2A",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360-colors/BJ60/color2.png"
+          },
+          {
+            "rgb": "#0A0A0A",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/BJ60/color3.png"
+          },
+          {
+            "rgb": "#1A1A2A",
+            "frameIndex": 4,
+            "previewUrl": "/images/car360-colors/BJ60/color4.png"
+          },
+          {
+            "rgb": "#1A2A1A",
+            "frameIndex": 5,
+            "previewUrl": "/images/car360-colors/BJ60/color5.png"
+          }
+        ]
+      },
+      {
+        "title": "BJ40 PLUS",
+        "displayName": "BJ40 C",
+        "stripLabel": "BJ40 C",
+        "thumbUrl": "/images/car360-thumbs/BJ40-C.png",
+        "vehicleUrl": "/images/car360-thumbs/BJ40-C.png",
+        "colors": [
+          {
+            "rgb": "#BC1D04",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/BJ40-PRO/color0.png"
+          },
+          {
+            "rgb": "#2A2929",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/BJ40-PRO/color3.png"
+          },
+          {
+            "rgb": "#7E8C9F",
+            "frameIndex": 4,
+            "previewUrl": "/images/car360-colors/BJ40-PRO/color4.png"
+          },
+          {
+            "rgb": "#193346",
+            "frameIndex": 5,
+            "previewUrl": "/images/car360-colors/BJ40-PRO/color5.png"
+          },
+          {
+            "rgb": "#364234",
+            "frameIndex": 6,
+            "previewUrl": "/images/car360-colors/BJ40-PRO/color6.png"
+          }
+        ]
+      },
+      {
+        "title": "BJ40 SE",
+        "displayName": "BJ40 SE",
+        "stripLabel": "BJ40 SE",
+        "thumbUrl": "/images/car360-thumbs/BJ40-SE.png",
+        "vehicleUrl": "/images/car360-thumbs/BJ40-SE.png",
+        "colors": [
+          {
+            "rgb": "#C40F0F",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/BJ40-SE/color0.png"
+          },
+          {
+            "rgb": "#030303",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360-colors/BJ40-SE/color1.png"
+          },
+          {
+            "rgb": "#F8F8F8",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360-colors/BJ40-SE/color2.png"
+          },
+          {
+            "rgb": "#404E45",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/BJ40-SE/color3.png"
+          },
+          {
+            "rgb": "#B9C9E2",
+            "frameIndex": 4,
+            "previewUrl": "/images/car360-colors/BJ40-SE/color4.png"
+          },
+          {
+            "rgb": "#193346",
+            "frameIndex": 5,
+            "previewUrl": "/images/car360-colors/BJ40-SE/color5.png"
+          }
+        ]
+      },
+      {
+        "title": "F40",
+        "displayName": "F40",
+        "stripLabel": "F40",
+        "thumbUrl": "/images/car360-thumbs/F40.png",
+        "vehicleUrl": "/images/car360-thumbs/F40.png",
+        "colors": [
+          {
+            "rgb": "#BF0808",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/F40/color0.png"
+          },
+          {
+            "rgb": "#F8F8F8",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360-colors/F40/color1.png"
+          },
+          {
+            "rgb": "#BACBE2",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360-colors/F40/color2.png"
+          },
+          {
+            "rgb": "#101011",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/F40/color3.png"
+          },
+          {
+            "rgb": "#55674A",
+            "frameIndex": 4,
+            "previewUrl": "/images/car360-colors/F40/color4.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SUV",
+    "models": [
+      {
+        "title": "ALL NEW X7",
+        "displayName": "X7",
+        "stripLabel": "X7",
+        "thumbUrl": "/images/car360-thumbs/X7.png",
+        "vehicleUrl": "/images/car360-thumbs/X7.png",
+        "colors": [
+          {
+            "rgb": "#6A6A6A",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/X7/color0.png"
+          },
+          {
+            "rgb": "#101010",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360-colors/X7/color1.png"
+          },
+          {
+            "rgb": "#F0F0F0",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360-colors/X7/color2.png"
+          },
+          {
+            "rgb": "#303030",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/X7/color3.png"
+          },
+          {
+            "rgb": "#B0B0B0",
+            "frameIndex": 4,
+            "previewUrl": "/images/car360-colors/X7/color4.png"
+          },
+          {
+            "rgb": "#2A2A2A",
+            "frameIndex": 5,
+            "previewUrl": "/images/car360-colors/X7/color5.png"
+          },
+          {
+            "rgb": "#C0C0C0",
+            "frameIndex": 6,
+            "previewUrl": "/images/car360-colors/X7/color6.png"
+          }
+        ]
+      },
+      {
+        "title": "X55 II",
+        "displayName": "X55 II",
+        "stripLabel": "X55 II",
+        "thumbUrl": "/images/car360-thumbs/X55.png",
+        "vehicleUrl": "/images/car360-thumbs/X55.png",
+        "colors": [
+          {
+            "rgb": "#F6F30A",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-colors/X55/color0.png"
+          },
+          {
+            "rgb": "#D21313",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360-colors/X55/color1.png"
+          },
+          {
+            "rgb": "#29B7A4",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360-colors/X55/color2.png"
+          },
+          {
+            "rgb": "#424344",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360-colors/X55/color3.png"
+          },
+          {
+            "rgb": "#B1B3B4",
+            "frameIndex": 4,
+            "previewUrl": "/images/car360-colors/X55/color4.png"
+          },
+          {
+            "rgb": "#F2F5F7",
+            "frameIndex": 5,
+            "previewUrl": "/images/car360-colors/X55/color5.png"
+          }
+        ]
+      },
+      {
+        "title": "X35",
+        "displayName": "X35",
+        "stripLabel": "X35",
+        "thumbUrl": "/images/car360-thumbs/X35.png",
+        "vehicleUrl": "/images/car360-thumbs/X35.png",
+        "colors": [
+          {
+            "rgb": "#C91D1D",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360/X35/color0/0.png"
+          },
+          {
+            "rgb": "#FEF9F9",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360/X35/color1/0.png"
+          },
+          {
+            "rgb": "#1C61D0",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360/X35/color2/0.png"
+          },
+          {
+            "rgb": "#480808",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360/X35/color3/0.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sedan",
+    "models": [
+      {
+        "title": "U5 PLUS",
+        "displayName": "U5 PLUS",
+        "stripLabel": "U5 PLUS",
+        "thumbUrl": "/images/car360-thumbs/U5-PLUS.png",
+        "vehicleUrl": "/images/car360-thumbs/U5-PLUS.png",
+        "colors": [
+          {
+            "rgb": "#CBCBCB",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360/U5-PLUS/color0/0.png"
+          },
+          {
+            "rgb": "#F0F2F5",
+            "frameIndex": 1,
+            "previewUrl": "/images/car360/U5-PLUS/color1/0.png"
+          },
+          {
+            "rgb": "#060606",
+            "frameIndex": 2,
+            "previewUrl": "/images/car360/U5-PLUS/color2/0.png"
+          },
+          {
+            "rgb": "#BB1A1A",
+            "frameIndex": 3,
+            "previewUrl": "/images/car360/U5-PLUS/color3/0.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arcfox",
+    "models": [
+      {
+        "title": "Arcfox T1",
+        "displayName": "Arcfox T1",
+        "stripLabel": "Arcfox T1",
+        "thumbUrl": "/images/car360-thumbs/Arcfox-T1.png",
+        "vehicleUrl": "/images/car360-thumbs/Arcfox-T1.png",
+        "colors": [
+          {
+            "rgb": "#7BA8C4",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-hq/Arcfox-T1/color0/0.png"
+          }
+        ]
+      },
+      {
+        "title": "Arcfox T5",
+        "displayName": "Arcfox T5",
+        "stripLabel": "Arcfox T5",
+        "thumbUrl": "/images/car360-thumbs/Arcfox-T5.png",
+        "vehicleUrl": "/images/car360-thumbs/Arcfox-T5.png",
+        "colors": [
+          {
+            "rgb": "#8BB4C8",
+            "frameIndex": 0,
+            "previewUrl": "/images/car360-hq/Arcfox-T5/color0/0.png"
+          }
+        ]
+      }
+    ]
+  }
+]

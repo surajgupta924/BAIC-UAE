@@ -1,0 +1,32 @@
+{
+  "data": {
+    "id": 1,
+    "bannerImage": "776_1723445671-1.png",
+    "bannerTitle": "Off Road",
+    "bannerTitle_ar": "مركبات الطُّرق الوعرة",
+    "bannerDescription": "Strength determination and endurance",
+    "bannerDescription_ar": "قوَّة، عزيمة وتحمُّل",
+    "image1": "375_1718954748verification-ability.png",
+    "image1Title": "Engineering Verification Ability",
+    "image1Title_ar": "قدرة التَّحقُّق الهندسيّ",
+    "image1Description": "Capable of testing and verifying functions, performance, reliability, durability, and environmental adaptability of components, systems, and complete vehicles, with CNAS certification obtained.\r\n\r\nOur professional trial production workshop features a comprehensive verification process, producing up to 500 trial, special, and modified prototype cars annually, leading in China.\r\n\r\nOur big data intelligent analysis platform enables rapid and accurate extraction of valuable information from massive data, successfully applied across various vehicle research and development processes.",
+    "image1Description_ar": "عبر السَّنوات طوَّرت BAIC قدراتها على الاِختبار والتَّحقُّق من الوظائف، الأداء، المتانة، التَّكيُّف البيئيّ للعناصر والأنظمة للمركبات الكاملة، خاصَّةً مع حصولها على شهادة .CNAS تتميَّز ورشة الإنتاج التَّجريبيّ للشَّركة بعمليَّة تحقُّق شاملة، حيث يتمّ إنتاج ما يصل إلى 500 سيَّارة نموذجيَّة تجريبيَّة خاصَّة ومعدَّلة سنويًّا، ممَّا يجعلنا الرائدين في مجالنا في الصِّين. منصَّة التَّحليل الذَّكيّ للبيانات الضَّخمة لدينا، تمكِّننا من استخراج المعلومات القيِّمة بسرعة ودقَّة، وتطبيقها بنجاح عبر مختلف عمليَّات البحث والتَّطوير للمركبات.",
+    "image1MainDescription": "Comprehensive application of computer-aided development methods\r\n\r\nln-depth integration of simulation analysis with design and experimental verification\r\n\r\nThe integration of the system such as component level, system level, and vehicle level is a comprehensive integration of virtual and reality. ",
+    "image1MainDescription_ar": "تشمل عمليَّات التَّحقُّق الهندسيّ لدينا:\r\n-\tتطبيق شامل لأساليب التَّطوير المدعومة بالحاسوب. \r\n-\tدمج عميق بين تحليل المحاكاة والتَّصميم والتَّحقُّق التَّجريبيّ. \r\n-\tدمج النِّظام على مستويات متعدِّدة مثل مستوى العناصر، مستوى النِّظام، ومستوى المركبة، وهو دمج شامل بين الواقع الافتراضيّ والحقيقيّ.\r\n",
+    "image2": "418_1718954749production-ability.png",
+    "image2Title": "VEHICLE PRODUCTION ABILITY",
+    "image2Title_ar": "قدرة إنتاج المركبات",
+    "image2Description": "The off-road vehicle factory has an overall construction area of 240,000 square meters and an annual production capacity of 100,000 vehicles, and won the\"National Green Factory\", \"China's Best Factory Digital Competition Excellence Award\"",
+    "image2Description_ar": "يمتدّ مصنع مركبات الطُّرق الوعرة (Off-road) على مساحة بناء إجماليَّة تبلغ 240,000 متر مربَّع، ويتمتَّع بطاقة إنتاجيَّة سنويَّة تصل إلى 100,000 مركبة. وقد فاز بجوائز \"المصنع الأخضر الوطنيّ\" و\"جائزة التَّميُّز في المنافسة الرَّقميَّة لأفضل مصنع في الصِّين\".",
+    "image3": "299_1718614797design-reliability.png",
+    "image3Title": "High Designed Reliability",
+    "image3Title_ar": "تصميم موثوق عالي الجودة",
+    "image3Description": "The off-road vehicle factory has also developed 28 methods for analyzing and extracting load spectra under limit and typical working conditions, combining dynamic and static loads. Additionally, it has innovated 35 high-reliability structures, such as the opening and closing parts structure and the whole vehicle locking system.\r\nEstablishing virtual and physical tests using a multi-level test platform and method has enabled the proactive design of highly reliable off-road vehicles. \r\nBasics off-road vehicle base tests have significantly increased the average mileage between failures from 1,200 km to 7,536 km, surpassing international standards for similar products.",
+    "image3Description_ar": "طوَّر مصنع مركبات الطُّرق الوعرة 28 طريقة لتحليل واستخراج أطياف الأحمال تحت ظروف عمل قصوى ونموذجيَّة، مدمجًا ما بين الأحمال الدِّيناميكيَّة والثَّابتة. بالإضافة إلى ذلك، فقد ابتكر 35 هيكلاً عالي الموثوقيَّة، مثل هياكل أجزاء الفتح والإغلاق ونظام قفل السَّيَّارة بالكامل. كما أسَّس المصنع اختبارات افتراضيَّة ومادِّية باستخدام منصَّة اختبار ومنهج متعدِّد المستويات ممَّا أدَّى إلى ابتكار تصميم استباقيّ لمركبات الطُّرق الوعرة باعتماديَّة عالية للغاية. أساسيَّات اختبار قاعدة المركبات على الطُّرق الوعرة زادت بشكلٍ كبير من متوسِّط الأميال بين 1200 كم إلى 7536 كم، متجاوزًا المعايير الدَّوليَّة للمنتجات المماثلة.",
+    "meta_description": null,
+    "meta_title": null,
+    "meta_keywords": null,
+    "createdAt": "2024-06-14T06:03:23.000Z",
+    "updatedAt": "2025-07-17T09:28:23.000Z"
+  }
+}

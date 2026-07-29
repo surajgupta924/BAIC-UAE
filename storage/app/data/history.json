@@ -1,0 +1,139 @@
+{
+  "data": [
+    {
+      "id": 18,
+      "year": "2022",
+      "description": "Selected in Fortune Global 500 for ten years consecutively.",
+      "description_ar": "تمَّ اختيار BAIC ضمن قائمة فورتشن العالميَّة لأفضل 500 شركة، لمدَّة عشر سنوات متتالية.",
+      "image": "474_1719493252Ã§ÂÂ»Ã¦ÂÂ¿_13_20231227100808A012.jpeg",
+      "createdAt": "2024-06-25T09:48:34.000Z",
+      "updatedAt": "2025-01-15T08:34:07.000Z"
+    },
+    {
+      "id": 19,
+      "year": "2021",
+      "description": "BAIC licensed the technology and relevant intellectual property of BE21 platform structure to Steyr USA LLC.",
+      "description_ar": "عملت شركة BAIC على ترخيص تقنيَّة وحقوق الملكية الفكريَّة المتعلِّقة بهيكل منصَّة BE21 لشركة Steyr USA LLC.   ",
+      "image": "761_17194933282021.jpeg",
+      "createdAt": "2024-06-25T09:48:46.000Z",
+      "updatedAt": "2025-01-15T08:34:23.000Z"
+    },
+    {
+      "id": 20,
+      "year": "2020",
+      "description": "Foton deepened cooperation with Daimler, and the localization of Mercedes-Benz heavy trucks was officially landed.",
+      "description_ar": "قامت شركة Foton بتعميق التَّعاون مع شركة Daimler، وتمَّ إطلاق عمليَّة توطين شاحنات مرسيدس-بنز الثَّقيلة رسميًّا.",
+      "image": "488_1719308980timeline.png",
+      "createdAt": "2024-06-25T09:49:41.000Z",
+      "updatedAt": "2025-01-15T08:34:40.000Z"
+    },
+    {
+      "id": 21,
+      "year": "2018",
+      "description": "BAIC GROUP and MAGNA signed a strategic cooperation agreement to establish a joint venture and bulid up a high-end BEV R&D and manufacturing base. At the same time, BAIC Group ranks 124th in Fortune Global 500.",
+      "description_ar": "وقَّعت مجموعة BAIC وشركة MAGNA على اتِّفاقيَّة تعاون استراتيجيّ لتأسيس مشروع مشترك، وبناء قاعدة للبحث والتَّطوير والتَّصنيع للمركبات الكهربائيَّة الفاخرة. واحتلَّت إذ ذاك مجموعة BAIC المرتبة 124 في قائمة فورتشن العالميَّة لأفضل 500 شركة.",
+      "image": "939_17194934452018.jpeg",
+      "createdAt": "2024-06-25T09:49:52.000Z",
+      "updatedAt": "2025-01-15T08:35:02.000Z"
+    },
+    {
+      "id": 22,
+      "year": "2017",
+      "description": "BJ80 used again as the president's vehicle at the military parade to mark the 90th Anniversary of PLA.",
+      "description_ar": "مركَبَة BJ80 تتألَّق مرَّة أخرى، وتستخدم سيَّارةً للرَّئيس في العرض العسكريّ بمناسبة الذِّكرى التِّسعين لتأسيس جيش التَّحرير الشعبي.",
+      "image": "282_17194934892017.jpeg",
+      "createdAt": "2024-06-25T09:50:00.000Z",
+      "updatedAt": "2025-01-15T08:35:11.000Z"
+    },
+    {
+      "id": 23,
+      "year": "2016",
+      "description": "A 35% stake in Fujian Benz was acquired.",
+      "description_ar": "استحوذت BAIC على حصَّة قيمتها 35٪ من شركة فوجيان بنز.",
+      "image": "672_1719493542Ã§ÂÂ»Ã¦ÂÂ¿_6_20231226165124A052.jpeg",
+      "createdAt": "2024-06-25T09:50:36.000Z",
+      "updatedAt": "2025-01-15T08:36:10.000Z"
+    },
+    {
+      "id": 24,
+      "year": "2013",
+      "description": "BAIC INTL was officially established.",
+      "description_ar": "تمَّ تأسيس شركة BAIC الدَّوليَّة رسميًّا.",
+      "image": "381_1719493580Ã§ÂÂ»Ã¦ÂÂ¿_5_20231226165023A049.jpeg",
+      "createdAt": "2024-06-25T09:50:48.000Z",
+      "updatedAt": "2025-01-15T08:36:26.000Z"
+    },
+    {
+      "id": 25,
+      "year": "2010",
+      "description": "100% of Inalfa's shares were successfully acquired.",
+      "description_ar": "تمّ الاستحواذ بنجاح على 100٪ من أسهم شركة Inalfa.",
+      "image": "460_1719493721Ã§ÂÂ»Ã¦ÂÂ¿_4_20231226164939A046.jpeg",
+      "createdAt": "2024-06-25T09:51:44.000Z",
+      "updatedAt": "2025-01-15T08:36:44.000Z"
+    },
+    {
+      "id": 26,
+      "year": "2009",
+      "description": "BAIC Group has successfully acquired the intellectual property rights of Sweden's Saab.",
+      "description_ar": "نجحت مجموعة BAIC في الاستحواذ على حقوق الملكيَّة الفكريَّة لشركة ساب السُّويديَّة.",
+      "image": "245_1719493741Ã§ÂÂ»Ã¦ÂÂ¿_3_20231226164243A043.jpeg",
+      "createdAt": "2024-06-27T13:09:02.000Z",
+      "updatedAt": "2025-01-15T08:37:10.000Z"
+    },
+    {
+      "id": 27,
+      "year": "2003",
+      "description": "BAIC Group and DaimlerChrysler signed a strategic cooperation framework agreement.",
+      "description_ar": "وقعت مجموعة BAIC مع شركة دايملر كرايسلر اتفاقيَّة نمودجيَّة للتَّعاون الاستراتيجيّ.",
+      "image": "501_1719493774Ã§ÂÂ»Ã¦ÂÂ¿_7_20231226164110A040.jpeg",
+      "createdAt": "2024-06-27T13:09:34.000Z",
+      "updatedAt": "2025-01-15T08:37:31.000Z"
+    },
+    {
+      "id": 28,
+      "year": "2002",
+      "description": "BAIC Group and Hyundai Motor Company signed a comprehensive strategic cooperation.",
+      "description_ar": "وقَّعت مجموعة BAIC  مع شركة هيونداي موتور اتفاقيَّة تعاون استراتيجيّ شامل.",
+      "image": "218_1719493800Ã§ÂÂ»Ã¦ÂÂ¿_2_20231226163954A037.jpeg",
+      "createdAt": "2024-06-27T13:10:00.000Z",
+      "updatedAt": "2025-01-15T08:37:55.000Z"
+    },
+    {
+      "id": 29,
+      "year": "1996",
+      "description": "Foton Motor Co.,Ltd. was established , which ranks first in the world in terms of commercial vehicle sales.",
+      "description_ar": "تأسَّست شركة فوتون موتور المحدودة، الَّتي تحتلّ المرتبة الأولى عالميًّا من حيث مبيعات المركبات التِّجاريَّة.",
+      "image": "906_1719493827Ã§ÂÂ»Ã¦ÂÂ¿_1_20231226163748A034.jpeg",
+      "createdAt": "2024-06-27T13:10:27.000Z",
+      "updatedAt": "2025-01-15T08:38:20.000Z"
+    },
+    {
+      "id": 30,
+      "year": "1983",
+      "description": "Beijing Jeep Joint venture, the first Sino-foreign joint venture for the complete vehicle manufacturing was established.",
+      "description_ar": "تمَّ تأسيس مشروع بكين جيب المشترك، وهو أوَّل مشروع مشترك بين الصِّين ودولة أجنبيَّة لتصنيع المركبات الكاملة.",
+      "image": "151_1719493859Ã§ÂÂ»Ã¦ÂÂ¿_1_Ã¦ÂÂ·Ã¨Â´Â_20231226163532A031.jpeg",
+      "createdAt": "2024-06-27T13:10:59.000Z",
+      "updatedAt": "2025-01-15T08:38:41.000Z"
+    },
+    {
+      "id": 31,
+      "year": "1966",
+      "description": "BJ212 off-road vehicle independently developed by BAIC was offcially put into production.",
+      "description_ar": "تمَّ رسميًّا البدء بإنتاج مركبة BJ212 للطُّرق الوعرة، الَّتي عملت شركة BAIC على تطويرها بشكل مستقلّ.",
+      "image": "694_1719493894Ã§ÂÂ»Ã¦ÂÂ¿_14_20231226163353A028.jpeg",
+      "createdAt": "2024-06-27T13:11:34.000Z",
+      "updatedAt": "2025-01-15T08:38:58.000Z"
+    },
+    {
+      "id": 32,
+      "year": "1958",
+      "description": "“Jinggangshan” was born as BAIC’s first sedan.",
+      "description_ar": "ولدت سيارة \"جينغ قانغشان \"Jinggangshan كأوَّل سيَّارة سيدان من إنتاج شركة BAIC.",
+      "image": "410_1719493955Ã§ÂÂ»Ã¦ÂÂ¿_15_20231226162517A025.jpeg",
+      "createdAt": "2024-06-27T13:12:36.000Z",
+      "updatedAt": "2025-01-15T08:39:14.000Z"
+    }
+  ]
+}

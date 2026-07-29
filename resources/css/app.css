@@ -1,0 +1,887 @@
+/* BAIC Nigeria — Laravel/Inertia app styles */
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.habetlouta {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.car-360-iframe-wrap {
+  margin-top: 54px;
+  position: relative;
+  z-index: 1;
+}
+
+.responsive-iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  height: 1296px;
+  margin-top: 0;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .car-360-iframe-wrap {
+    margin-top: 32px;
+  }
+
+  .responsive-iframe {
+    height: 920px;
+  }
+}
+
+.section-beauty img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.section-beauty .beauty-info h2,
+.section-beauty .beauty-info h4 {
+  text-shadow: none;
+}
+
+.section-banner {
+  margin-bottom: 0;
+  overflow: visible !important;
+  position: relative;
+  z-index: 2;
+}
+
+.section-banner,
+.section-banner .slider-banner,
+.section-banner .swiper,
+.section-banner .swiper-wrapper,
+.section-banner .swiper-slide {
+  height: 100vh;
+}
+
+.section-banner .swiper-slide {
+  position: relative;
+}
+
+.section-banner .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom !important;
+}
+
+.section-banner .swiper-pagination {
+  z-index: 5;
+}
+
+.service-image img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.service-box:hover .service-image img,
+.service-box:focus .service-image img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .service-image img {
+    height: auto;
+  }
+
+  .service-box h3 {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+.news-article-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 24px;
+}
+
+.news-article-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.news-article-card .article-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.news-article-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.model-color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.model-color-dot.active {
+  border-color: #dc1717;
+  box-shadow: 0 0 0 2px #dc1717;
+}
+
+.category-tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #888;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.category-tab-btn.active {
+  border-bottom-color: #dc1717;
+  color: #111;
+  font-weight: 600;
+}
+
+.car-360-viewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.car-360-viewer.is-dragging {
+  cursor: grabbing;
+}
+
+.car-360-stage-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-360-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 92%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.car-360-frame.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.car-360-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.car-360-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sliderModels .color-list .color-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.sliderModels .color-item.active .color-icon {
+  border-color: #dc1717;
+  box-shadow: 0 0 0 2px #dc1717;
+}
+
+.sliderModels .thumb-model-btn {
+  cursor: pointer;
+}
+
+.sliderModels .thumb-model-btn .carname1 {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: auto;
+}
+
+.sliderModels .swiper-slide-thumb-active .carname1 {
+  color: #111;
+  font-weight: 700;
+}
+
+/* Omni Auto pre-header + nav alignment */
+.pre-header {
+  background: #111;
+  color: #fff;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.pre-header-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 38px;
+  padding-bottom: 0.4rem;
+  padding-top: 0.4rem;
+}
+
+.pre-header-link {
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pre-header-link:hover,
+.pre-header-link:focus {
+  color: #e31837;
+}
+
+.pre-header-mark {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-header .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.site-header .navbar-nav {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+.site-header .navbar-brand.logo img {
+  max-height: 48px;
+  width: auto;
+}
+
+@media (max-width: 767.98px) {
+  .pre-header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pre-header-mark {
+    order: -1;
+    width: 100%;
+  }
+}
+
+/* Omni contact redesign */
+.omni-contact-card {
+  background: #fff;
+  color: inherit;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.omni-contact-card:hover {
+  color: inherit;
+  transform: translateY(-4px);
+}
+
+.omni-contact-card img {
+  display: block;
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.omni-contact-card-body {
+  border: 1px solid #eee;
+  border-top: 0;
+  padding: 1rem 1.1rem 1.25rem;
+}
+
+.omni-contact-label {
+  color: #888;
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.omni-contact-card-body strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.omni-contact-panel {
+  background: #f7f7f7;
+  padding: 2rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .omni-contact-panel {
+    padding: 2.5rem 2.75rem;
+  }
+}
+
+.omni-contact-panel-intro {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.omni-contact-panel-intro h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.omni-contact-panel-intro p {
+  color: #555;
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+.omni-contact-form .form-control,
+.omni-contact-form .form-select,
+.omni-contact-form .input-group-text {
+  border-radius: 0;
+  min-height: 48px;
+}
+
+.omni-contact-form textarea.form-control {
+  min-height: 140px;
+}
+
+.omni-contact-submit {
+  background: #111;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  min-width: 10rem;
+  padding: 0.7rem 1.5rem;
+}
+
+.omni-contact-submit:hover,
+.omni-contact-submit:focus {
+  background: #e31837;
+  color: #fff;
+}
+
+/* Closed dropdowns must stay hidden even when always mounted in the DOM */
+.site-header .navbar-nav .dropdown-menu:not(.show),
+.site-header .dropdown > .dropdown-menu:not(.show) {
+  display: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .site-header .navbar-collapse.show {
+    background: #fff;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+
+  .site-header .megamenu {
+    position: static !important;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    padding: 0.5rem 0;
+  }
+
+  .site-header .navbar-nav .dropdown-menu.show {
+    position: static;
+    visibility: visible;
+    transform: none;
+    background: rgba(255, 255, 255, 0.95);
+    display: block !important;
+  }
+
+  .site-header .dropdown-links {
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+
+  .site-header .dropdown-links .dropdown-item {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    text-align: left;
+  }
+}
+
+.site-header .brand-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0.75rem 0 0.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.site-header .carmodels-brand + .carmodels-brand {
+  border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.section-locations .map-box {
+  position: relative;
+  overflow: visible;
+}
+
+.section-locations .map-box .point {
+  position: absolute !important;
+  width: 26px;
+  height: 26px;
+  z-index: 3;
+}
+
+.section-locations .marker-wrap {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.section-locations .map-box .mappin-box.show {
+  display: block !important;
+}
+
+.section-locations .location-title img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.section-locations .location-info img {
+  height: 16px;
+  width: auto;
+}
+
+.page-hero-title {
+  background: #111;
+  color: #fff;
+}
+
+.page-hero-title h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.inner-page {
+  min-height: 50vh;
+}
+
+/* Overview page (match baicuae.com) */
+.overview-page .about-service-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.overview-page .about-service-wrap .container {
+  position: relative;
+  z-index: 1;
+}
+
+.overview-page .pattern-overlay.circle-patten {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: radial-gradient(
+    circle at 10% 20%,
+    rgba(255, 255, 255, 0.55) 0,
+    rgba(255, 255, 255, 0.55) 8%,
+    transparent 9%
+  ),
+  radial-gradient(
+    circle at 90% 80%,
+    rgba(255, 255, 255, 0.4) 0,
+    rgba(255, 255, 255, 0.4) 6%,
+    transparent 7%
+  );
+}
+
+.overview-page .wrap-owner {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.overview-page .wrap-owner .product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overview-page .tilte-own h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+}
+
+.overview-page .section-title {
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+}
+
+.overview-page .section-disc,
+.overview-page .about-right-desc,
+.overview-page .content-overview {
+  color: #555;
+}
+
+.overview-page .page-heading-info p {
+  margin-bottom: 0.35rem;
+}
+
+/* Match baicuae.com full-width header megamenus */
+.site-header .nav-link.dropdown-toggle {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding-bottom: 0.65rem;
+}
+
+.site-header .navbar-nav .nav-item .nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+.site-header .navbar-nav .dropdown {
+  position: static;
+}
+
+.site-header .navbar-nav .dropdown-menu.megamenu {
+  background: rgba(255, 255, 255, 0.9);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  transform: translateZ(0);
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
+}
+
+.site-header .navbar-nav .dropdown-menu.megamenu.show {
+  transform: translateZ(0);
+  transition: all 1s cubic-bezier(0.2, 0.06, 0.05, 0.95);
+  visibility: visible;
+}
+
+.site-header .navbar-nav .nav-item.dropdown:hover > .nav-link,
+.site-header .navbar-nav .nav-item.dropdown.show > .nav-link,
+.site-header .navbar-nav .nav-item.dropdown:focus-within > .nav-link {
+  border-bottom: 2px solid #e31837;
+  color: #111;
+}
+
+/* Live site: centered horizontal link row (inline-block flow) */
+.site-header .dropdown-links {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.site-header .dropdown-links .dropdown-item {
+  background: transparent;
+  border-radius: 0;
+  color: #222;
+  display: inline-block;
+  font-size: 14px;
+  line-height: normal;
+  min-width: 0;
+  padding: 30px 20px;
+  text-align: center;
+  width: auto;
+}
+
+.site-header .dropdown-links .dropdown-item:hover,
+.site-header .dropdown-links .dropdown-item:focus,
+.site-header .dropdown-links .dropdown-item.is-active {
+  background: transparent;
+  color: #d1251a;
+}
+
+.site-header .dropdown-menu:not(.megamenu) {
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 0;
+}
+
+.site-header .dropdown-menu:not(.megamenu) .dropdown-item {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.site-header .dropdown-menu:not(.megamenu) .dropdown-item:hover,
+.site-header .dropdown-menu:not(.megamenu) .dropdown-item:focus {
+  background: #f5f5f5;
+  color: #dc1717;
+}
+
+.contact-details a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.section-questionnaire .form-control,
+.section-questionnaire .form-select,
+.inner-page .form-control,
+.inner-page .form-select {
+  border-radius: 0;
+  min-height: 48px;
+}
+
+.inner-page .form-box .form-select {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 36px;
+  min-height: 36px;
+  padding: 0 1.75rem 0 0;
+}
+
+.media-contact-page .media-contact-intro p {
+  color: #555;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.media-contact-page .page-heading-info h1 {
+  line-height: 0.95;
+  margin: 0;
+}
+
+.media-contact-page .form-box .field-group .row {
+  align-items: center;
+}
+
+.media-contact-page .form-box .btn-outline-secondary {
+  border-radius: 0;
+  min-width: 7rem;
+  padding: 0.55rem 1.5rem;
+}
+
+/* Contact Us — match baicuae.com */
+.contact-us-page .contact-page-section {
+  padding: 2.5rem 0 0.5rem;
+}
+
+.contact-us-page .contact-us-intro p {
+  color: #555;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-us-page .qabox-image img {
+  display: block;
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.contact-us-page .field-phonenumber {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.contact-us-page .field-phonenumber .country-code-static {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #000;
+  display: inline-flex;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 36px;
+  min-height: 36px;
+  padding: 0 0.5rem 0 0;
+  pointer-events: none;
+  width: auto;
+}
+
+.contact-us-page .field-phonenumber .input-box {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+.contact-us-page .contact-map-section iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+/* Our Service — match baicuae.com cards */
+.our-service-page .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.our-service-page .card-img-top {
+  height: 14rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.our-service-page .card-body {
+  flex: 1 1 auto;
+}
+
+.our-service-page .card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.our-service-page .card-text {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.our-service-page .card-bottom .btn {
+  border-radius: 0;
+  min-width: 10rem;
+}
+
+/* Newsroom pages — match baicuae.com layout */
+.news-release-page .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.news-release-page .card-img-top {
+  height: 14rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.news-release-page .card-body {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.news-release-page .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.news-release-page .card-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-box .field-group .form-select {
+  box-shadow: none;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 36px;
+  min-height: 36px;
+  padding: 0;
+}
+
+@media (max-width: 991.98px) {
+  .page-heading-info-release,
+  .page-heading-info {
+    padding-left: 1.5rem;
+    width: 90%;
+  }
+
+  .page-heading-info-release h1,
+  .page-heading-info h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+}
+

@@ -1,53 +1,58 @@
-# BAIC UAE Homepage Clone
+# BAIC Nigeria — Laravel + Inertia + React
 
-A Next.js recreation of [baicuae.com](https://baicuae.com/) — homepage structure, styling, and interactions matched to the live Nuxt site.
+Laravel port of the BAIC Nigeria marketing site. UI, routes, and behaviour match the previous Next.js app (and [baicuae.com](https://baicuae.com/) layouts).
 
-## Run locally
+## Requirements
+
+- PHP **8.2+** with extensions: `mbstring`, `xml`, `curl`, `zip`, `sqlite3`, `tokenizer`
+- Composer 2
+- Node.js 20+
+
+## Setup
 
 ```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+
 npm install
+npm run build   # or: npm run dev  (Vite HMR)
+```
+
+Create the SQLite DB file if missing:
+
+```bash
+touch database/database.sqlite
+```
+
+## Run
+
+```bash
+# terminal 1 — Laravel
+php artisan serve --port=8000
+
+# terminal 2 — Vite (during development)
 npm run dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001).
+Open [http://localhost:8000](http://localhost:8000).
 
-## Build for production
+## Architecture
 
-```bash
-npm run build
-npm start
-```
+| Layer | Role |
+|---|---|
+| `routes/web.php` | All page routes |
+| `app/Http/Controllers/PageController.php` | Inertia page responses |
+| `app/Services/ContentService.php` | Local JSON + optional UAE API fallback |
+| `storage/app/data/*.json` | Content fallbacks (same payloads as before) |
+| `resources/js/Pages` | Inertia React pages |
+| `resources/js/Components` | Shared UI (header, forms, 360, sections) |
+| `public/images` | Static assets (unchanged URLs) |
 
-## What’s included
+Shared chrome data (`homepage`, `models`, `categories`) is provided via `HandleInertiaRequests`.
 
-Homepage (`/`) matches the live site order:
+## Notes
 
-1. Quick links
-2. Header (Models megamenu + Innovation / About / Newsroom / Connect)
-3. Hero banner slider (live BAIC offer creatives)
-4. **360° models** via iframe to `https://360.baicuae.com` (local recreation fallback)
-5. Capital Beauty teaser
-6. Services grid (R&D, Off-Road, History, Overview)
-7. Find BAIC / UAE map
-8. News feed
-9. Footer
-
-Secondary routes for navigation CTAs: test drive, contact, capital beauty, model pages, and the rest of the footer/header sitemap.
-
-## Data & assets
-
-- Live API: `baicserver.baicuae.com` with JSON fallbacks in `src/data/`
-- Mirrored homepage images in `public/images/api/`
-- Original Nuxt CSS in `public/baic-original.css`
-- Fonts: Poppins & Roboto (as on the original)
-
-## Project structure
-
-```
-src/
-  app/           # App Router pages
-  components/    # Header, Hero, 360 embed, sections, forms, Footer
-  data/          # API JSON fallbacks + local image map
-  lib/           # fetch helpers, imageUrl, constants
-public/images/   # Banners, 360 frames, Nuxt section assets
-```
+- The old Next.js `src/` tree remains for reference; the running app is Laravel.
+- Forms remain client-side success stubs (same as before).
+- 360° viewer and Bootstrap/legacy CSS paths are preserved under `public/`.

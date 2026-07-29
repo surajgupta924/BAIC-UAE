@@ -1,0 +1,335 @@
+/* Match baicuae.com model section — names only + enter animation */
+
+.index-model-section {
+  position: relative;
+  background: #fff;
+  padding: 0 0 3.5rem;
+  margin-top: 0;
+}
+
+.models-wrap,
+.models-main,
+.car-content {
+  width: 100%;
+}
+
+.car-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 0 0;
+  gap: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.car-tab-item button {
+  border: 0;
+  background: transparent;
+  font-size: 36px;
+  color: #ababab;
+  padding: 0 0 10px;
+  margin: 0 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.car-tab-item.active button {
+  color: #505051;
+  font-weight: 600;
+  border-bottom: 2px solid #c9362e;
+}
+
+.car-tab-item button:hover {
+  color: #505051;
+}
+
+/* Model strip — text labels only */
+.model-list {
+  display: flex;
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0 4.167vw;
+  list-style: none;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  justify-content: center;
+  gap: 0;
+}
+
+.model-list-single {
+  margin-top: 12px;
+}
+
+.model-item {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+}
+
+.model-list-single .model-item {
+  flex: 0 1 280px;
+}
+
+.model-item-btn {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  padding: 0.35rem 0.25rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.model-name-text {
+  display: block;
+  font-size: 3em;
+  color: #666;
+  font-style: italic;
+  opacity: 0.25;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  transition: opacity 0.25s ease, color 0.25s ease, font-weight 0.25s ease;
+}
+
+.model-item.active-car .model-name-text,
+.model-list-single .model-name-text {
+  opacity: 1;
+  color: #505051;
+  font-weight: 600;
+}
+
+.model-item:not(.active-car) .model-item-btn:hover .model-name-text {
+  opacity: 0.45;
+}
+
+/* Center viewer — car slides in from the right */
+.model-viewer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 30vw;
+  min-height: 320px;
+  max-height: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+@keyframes car-enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(42%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.model-viewer-wrap.is-entering {
+  animation: car-enter-from-right 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.model-viewer-wrap.is-ready {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.car-360-stage {
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+}
+
+.car-360-stage.car-360-viewer {
+  min-height: 0;
+}
+
+.car-360-stage .car-360-frame {
+  max-width: 68%;
+  max-height: min(28vw, 420px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.18));
+}
+
+.car-360-viewer.is-static {
+  cursor: default;
+}
+
+.model-static-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 4.167vw;
+}
+
+.model-static-image img {
+  width: 68%;
+  max-width: 900px;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.18));
+}
+
+.model-color-wrap {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.model-color-wrap .color-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.color-item {
+  margin-right: 12px;
+}
+
+.color-item:last-child {
+  margin-right: 0;
+}
+
+.color-icon {
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.color-icon.active {
+  border: 1px solid #e45d60;
+  box-shadow: none;
+}
+
+.color-icon .pie-color1 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+}
+
+.section-banner {
+  margin-bottom: 0 !important;
+}
+
+.section-banner + .index-model-section {
+  margin-top: 0;
+}
+
+.car-360-stage .car-360-hint {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1200px) {
+  .model-name-text {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .car-tab-item button {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .car-tab-item button {
+    font-size: 18px;
+    margin: 0 12px;
+  }
+
+  .car-tabs {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+
+  .model-list {
+    padding: 24px 12px 8px;
+    margin-top: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+  }
+
+  .model-list::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .model-item {
+    flex: 0 0 auto;
+    padding-top: 0;
+    margin-right: 1.25rem;
+  }
+
+  .model-item:last-child {
+    margin-right: 0;
+  }
+
+  .model-name-text {
+    font-size: 18px !important;
+  }
+
+  .model-viewer-wrap {
+    height: 44vw;
+    min-height: 240px;
+  }
+
+  .car-360-stage .car-360-frame,
+  .model-static-image img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 42vw;
+  }
+
+  .color-icon .pie-color1 {
+    width: 23px;
+    height: 23px;
+  }
+
+  @keyframes car-enter-from-right {
+    from {
+      opacity: 0;
+      transform: translateX(28%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .model-viewer-wrap.is-entering {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

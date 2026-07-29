@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": 1,
+    "title": "After-Sales Service",
+    "title_ar": "خدمة ما بعد البيع",
+    "subTitle": "With our rigorous observation of consumer behavior and our meticulous care for every detail, we strive to understand and satisfy the ever increasing demands of our clients.",
+    "subTitle_ar": "من خلال مراقبتنا الدَّقيقة لسلوك المستهلكين، واهتمامنا الشَّديد بكلّ التَّفاصيل، نحن نسعى على الدَّوام لفهم وتلبية المتطلِّبات المتزايدة لعملائنا.",
+    "bannerImage": "1718959302aftersales-page-heading.png",
+    "worldTitle": "Multiple After-Sales Service Points Around The World ",
+    "worldTitle_ar": "نُقاط خدمة ما بعد البيع، المُتعدِّدة حول العالم",
+    "worldSubTitle": "45 after-sales service channels and 189 service dealers ",
+    "worldSubTitle_ar": "45 مركزًا لخدمة ما بعد البيع،  189 موزِّعًا للخدمات.",
+    "worldimage": "1718614507map1.png",
+    "featureTitle": "Differentiated Featured Services ",
+    "featureTitle_ar": "خدمات متميِّزة وفريدة",
+    "featureSubTitle": "according to the needs of customers in different countries, with the concept of \"Reliability and Passion\", provide differentiated services ",
+    "featureSubTitle_ar": "وفقًا لاحتياجات العملاء في مُختلف البلدان، وتماشيًا مع مفهوم \"الموثوقيَّة والشَّغف\" الَّذي نعتمده، نحن نقدِّم خدمات مميَّزة وفريدة من نوعها.",
+    "featureimage": "205_1718613883featured-service-banner.png",
+    "meta_description": null,
+    "meta_title": null,
+    "meta_keywords": null,
+    "createdAt": "2024-06-14T05:48:40.000Z",
+    "updatedAt": "2025-07-17T09:29:28.000Z"
+  }
+}
