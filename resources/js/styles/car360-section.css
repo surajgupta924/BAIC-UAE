@@ -202,17 +202,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .color-item {
-  margin-right: 12px;
+  margin: 0 !important;
 }
 
 .color-item:last-child {
-  margin-right: 0;
+  margin: 0 !important;
 }
 
 .color-icon {

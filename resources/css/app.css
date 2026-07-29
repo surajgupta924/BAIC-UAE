@@ -257,6 +257,21 @@ body {
   box-shadow: 0 0 0 2px #dc1717;
 }
 
+/* Space between 360 / model color swatches */
+.model-color-wrap .color-list,
+.sliderModels .color-list {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 12px !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-color-wrap .color-item,
+.sliderModels .color-item {
+  margin: 0 !important;
+}
+
 .sliderModels .thumb-model-btn {
   cursor: pointer;
 }
