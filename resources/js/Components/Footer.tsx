@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { HomepageData, VehicleModel } from "@/lib/api";
 import { LOGO_SRC, SITE_NAME } from "@/lib/site";
 
@@ -13,13 +12,13 @@ export default function Footer({ homepage, models }: FooterProps) {
     <footer id="footer" className="section-footer pt-5 pb-4">
       <div className="container">
         <div className="footer-logo mb-5">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={LOGO_SRC}
             alt={SITE_NAME}
-            width={180}
-            height={180}
-            className="img-fluid"
-            unoptimized
+            className="omni-logo-img footer"
+            width={240}
+            height={70}
           />
         </div>
         <div className="sitemap">

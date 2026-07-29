@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-label="omni-NET">
+  <title>omni-NET</title>
+  <text
+    x="280"
+    y="78"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="72"
+    font-weight="800"
+    font-style="italic"
+  >
+    <tspan fill="#e31c23">omni-</tspan><tspan fill="#1e6bff" font-style="normal">NET</tspan>
+  </text>
+  <text
+    x="280"
+    y="128"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-style="italic"
+    font-weight="500"
+    fill="#555555"
+  >Trust Us... We trust Technology</text>
+</svg>

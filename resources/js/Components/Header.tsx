@@ -202,27 +202,32 @@ export default function Header({ models, categories }: HeaderProps) {
     <header className="site-header sticky" ref={headerRef}>
       <div className="pre-header">
         <div className="container pre-header-inner">
-          <Link href="/test-drive" className="pre-header-link">
-            Book a Test Drive
-          </Link>
-          <span className="pre-header-mark">{SITE_NAME}</span>
-          <a href={`tel:${SUPPORT_PHONE_TEL}`} className="pre-header-link">
-            Call Support {SUPPORT_PHONE_DISPLAY}
-          </a>
+          <div className="pre-header-left">
+            <Link href="/test-drive" className="pre-header-link">
+              Book a Test Drive
+            </Link>
+          </div>
+          <div className="pre-header-center">
+            <span className="pre-header-mark">{SITE_NAME}</span>
+          </div>
+          <div className="pre-header-right">
+            <a href={`tel:${SUPPORT_PHONE_TEL}`} className="pre-header-link">
+              Call Support {SUPPORT_PHONE_DISPLAY}
+            </a>
+          </div>
         </div>
       </div>
 
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link className="navbar-brand logo" href="/" onClick={closeAll}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={LOGO_SRC}
               alt={SITE_NAME}
-              width={160}
-              height={160}
-              className="img-fluid"
-              priority
-              unoptimized
+              className="omni-logo-img"
+              width={200}
+              height={58}
             />
           </Link>
           <button
