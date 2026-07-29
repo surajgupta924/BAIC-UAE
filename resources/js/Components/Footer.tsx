@@ -16,8 +16,8 @@ export default function Footer({ homepage, models }: FooterProps) {
           <Image
             src={LOGO_SRC}
             alt={SITE_NAME}
-            width={200}
-            height={60}
+            width={180}
+            height={180}
             className="img-fluid"
             unoptimized
           />

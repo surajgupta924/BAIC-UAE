@@ -321,7 +321,12 @@ body {
 }
 
 .site-header .navbar-brand.logo img {
-  max-height: 48px;
+  max-height: 64px;
+  width: auto;
+}
+
+.section-footer .footer-logo img {
+  max-height: 96px;
   width: auto;
 }
 

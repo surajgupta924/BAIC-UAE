@@ -218,8 +218,8 @@ export default function Header({ models, categories }: HeaderProps) {
             <Image
               src={LOGO_SRC}
               alt={SITE_NAME}
-              width={180}
-              height={48}
+              width={160}
+              height={160}
               className="img-fluid"
               priority
               unoptimized
