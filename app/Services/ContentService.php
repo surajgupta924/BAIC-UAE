@@ -57,15 +57,12 @@ class ContentService
 
     /** Models offered for Omni Auto Nigeria (exclude UAE-only / out-of-scope). */
     private const ACTIVE_MODEL_NAMES = [
-        'BJ60',
-        'BJ40 C',
-        'BJ40 PRO',
-        'BJ30',
-        'BJ40 SE',
-        'X7',
-        'X55 II',
         'X55',
+        'X7',
+        'BJ30',
         'BJ30e Smart Hybrid',
+        'BJ40 PRO',
+        'BJ60',
         'Arcfox T1',
         'Arcfox T5',
     ];
