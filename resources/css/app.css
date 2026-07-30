@@ -511,6 +511,21 @@ body {
   width: 1px !important;
 }
 
+/* Match other inner-page heroes (1920×768) and keep full-bleed fit */
+.research-development-page .page-heading {
+  overflow: hidden;
+  width: 100%;
+}
+
+.research-development-page .page-heading > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 768;
+  object-fit: cover;
+  object-position: left center;
+}
+
 /* Closed dropdowns must stay hidden even when always mounted in the DOM */
 .site-header .navbar-nav .dropdown-menu:not(.show),
 .site-header .dropdown > .dropdown-menu:not(.show) {
