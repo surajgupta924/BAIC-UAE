@@ -41,7 +41,7 @@ const INNOVATION_LINKS = [
 
 const ABOUT_LINKS = [
   { href: "/about-baic", label: "About BAIC" },
-  { href: "/about-omni-net", label: "About Omni Net" },
+  { href: "/about-omni-auto", label: "About Omni Auto" },
   { href: "/about-arcfox", label: "About Arcfox" },
 ];
 

@@ -75,7 +75,7 @@ export default function Footer({ homepage, models }: FooterProps) {
                     <Link href="/about-baic">About BAIC</Link>
                   </li>
                   <li>
-                    <Link href="/about-omni-net">About Omni Net</Link>
+                    <Link href="/about-omni-auto">About Omni Auto</Link>
                   </li>
                   <li>
                     <Link href="/about-arcfox">About Arcfox</Link>

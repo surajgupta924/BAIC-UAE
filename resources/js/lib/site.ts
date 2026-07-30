@@ -14,7 +14,7 @@ export const SUPPORT_MAPS_QUERY =
   "122-132 Oshodi-Apapa Expressway, Isolo, Lagos State, Nigeria";
 export const SUPPORT_MAPS_EMBED =
   "https://www.google.com/maps?q=122-132+Oshodi-Apapa+Expressway,+Isolo,+Lagos,+Nigeria&output=embed";
-export const LOGO_SRC = "/images/brand/omni-net-logo.svg";
+export const LOGO_SRC = "/images/brand/omni-auto-logo.png?v=20260730n";
 
 /** Models offered for Omni Auto Nigeria (exclude UAE-only / out-of-scope). */
 export const ACTIVE_MODEL_NAMES = [

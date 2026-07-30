@@ -62,9 +62,9 @@ class PageController extends Controller
         ]);
     }
 
-    public function aboutOmniNet(): Response
+    public function aboutOmniAuto(): Response
     {
-        return Inertia::render('AboutOmniNet');
+        return Inertia::render('AboutOmniAuto');
     }
 
     public function aboutArcfox(): Response
