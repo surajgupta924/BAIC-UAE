@@ -160,7 +160,13 @@ class ContentService
 
     public function news(): array
     {
-        return $this->fetchWithFallback('news-release', $this->localData('news.json')) ?: [];
+        // Prefer local so Omni news image replacements are not overwritten by UAE API.
+        $local = $this->localData('news.json');
+        if (is_array($local) && $local !== []) {
+            return $local;
+        }
+
+        return $this->fetchWithFallback('news-release', []) ?: [];
     }
 
     public function modelColors(): array

@@ -28,7 +28,13 @@ export default function NewsReleasePageView({ items }: { items: NewsItem[] }) {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={imageUrl(item.image)}
+                      src={
+                        item.id === 22 ||
+                        (item.image || "").includes("595_1719573619") ||
+                        (item.image || "").includes("news-partnership-africa")
+                          ? "/images/api/news-partnership-africa-v1.jpg?v=20260730k"
+                          : imageUrl(item.image)
+                      }
                       className="card-img-top"
                       alt="..."
                       loading="lazy"
