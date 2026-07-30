@@ -27,12 +27,13 @@ export default function ResearchDevelopmentPageView({
       <section className="page-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={imageUrl(data.banner_image)}
+          src="/images/api/research-development-banner-v1.png?v=20260730c"
           className="img-fluid"
-          alt=""
+          alt={data.banner_title}
           loading="eager"
         />
-        <div className="page-heading-info">
+        {/* Title is baked into the banner image — keep overlay for a11y only */}
+        <div className="page-heading-info visually-hidden">
           <div>
             <h1 className="text-uppercase">{data.banner_title}</h1>
           </div>

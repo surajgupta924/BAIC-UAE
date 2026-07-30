@@ -117,10 +117,13 @@ class ContentService
 
     public function researchDevelopment(): array
     {
-        return $this->fetchWithFallback(
-            'research-and-development/1',
-            $this->localData('research-development.json')
-        );
+        // Prefer local so Omni banner replacements are not overwritten by UAE API.
+        $local = $this->localData('research-development.json');
+        if (is_array($local) && $local !== []) {
+            return $local;
+        }
+
+        return $this->fetchWithFallback('research-and-development/1', []);
     }
 
     public function afterSalesService(): array

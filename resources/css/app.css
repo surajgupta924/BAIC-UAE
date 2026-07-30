@@ -499,6 +499,18 @@ body {
   color: #fff;
 }
 
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
 /* Closed dropdowns must stay hidden even when always mounted in the DOM */
 .site-header .navbar-nav .dropdown-menu:not(.show),
 .site-header .dropdown > .dropdown-menu:not(.show) {
