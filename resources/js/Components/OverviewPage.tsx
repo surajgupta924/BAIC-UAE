@@ -69,7 +69,7 @@ export default function OverviewPageView({ data }: { data: OverviewData }) {
                   <figure className="product-image">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/images/api/about-baic-owner-v1.png?v=20260730f"
+                      src="/images/api/about-baic-owner-v1.png?v=20260730g"
                       alt={data.section2_image_title1}
                       loading="lazy"
                     />

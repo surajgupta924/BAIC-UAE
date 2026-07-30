@@ -112,7 +112,7 @@ class ContentService
 
     public function overview(): array
     {
-        // Prefer local so Omni owner/image replacements are not overwritten by UAE API.
+        // Prefer local so Omni owner/banner replacements are not overwritten by UAE API.
         $local = $this->localData('overview.json');
         if (is_array($local) && $local !== []) {
             return $local;
