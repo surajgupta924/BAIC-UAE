@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const BANNER = "/images/pages/our-service/service-banner.et4n-X45.jpg";
+const BANNER = "/images/pages/our-service/service-banner-v1.png?v=20260730e";
 const BOOKING = "/images/pages/our-service/booking.x1rTBXGR.jpg";
 const FEEDBACK = "/images/pages/our-service/feedback.BGyvPy5t.jpg";
 const NEW_SALES = "/images/pages/our-service/new_sales.CJ0jgf0g.jpeg";
@@ -38,8 +38,9 @@ export default function OurServicePageView() {
     <div className="our-service-page">
       <section className="page-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={BANNER} className="img-fluid" alt="" loading="eager" />
-        <div className="page-heading-info-release">
+        <img src={BANNER} className="img-fluid" alt="Service" loading="eager" />
+        {/* Title is baked into the banner image — keep overlay for a11y only */}
+        <div className="page-heading-info-release visually-hidden">
           <div>
             <h1 className="text-uppercase">Service</h1>
           </div>
