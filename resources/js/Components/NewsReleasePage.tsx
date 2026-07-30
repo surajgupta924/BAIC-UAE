@@ -3,6 +3,23 @@ import { imageUrl } from "@/lib/constants";
 
 const BANNER = "/images/pages/news-release/news-page-heading.2v6iVI-1.png";
 
+const LOCAL_NEWS_IMAGES: Record<number, string> = {
+  22: "/images/api/news-partnership-africa-v1.jpg?v=20260730k",
+  37: "/images/api/news-distributor-africa-v1.jpg?v=20260730l",
+};
+
+function newsCardImage(item: NewsItem): string {
+  if (LOCAL_NEWS_IMAGES[item.id]) return LOCAL_NEWS_IMAGES[item.id];
+  const img = item.image || "";
+  if (img.includes("news-partnership-africa") || img.includes("595_1719573619")) {
+    return LOCAL_NEWS_IMAGES[22];
+  }
+  if (img.includes("news-distributor-africa") || img.includes("646_1719575198")) {
+    return LOCAL_NEWS_IMAGES[37];
+  }
+  return imageUrl(img);
+}
+
 export default function NewsReleasePageView({ items }: { items: NewsItem[] }) {
   return (
     <div className="news-release-page">
@@ -28,13 +45,7 @@ export default function NewsReleasePageView({ items }: { items: NewsItem[] }) {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={
-                        item.id === 22 ||
-                        (item.image || "").includes("595_1719573619") ||
-                        (item.image || "").includes("news-partnership-africa")
-                          ? "/images/api/news-partnership-africa-v1.jpg?v=20260730k"
-                          : imageUrl(item.image)
-                      }
+                      src={newsCardImage(item)}
                       className="card-img-top"
                       alt="..."
                       loading="lazy"
