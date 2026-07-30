@@ -212,13 +212,14 @@ export default function Car360Section() {
                   {visibleColors.map((color, index) => (
                     <li
                       key={`${color.rgb}-${color.frameIndex}`}
-                      className="color-item"
+                      className={`color-item${index === safeColorIndex ? " active" : ""}`}
                     >
                       <button
                         type="button"
-                        className={`color-icon${index === safeColorIndex ? " active" : ""}`}
+                        className="color-icon"
                         onClick={() => selectColor(index)}
                         aria-label={`Color option ${index + 1}`}
+                        aria-pressed={index === safeColorIndex}
                       >
                         <span
                           className="pie-color1"

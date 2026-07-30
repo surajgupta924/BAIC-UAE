@@ -247,14 +247,29 @@ body {
 .sliderModels .color-list .color-icon {
   width: 28px;
   height: 28px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
+  border-radius: 0;
+  border: 0;
   cursor: pointer;
+  padding: 0;
+  background: transparent;
+}
+
+.sliderModels .color-item {
+  display: inline-block;
+  margin: 0 2px !important;
+  padding: 3px !important;
+  border: 1px solid transparent !important;
+  border-radius: 2px;
+  line-height: 0;
+}
+
+.sliderModels .color-item.active {
+  border: 1px solid #333 !important;
 }
 
 .sliderModels .color-item.active .color-icon {
-  border-color: #dc1717;
-  box-shadow: 0 0 0 2px #dc1717;
+  border: 0;
+  box-shadow: none;
 }
 
 /* Space between 360 / model color swatches */
@@ -262,14 +277,9 @@ body {
 .sliderModels .color-list {
   display: flex !important;
   flex-wrap: wrap;
-  gap: 12px !important;
+  gap: 6px !important;
   justify-content: center;
   align-items: center;
-}
-
-.model-color-wrap .color-item,
-.sliderModels .color-item {
-  margin: 0 !important;
 }
 
 .sliderModels .thumb-model-btn {
