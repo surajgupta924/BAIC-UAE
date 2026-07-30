@@ -91,7 +91,13 @@ class ContentService
 
     public function capitalBeauty(): array
     {
-        return $this->fetchWithFallback('capital-beauty/1', $this->localData('capital.json'));
+        // Prefer local so Omni image replacements are not overwritten by UAE API.
+        $local = $this->localData('capital.json');
+        if (is_array($local) && $local !== []) {
+            return $local;
+        }
+
+        return $this->fetchWithFallback('capital-beauty/1', []);
     }
 
     public function conceptCar(): array
