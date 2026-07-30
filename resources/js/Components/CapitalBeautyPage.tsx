@@ -281,9 +281,9 @@ export default function CapitalBeautyPageView({
         <div className="banner-box">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={imageUrl(data.image4)}
+            src="/images/api/capital-banner-africa-v1.png?v=20260730b"
             className="img-fluid"
-            alt=""
+            alt="Capital Beauty"
             loading="lazy"
           />
         </div>
