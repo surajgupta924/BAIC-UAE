@@ -259,7 +259,7 @@ export default function CapitalBeautyPageView({
                 <div className="beauty-simplicity-image">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={imageUrl(data.image3)}
+                    src="/images/api/capital-warm-experience-team-v2.png?v=20260730"
                     className="img-fluid"
                     alt="WARM EXPERIENCE"
                     loading="lazy"
