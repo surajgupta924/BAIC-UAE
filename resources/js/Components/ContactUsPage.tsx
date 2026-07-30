@@ -10,7 +10,7 @@ import {
   SUPPORT_PHONE_TEL,
 } from "@/lib/site";
 
-const BANNER = "/images/pages/contact-us/contact-banner-v1.png?v=20260730f";
+const BANNER = "/images/pages/contact-us/contact-banner-v1.png?v=20260730h";
 const FACE_PHONE = "/images/pages/contact-us/ng-face-phone.jpg";
 const FACE_EMAIL = "/images/pages/contact-us/ng-face-email.jpg";
 const FACE_LOCATION = "/images/pages/contact-us/ng-face-location.jpg";
@@ -92,7 +92,7 @@ export default function ContactUsPageView() {
 
   return (
     <div className="contact-us-page omni-contact-page">
-      <section className="page-heading overviewopacity">
+      <section className="page-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={BANNER} className="img-fluid" alt="Contact Us" loading="eager" />
         {/* Title is baked into the banner image — keep overlay for a11y only */}

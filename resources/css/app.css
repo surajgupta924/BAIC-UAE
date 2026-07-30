@@ -540,26 +540,18 @@ body {
   object-position: left center;
 }
 
-.contact-us-page .page-heading,
-.media-contact-page .page-heading {
+.contact-us-page .page-heading {
   overflow: hidden;
   width: 100%;
 }
 
-.contact-us-page .page-heading > img,
-.media-contact-page .page-heading > img {
+.contact-us-page .page-heading > img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1920 / 768;
   object-fit: cover;
   object-position: left center;
-}
-
-.overview-page .wrap-owner .product-image img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* Closed dropdowns must stay hidden even when always mounted in the DOM */
