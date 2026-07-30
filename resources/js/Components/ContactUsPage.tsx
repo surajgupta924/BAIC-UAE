@@ -105,7 +105,7 @@ export default function ContactUsPageView() {
 
       <section className="contact-page-section">
         <div className="container">
-          <div className="row g-4">
+          <div className="row g-3">
             <div className="col-md-4">
               <a href={`tel:${SUPPORT_PHONE_TEL}`} className="omni-contact-card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

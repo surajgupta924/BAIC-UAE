@@ -12,8 +12,6 @@ const CARDS = [
     text: "Is your vehicle due for service? Skip the lines at service centers and schedule your appointment today!",
     cta: "Book Appointment",
     href: "/booking",
-    textClassName: "card-text mb-4",
-    textStyle: { marginBottom: "2.1rem" },
   },
   {
     image: FEEDBACK,
@@ -21,7 +19,6 @@ const CARDS = [
     text: "Call the service desk for help with your request, questions and problems. Get help over a Phone or Email.",
     cta: "Send a Feedback",
     href: "/feedback",
-    textClassName: "card-text mb-4",
   },
   {
     image: NEW_SALES,
@@ -29,7 +26,6 @@ const CARDS = [
     text: "Certain BAIC X7 models (2022–2023) are being recalled due to a technical issue with the electrical fuse box. Owners are requested to book a service appointment for the free replacement and safety update.",
     cta: "See More",
     href: "/booking",
-    textClassName: "card-text mb-4",
   },
 ];
 
@@ -49,16 +45,13 @@ export default function OurServicePageView() {
 
       <section className="section-content">
         <div className="container">
-          <div className="row">
-            <p className="card-text mb-4 mt-4 text-center">
+          <div className="row g-3">
+            <p className="card-text mb-2 mt-3 text-center">
               Need a helping hand? check select.
             </p>
             {CARDS.map((card) => (
               <div className="col-sm-4" key={card.title}>
-                <div
-                  className="card text-center mt-4"
-                  style={{ marginBottom: "2rem" }}
-                >
+                <div className="card text-center h-100">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="card-img-top"
@@ -68,14 +61,9 @@ export default function OurServicePageView() {
                   />
                   <div className="card-body">
                     <h5 className="card-title">{card.title}</h5>
-                    <p
-                      className={card.textClassName}
-                      style={"textStyle" in card ? card.textStyle : undefined}
-                    >
-                      {card.text}
-                    </p>
+                    <p className="card-text">{card.text}</p>
                   </div>
-                  <div className="card-bottom mb-2">
+                  <div className="card-bottom mb-3">
                     <Link href={card.href} className="btn btn-dark">
                       {card.cta}
                     </Link>

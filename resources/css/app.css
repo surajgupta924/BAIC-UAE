@@ -82,7 +82,7 @@ body {
 .service-image img {
   display: block;
   width: 100%;
-  height: 450px;
+  height: 380px;
   object-fit: cover;
   object-position: center;
   transition: transform 0.5s ease;
@@ -111,12 +111,12 @@ body {
   border-radius: 0;
   text-decoration: none;
   color: inherit;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .news-article-card img {
   width: 100%;
-  height: 320px;
+  height: 260px;
   object-fit: cover;
 }
 
@@ -420,7 +420,7 @@ body {
 
 .omni-contact-card img {
   display: block;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
   width: 100%;
 }
@@ -428,7 +428,7 @@ body {
 .omni-contact-card-body {
   border: 1px solid #eee;
   border-top: 0;
-  padding: 1rem 1.1rem 1.25rem;
+  padding: 0.75rem 1rem 1rem;
 }
 
 .omni-contact-label {
@@ -940,26 +940,30 @@ body {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  margin: 0;
 }
 
 .our-service-page .card-img-top {
-  height: 14rem;
+  height: 12rem;
   object-fit: cover;
   width: 100%;
 }
 
 .our-service-page .card-body {
   flex: 1 1 auto;
+  padding: 1rem 1rem 0.5rem;
 }
 
 .our-service-page .card-title {
   font-size: 1.15rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .our-service-page .card-text {
   color: #555;
   font-size: 0.95rem;
+  margin-bottom: 0.75rem;
 }
 
 .our-service-page .card-bottom .btn {
@@ -971,29 +975,54 @@ body {
 .news-release-page .card {
   display: flex;
   flex-direction: column;
+  height: auto;
+  min-height: 0;
   overflow: hidden;
+  margin: 0;
 }
 
 .news-release-page .card-img-top {
-  height: 14rem;
+  height: 12rem;
   object-fit: cover;
   width: 100%;
 }
 
 .news-release-page .card-body {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   overflow: hidden;
+  padding: 1rem 1rem 0.5rem;
 }
 
 .news-release-page .card-title {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .news-release-page .card-text {
   color: #555;
   font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Site-wide card spacing — remove excess empty space */
+.card {
+  --bs-card-spacer-y: 0.85rem;
+  --bs-card-spacer-x: 1rem;
+}
+
+.card-body {
+  padding: 1rem 1rem 0.75rem;
+}
+
+.section-content {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.section-content .card.mt-4 {
+  margin-top: 0.75rem !important;
 }
 
 .form-box .field-group .form-select {
