@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const BANNER = "/images/pages/our-service/service-banner-v1.png?v=20260730e";
+const BANNER = "/images/pages/our-service/service-banner-v1.png?v=20260730j";
 const BOOKING = "/images/pages/our-service/booking.x1rTBXGR.jpg";
 const FEEDBACK = "/images/pages/our-service/feedback.BGyvPy5t.jpg";
 const NEW_SALES = "/images/pages/our-service/new_sales.CJ0jgf0g.jpeg";

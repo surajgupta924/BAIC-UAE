@@ -27,7 +27,7 @@ export default function ResearchDevelopmentPageView({
       <section className="page-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/api/research-development-banner-v1.png?v=20260730d"
+          src="/images/api/research-development-banner-v1.png?v=20260730j"
           className="img-fluid"
           alt={data.banner_title}
           loading="eager"
