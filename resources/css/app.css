@@ -938,7 +938,7 @@ body {
 .our-service-page .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   margin: 0;
 }
@@ -950,20 +950,27 @@ body {
 }
 
 .our-service-page .card-body {
-  flex: 1 1 auto;
-  padding: 1rem 1rem 0.5rem;
+  flex: 0 1 auto;
+  display: block;
+  padding: 0.85rem 0.9rem 1rem;
 }
 
 .our-service-page .card-title {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.35rem !important;
+  line-height: 1.25 !important;
 }
 
 .our-service-page .card-text {
   color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+  margin: 0 0 0.85rem !important;
+  line-height: 1.4 !important;
+}
+
+.our-service-page .card-bottom {
+  margin-top: 0;
 }
 
 .our-service-page .card-bottom .btn {
@@ -989,31 +996,91 @@ body {
 
 .news-release-page .card-body {
   flex: 0 1 auto;
+  display: block;
   overflow: hidden;
-  padding: 1rem 1rem 0.5rem;
+  padding: 0.85rem 0.9rem 1rem;
 }
 
 .news-release-page .card-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.35rem !important;
+  line-height: 1.25 !important;
 }
 
 .news-release-page .card-text {
   color: #555;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  margin: 0 0 0.85rem !important;
+  line-height: 1.4 !important;
 }
 
-/* Site-wide card spacing — remove excess empty space */
+.news-release-page .card-bottom {
+  margin-top: 0;
+}
+
+/* Site-wide: tighten text gaps inside cards & content blocks */
 .card {
-  --bs-card-spacer-y: 0.85rem;
-  --bs-card-spacer-x: 1rem;
+  --bs-card-spacer-y: 0.75rem;
+  --bs-card-spacer-x: 0.9rem;
+  --bs-card-title-spacer-y: 0.35rem;
 }
 
 .card-body {
-  padding: 1rem 1rem 0.75rem;
+  padding: 0.85rem 0.9rem 1rem;
+}
+
+.card .card-title,
+.card h5.card-title,
+.card h5 {
+  margin-top: 0 !important;
+  margin-bottom: 0.35rem !important;
+  line-height: 1.25 !important;
+}
+
+.card .card-text,
+.card p.card-text,
+.card p {
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.4 !important;
+}
+
+.card .card-bottom {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.card .card-bottom .btn {
+  margin: 0;
+}
+
+/* Body copy across pages — override baic 34px line-height */
+.inner-page p,
+.section-content p,
+.overview-page p,
+.research-development-page p,
+.contact-us-page p,
+.media-contact-page p,
+.our-service-page p,
+.news-release-page p,
+.capital-beauty-page p {
+  line-height: 1.45 !important;
+}
+
+.inner-page h1,
+.inner-page h2,
+.inner-page h3,
+.inner-page h4,
+.inner-page h5,
+.section-content h1,
+.section-content h2,
+.section-content h3,
+.section-content h4,
+.section-content h5 {
+  line-height: 1.25;
 }
 
 .section-content {

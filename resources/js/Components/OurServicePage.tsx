@@ -51,7 +51,7 @@ export default function OurServicePageView() {
             </p>
             {CARDS.map((card) => (
               <div className="col-sm-4" key={card.title}>
-                <div className="card text-center h-100">
+                <div className="card text-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="card-img-top"
@@ -62,11 +62,11 @@ export default function OurServicePageView() {
                   <div className="card-body">
                     <h5 className="card-title">{card.title}</h5>
                     <p className="card-text">{card.text}</p>
-                  </div>
-                  <div className="card-bottom mb-3">
-                    <Link href={card.href} className="btn btn-dark">
-                      {card.cta}
-                    </Link>
+                    <div className="card-bottom">
+                      <Link href={card.href} className="btn btn-dark">
+                        {card.cta}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

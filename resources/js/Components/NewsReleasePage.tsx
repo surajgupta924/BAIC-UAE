@@ -39,7 +39,7 @@ export default function NewsReleasePageView({ items }: { items: NewsItem[] }) {
             <div className="row g-3">
               {items.map((item) => (
                 <div className="col-sm-4" key={item.id}>
-                  <div className="card text-center h-100">
+                  <div className="card text-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={newsCardImage(item)}
@@ -50,11 +50,11 @@ export default function NewsReleasePageView({ items }: { items: NewsItem[] }) {
                     <div className="card-body">
                       <h5 className="card-title">{item.title}</h5>
                       <p className="card-text">{item.subTitle}</p>
-                    </div>
-                    <div className="card-bottom mb-3">
-                      <a href="#" className="btn btn-dark">
-                        See more
-                      </a>
+                      <div className="card-bottom">
+                        <a href="#" className="btn btn-dark">
+                          See more
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
