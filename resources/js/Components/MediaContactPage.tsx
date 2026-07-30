@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const BANNER = "/images/pages/media-contact/media-banner-v1.png?v=20260730f";
+const BANNER = "/images/pages/media-contact/media-banner-v1.png?v=20260730i";
 
 type FormState = {
   gender: string;
