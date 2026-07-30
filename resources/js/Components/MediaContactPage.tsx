@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const BANNER = "/images/pages/media-contact/media-page-heading.DeUXD9NV.png";
+const BANNER = "/images/pages/media-contact/media-banner-v1.png?v=20260730f";
 
 type FormState = {
   gender: string;
@@ -81,8 +81,9 @@ export default function MediaContactPageView() {
     <div className="media-contact-page">
       <section className="page-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={BANNER} className="img-fluid" alt="" loading="eager" />
-        <div className="page-heading-info">
+        <img src={BANNER} className="img-fluid" alt="Media Contact" loading="eager" />
+        {/* Title is baked into the banner image — keep overlay for a11y only */}
+        <div className="page-heading-info visually-hidden">
           <div>
             <h1 className="text-uppercase">
               MEDIA

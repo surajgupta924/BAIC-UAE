@@ -69,15 +69,16 @@ export default function OverviewPageView({ data }: { data: OverviewData }) {
                   <figure className="product-image">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={imageUrl(data.section2_image)}
+                      src="/images/api/about-baic-owner-v1.png?v=20260730f"
                       alt={data.section2_image_title1}
                       loading="lazy"
                     />
                   </figure>
-                  <div className="product-content">
+                  {/* Name/title are baked into the owner image */}
+                  <div className="product-content visually-hidden">
                     <h5>{data.section2_image_title1}</h5>
                   </div>
-                  <div className="tilte-own">
+                  <div className="tilte-own visually-hidden">
                     <h3>{data.section2_image_title2}</h3>
                   </div>
                 </div>

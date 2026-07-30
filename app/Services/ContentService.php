@@ -112,7 +112,13 @@ class ContentService
 
     public function overview(): array
     {
-        return $this->fetchWithFallback('overview/1', $this->localData('overview.json'));
+        // Prefer local so Omni owner/image replacements are not overwritten by UAE API.
+        $local = $this->localData('overview.json');
+        if (is_array($local) && $local !== []) {
+            return $local;
+        }
+
+        return $this->fetchWithFallback('overview/1', []);
     }
 
     public function researchDevelopment(): array
