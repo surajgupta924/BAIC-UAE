@@ -11,6 +11,7 @@ import type {
 } from "@/lib/api";
 import { imageUrl } from "@/lib/constants";
 import {
+  BRAND_MARK,
   LOGO_SRC,
   SITE_NAME,
   SUPPORT_PHONE_DISPLAY,
@@ -208,7 +209,7 @@ export default function Header({ models, categories }: HeaderProps) {
             </Link>
           </div>
           <div className="pre-header-center">
-            <span className="pre-header-mark">{SITE_NAME}</span>
+            <span className="pre-header-mark">{BRAND_MARK}</span>
           </div>
           <div className="pre-header-right">
             <a href={`tel:${SUPPORT_PHONE_TEL}`} className="pre-header-link">

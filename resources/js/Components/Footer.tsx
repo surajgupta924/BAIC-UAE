@@ -1,6 +1,17 @@
 import Link from "next/link";
 import type { HomepageData, VehicleModel } from "@/lib/api";
-import { LOGO_SRC, SITE_NAME } from "@/lib/site";
+import {
+  COMPANY_NAME,
+  LOGO_SRC,
+  SITE_NAME,
+  SUPPORT_ADDRESS_LINE1,
+  SUPPORT_ADDRESS_LINE2,
+  SUPPORT_EMAIL,
+  SUPPORT_PHONE_DISPLAY,
+  SUPPORT_PHONE_TEL,
+  SUPPORT_WEBSITE,
+  SUPPORT_WEBSITE_URL,
+} from "@/lib/site";
 
 interface FooterProps {
   homepage: HomepageData;
@@ -106,11 +117,27 @@ export default function Footer({ homepage, models }: FooterProps) {
             </div>
           </div>
         </div>
+        <div className="footer-contact mt-4 mb-4">
+          <strong>{COMPANY_NAME}</strong>
+          <br />
+          {SUPPORT_ADDRESS_LINE1}
+          <br />
+          {SUPPORT_ADDRESS_LINE2}
+          <br />
+          T: <a href={`tel:${SUPPORT_PHONE_TEL}`}>{SUPPORT_PHONE_DISPLAY}</a>
+          <br />
+          E: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+          <br />
+          W:{" "}
+          <a href={SUPPORT_WEBSITE_URL} target="_blank" rel="noopener noreferrer">
+            {SUPPORT_WEBSITE}
+          </a>
+        </div>
         <div className="copyright-bar">
           <div className="row align-items-center">
             <div className="col-sm-8">
               <div className="copyright">
-                © {SITE_NAME} {new Date().getFullYear()}. All Rights Reserved{" "}
+                © {COMPANY_NAME} {new Date().getFullYear()}. All Rights Reserved{" "}
                 <Link href="/terms-and-conditions">Terms & Conditions</Link>{" "}
                 <Link href="/cookie-policy">Cookie Policy</Link>{" "}
                 <Link href="/data-protection">Data Protection</Link>

@@ -3,11 +3,16 @@
 import { FormEvent, useState } from "react";
 import nationalities from "@/data/nationalities.json";
 import {
+  COMPANY_NAME,
   SITE_NAME,
   SUPPORT_EMAIL,
   SUPPORT_LOCATION,
+  SUPPORT_MAPS_EMBED,
+  SUPPORT_MAPS_QUERY,
   SUPPORT_PHONE_DISPLAY,
   SUPPORT_PHONE_TEL,
+  SUPPORT_WEBSITE,
+  SUPPORT_WEBSITE_URL,
 } from "@/lib/site";
 
 const BANNER = "/images/pages/contact-us/contact-banner-v1.png?v=20260730h";
@@ -15,8 +20,7 @@ const FACE_PHONE = "/images/pages/contact-us/ng-face-phone.jpg";
 const FACE_EMAIL = "/images/pages/contact-us/ng-face-email.jpg";
 const FACE_LOCATION = "/images/pages/contact-us/ng-face-location.jpg";
 
-const MAP_SRC =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3792!3d6.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng";
+const MAP_SRC = SUPPORT_MAPS_EMBED;
 
 type FormState = {
   gender: string;
@@ -128,7 +132,7 @@ export default function ContactUsPageView() {
             </div>
             <div className="col-md-4">
               <a
-                href="https://maps.google.com/?q=Lagos+Nigeria"
+                href={`https://maps.google.com/?q=${encodeURIComponent(SUPPORT_MAPS_QUERY)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="omni-contact-card"
@@ -151,7 +155,11 @@ export default function ContactUsPageView() {
             <div className="col-lg-8">
               <div className="omni-contact-panel">
                 <div className="omni-contact-panel-intro">
-                  <h2>Talk to {SITE_NAME}</h2>
+                  <h2>Talk to {COMPANY_NAME}</h2>
+                  <p>
+                    Call {SUPPORT_PHONE_DISPLAY}, email {SUPPORT_EMAIL}, or visit{" "}
+                    <a href={SUPPORT_WEBSITE_URL}>{SUPPORT_WEBSITE}</a>.
+                  </p>
                   <p>
                     Share your details and we will connect you with our Nigeria
                     team for sales, service, or test-drive support.

@@ -13,7 +13,7 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="alert alert-success" role="status">
-        Thank you for contacting BAIC UAE. We will get back to you soon.
+        Thank you for contacting Omni Auto Limited. We will get back to you soon.
       </div>
     );
   }

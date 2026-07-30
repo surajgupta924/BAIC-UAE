@@ -1088,8 +1088,19 @@ body {
   padding-bottom: 2rem;
 }
 
-.section-content .card.mt-4 {
-  margin-top: 0.75rem !important;
+.section-footer .footer-contact {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.section-footer .footer-contact a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.section-footer .footer-contact a:hover {
+  color: #e31837;
 }
 
 .form-box .field-group .form-select {
