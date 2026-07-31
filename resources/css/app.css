@@ -55,12 +55,14 @@ body {
   z-index: 2;
 }
 
+/* Size to the banner artwork so top/bottom promo text is not cropped */
 .section-banner,
 .section-banner .slider-banner,
 .section-banner .swiper,
 .section-banner .swiper-wrapper,
 .section-banner .swiper-slide {
-  height: 100vh;
+  height: auto !important;
+  min-height: 0;
 }
 
 .section-banner .swiper-slide {
@@ -69,11 +71,11 @@ body {
 
 .section-banner .swiper-slide img {
   width: 100%;
-  height: 100%;
+  height: auto !important;
+  max-height: none;
   display: block;
-  object-fit: cover;
-  /* Prefer top so baked-in headline text is not cropped */
-  object-position: center top !important;
+  object-fit: contain;
+  object-position: center center !important;
 }
 
 .section-banner .swiper-pagination {

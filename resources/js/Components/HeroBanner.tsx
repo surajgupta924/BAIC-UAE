@@ -56,6 +56,7 @@ export default function HeroBanner({ homepage }: HeroBannerProps) {
           modules={[Autoplay, Pagination]}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
+          autoHeight
           loop
         >
           {items.map((slide, index) => (
