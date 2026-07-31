@@ -72,7 +72,8 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center bottom !important;
+  /* Prefer top so baked-in headline text is not cropped */
+  object-position: center top !important;
 }
 
 .section-banner .swiper-pagination {
