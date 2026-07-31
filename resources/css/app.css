@@ -245,31 +245,35 @@ body {
 }
 
 .sliderModels .color-list .color-icon {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   border-radius: 0;
-  border: 0;
+  border: 0 !important;
   cursor: pointer;
-  padding: 0;
+  padding: 0 !important;
   background: transparent;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .sliderModels .color-item {
-  display: inline-block;
-  margin: 0 2px !important;
-  padding: 3px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 4px !important;
   border: 1px solid transparent !important;
-  border-radius: 2px;
+  border-radius: 0 !important;
   line-height: 0;
 }
 
 .sliderModels .color-item.active {
-  border: 1px solid #333 !important;
+  border: 1px solid #111 !important;
 }
 
 .sliderModels .color-item.active .color-icon {
-  border: 0;
-  box-shadow: none;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 /* Space between 360 / model color swatches */
@@ -277,7 +281,7 @@ body {
 .sliderModels .color-list {
   display: flex !important;
   flex-wrap: wrap;
-  gap: 6px !important;
+  gap: 10px !important;
   justify-content: center;
   align-items: center;
 }

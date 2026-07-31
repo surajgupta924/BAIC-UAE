@@ -209,27 +209,32 @@ export default function Car360Section() {
             {visibleColors.length > 0 && (
               <div className="model-color-wrap">
                 <ul className="color-list">
-                  {visibleColors.map((color, index) => (
-                    <li
-                      key={`${color.rgb}-${color.frameIndex}`}
-                      className={`color-item${index === safeColorIndex ? " active" : ""}`}
-                    >
-                      <button
-                        type="button"
-                        className="color-icon"
-                        onClick={() => selectColor(index)}
-                        aria-label={`Color option ${index + 1}`}
-                        aria-pressed={index === safeColorIndex}
+                  {visibleColors.map((color, index) => {
+                    const swatch = parseRgb(color.rgb);
+                    const isActive = index === safeColorIndex;
+                    return (
+                      <li
+                        key={`${color.rgb}-${color.frameIndex}`}
+                        className={`color-item${isActive ? " active" : ""}`}
+                        style={
+                          isActive ? { borderColor: swatch } : undefined
+                        }
                       >
-                        <span
-                          className="pie-color1"
-                          style={{
-                            backgroundColor: parseRgb(color.rgb),
-                          }}
-                        />
-                      </button>
-                    </li>
-                  ))}
+                        <button
+                          type="button"
+                          className="color-icon"
+                          onClick={() => selectColor(index)}
+                          aria-label={`Color option ${index + 1}`}
+                          aria-pressed={isActive}
+                        >
+                          <span
+                            className="pie-color1"
+                            style={{ backgroundColor: swatch }}
+                          />
+                        </button>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}

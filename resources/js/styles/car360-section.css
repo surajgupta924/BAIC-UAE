@@ -193,8 +193,8 @@
 
 .model-color-wrap {
   width: 100%;
-  margin-top: 28px;
-  padding-bottom: 12px;
+  margin-top: 32px;
+  padding-bottom: 16px;
   position: relative;
   z-index: 2;
 }
@@ -204,52 +204,72 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Match baicuae.com: padding ring + border on selected swatch */
-.model-color-wrap .color-item,
-.color-list .color-item {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 2px !important;
-  padding: 3px !important;
+/*
+ * Original BAIC 360 swatches:
+ * - square color chip
+ * - transparent ring by default
+ * - active: colored border with white padding gap
+ */
+.model-color-wrap .color-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 4px !important;
   border: 1px solid transparent !important;
-  border-radius: 2px;
+  border-radius: 0 !important;
+  background: transparent;
   line-height: 0;
   list-style: none;
 }
 
-.model-color-wrap .color-item.active,
-.color-list .color-item.active {
-  border: 1px solid #333 !important;
+.model-color-wrap .color-item.active {
+  /* border-color set inline to match the selected swatch */
+  border-style: solid !important;
+  border-width: 1px !important;
 }
 
-.model-color-wrap .color-icon,
-.color-list .color-item .color-icon {
+.model-color-wrap .color-icon {
   appearance: none;
   -webkit-appearance: none;
   display: block;
-  border: 0 !important;
-  background: transparent !important;
-  padding: 0 !important;
+  width: auto;
+  height: auto;
   margin: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
   cursor: pointer;
   line-height: 0;
-  box-shadow: none !important;
 }
 
-.model-color-wrap .color-icon .pie-color1,
-.color-list .color-item .color-icon .pie-color1,
-.color-icon .pie-color1 {
+.model-color-wrap .color-icon:focus,
+.model-color-wrap .color-icon:focus-visible,
+.model-color-wrap .color-icon:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.model-color-wrap .color-icon .pie-color1 {
   display: block;
-  width: 28px;
-  height: 28px;
-  border-radius: 0;
-  box-shadow: none;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 .section-banner {
@@ -325,9 +345,9 @@
     max-height: 42vw;
   }
 
-  .color-icon .pie-color1 {
-    width: 23px;
-    height: 23px;
+  .model-color-wrap .color-icon .pie-color1 {
+    width: 20px;
+    height: 20px;
   }
 
   @keyframes car-enter-from-right {
