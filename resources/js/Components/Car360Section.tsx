@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import Car360Viewer from "@/components/Car360Viewer";
 import catalog from "@/data/car360-catalog.json";
 import { getAvailableColorIndexes, getCar360Frames } from "@/lib/car360";
@@ -217,7 +217,11 @@ export default function Car360Section() {
                         key={`${color.rgb}-${color.frameIndex}`}
                         className={`color-item${isActive ? " active" : ""}`}
                         style={
-                          isActive ? { borderColor: swatch } : undefined
+                          isActive
+                            ? ({
+                                ["--swatch-border" as string]: swatch,
+                              } as CSSProperties)
+                            : undefined
                         }
                       >
                         <button

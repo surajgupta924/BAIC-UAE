@@ -261,7 +261,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 !important;
-  padding: 4px !important;
+  padding: 2px !important;
   border: 1px solid transparent !important;
   border-radius: 0 !important;
   line-height: 0;
@@ -281,7 +281,7 @@ body {
 .sliderModels .color-list {
   display: flex !important;
   flex-wrap: wrap;
-  gap: 10px !important;
+  gap: 6px !important;
   justify-content: center;
   align-items: center;
 }
