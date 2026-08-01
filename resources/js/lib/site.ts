@@ -50,8 +50,11 @@ export const CAR360_MODEL_ALIASES: Record<string, string> = {
 };
 
 /** Guide EMI starting prices (NGN) for homepage slider badges. */
-export const SLIDER_EMI_NGN: Record<string, string> = {
-  "BJ40 PRO": "₦730,000",
-  "BJ40 Plus": "₦939,000",
-  BJ30: "₦457,000",
-};
+export const SLIDER_EMI_NGN: Record<string, { amount: string; label?: string }> =
+  {
+    "BJ40 PRO": { amount: "730,000" },
+    "BJ40 Plus": { amount: "939,000" },
+    BJ30: { amount: "457,000" },
+  };
+
+export const NAIRA_SYMBOL_SRC = "/images/brand/naira-symbol.png?v=20260801a";
