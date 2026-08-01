@@ -1,9 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Car360Viewer from "@/components/Car360Viewer";
 import catalog from "@/data/car360-catalog.json";
 import { getAvailableColorIndexes, getCar360Frames } from "@/lib/car360";
+import {
+  ACTIVE_MODEL_NAMES,
+  CAR360_MODEL_ALIASES,
+} from "@/lib/site";
 import "@/styles/car360-section.css";
 
 const ENTER_MS = 380;
@@ -29,6 +33,31 @@ interface CatalogCategory {
 }
 
 const categories = catalog as CatalogCategory[];
+
+const ACTIVE_SET = new Set<string>(ACTIVE_MODEL_NAMES);
+
+function resolveActiveName(displayName: string): string | null {
+  const aliased = CAR360_MODEL_ALIASES[displayName] ?? displayName;
+  return ACTIVE_SET.has(aliased) ? aliased : null;
+}
+
+/** Nigeria lineup only — do not show other UAE catalog model pics. */
+const nigeriaCategories: CatalogCategory[] = categories
+  .map((category) => ({
+    ...category,
+    models: category.models
+      .map((model) => {
+        const activeName = resolveActiveName(model.displayName);
+        if (!activeName) return null;
+        return {
+          ...model,
+          displayName: activeName,
+          stripLabel: model.stripLabel ?? activeName,
+        };
+      })
+      .filter((model): model is CatalogModel => model !== null),
+  }))
+  .filter((category) => category.models.length > 0);
 
 function parseRgb(rgb: string): string {
   return rgb.split("/")[0].trim();
@@ -75,13 +104,16 @@ function colorsForModel(model: CatalogModel): CatalogColor[] {
 
 export default function Car360Section() {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
-  // Live site defaults Off-road to BJ60 (second model)
-  const [activeModelIndex, setActiveModelIndex] = useState(1);
+  const [activeModelIndex, setActiveModelIndex] = useState(() => {
+    const offroad = nigeriaCategories[0]?.models ?? [];
+    const bj60 = offroad.findIndex((m) => m.displayName === "BJ60");
+    return bj60 >= 0 ? bj60 : 0;
+  });
   const [colorIndex, setColorIndex] = useState(0);
   const [viewerEpoch, setViewerEpoch] = useState(0);
   const [isEntering, setIsEntering] = useState(true);
 
-  const activeCategory = categories[activeCategoryIndex];
+  const activeCategory = nigeriaCategories[activeCategoryIndex];
   const models = activeCategory.models;
   const safeModelIndex = Math.min(activeModelIndex, Math.max(models.length - 1, 0));
   const activeModel = models[safeModelIndex];
@@ -114,7 +146,7 @@ export default function Car360Section() {
 
   const selectCategory = (index: number) => {
     setActiveCategoryIndex(index);
-    const nextModels = categories[index].models;
+    const nextModels = nigeriaCategories[index].models;
     const bj60 = nextModels.findIndex((m) => m.displayName === "BJ60");
     setActiveModelIndex(bj60 >= 0 ? bj60 : 0);
     setColorIndex(0);
@@ -139,7 +171,7 @@ export default function Car360Section() {
       <div className="models-wrap">
         <div className="models-main">
           <ul className="car-tabs">
-            {categories.map((category, index) => (
+            {nigeriaCategories.map((category, index) => (
               <li
                 key={category.name}
                 className={`car-tab-item${index === activeCategoryIndex ? " active" : ""}`}
@@ -216,13 +248,6 @@ export default function Car360Section() {
                       <li
                         key={`${color.rgb}-${color.frameIndex}`}
                         className={`color-item${isActive ? " active" : ""}`}
-                        style={
-                          isActive
-                            ? ({
-                                ["--swatch-border" as string]: swatch,
-                              } as CSSProperties)
-                            : undefined
-                        }
                       >
                         <button
                           type="button"

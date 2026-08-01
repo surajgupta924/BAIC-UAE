@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { HomepageData, VehicleModel } from "@/lib/api";
 import {
   COMPANY_NAME,
-  LOGO_SRC,
+  FOOTER_LOGO_SRC,
   SITE_NAME,
   SUPPORT_ADDRESS_LINE1,
   SUPPORT_ADDRESS_LINE2,
@@ -20,12 +20,12 @@ interface FooterProps {
 
 export default function Footer({ homepage, models }: FooterProps) {
   return (
-    <footer id="footer" className="section-footer pt-5 pb-4">
+    <footer id="footer" className="footer section-footer pt-5 pb-4">
       <div className="container">
         <div className="footer-logo mb-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={LOGO_SRC}
+            src={FOOTER_LOGO_SRC}
             alt={SITE_NAME}
             className="omni-logo-img footer"
             width={240}

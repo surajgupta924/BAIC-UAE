@@ -6,7 +6,14 @@ body {
 
 .habetlouta {
   margin-top: 0;
-  padding-top: 0;
+  /* Clear fixed site-header so hero top is not covered (header styles untouched) */
+  padding-top: var(--site-header-height, 9.5rem);
+}
+
+@media (max-width: 767.98px) {
+  .habetlouta {
+    padding-top: var(--site-header-height, 12rem);
+  }
 }
 
 .car-360-iframe-wrap {
@@ -50,12 +57,13 @@ body {
 
 .section-banner {
   margin-bottom: 0;
-  overflow: visible !important;
+  overflow: hidden;
   position: relative;
   z-index: 2;
+  background: #000;
 }
 
-/* Size to the banner artwork so top/bottom promo text is not cropped */
+/* Exact image size — full width, natural height, no top/bottom crop */
 .section-banner,
 .section-banner .slider-banner,
 .section-banner .swiper,
@@ -63,23 +71,51 @@ body {
 .section-banner .swiper-slide {
   height: auto !important;
   min-height: 0;
+  max-height: none;
 }
 
 .section-banner .swiper-slide {
   position: relative;
+  overflow: hidden;
+  background: #000;
+  height: auto !important;
+}
+
+.section-banner .swiper-slide picture {
+  display: block;
+  width: 100%;
+  line-height: 0;
 }
 
 .section-banner .swiper-slide img {
-  width: 100%;
+  width: 100% !important;
+  max-width: 100%;
   height: auto !important;
-  max-height: none;
+  max-height: none !important;
   display: block;
-  object-fit: contain;
+  object-fit: contain !important;
   object-position: center center !important;
 }
 
 .section-banner .swiper-pagination {
   z-index: 5;
+}
+
+/* Offer banners already include headline/pricing — pin CTAs to the lower area */
+.section-banner .slider-info--cta-only {
+  align-items: flex-end;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  padding: 0 1.5rem 3.5rem;
+  right: 0;
+  top: auto;
+  width: 100%;
+}
+
+.section-banner .slider-info--cta-only h1,
+.section-banner .slider-info--cta-only h5 {
+  display: none;
 }
 
 .service-image img {
@@ -271,7 +307,7 @@ body {
 }
 
 .sliderModels .color-item.active {
-  border: 1px solid #111 !important;
+  border: 1px solid #e31837 !important;
 }
 
 .sliderModels .color-item.active .color-icon {
@@ -398,6 +434,10 @@ body {
 .omni-logo-img.footer {
   height: 72px;
   max-height: 72px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 @media (max-width: 767.98px) {

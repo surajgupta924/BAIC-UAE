@@ -58,6 +58,8 @@ export default function HeroBanner({ homepage }: HeroBannerProps) {
           pagination={{ clickable: true }}
           autoHeight
           loop
+          observer
+          observeParents
         >
           {items.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -69,17 +71,16 @@ export default function HeroBanner({ homepage }: HeroBannerProps) {
                 <Image
                   src={imageUrl(slide.desktop)}
                   alt={slide.title}
-                  width={1920}
-                  height={900}
+                  width={2048}
+                  height={1160}
                   className="img-fluid"
                   priority={index === 0}
                   unoptimized
                 />
               </picture>
-              <div className="slider-info">
+              {/* Offer art already includes headline/pricing — keep only CTAs */}
+              <div className="slider-info slider-info--cta-only">
                 <div>
-                  <h1>{slide.title}</h1>
-                  {slide.description ? <h5>{slide.description}</h5> : null}
                   <div className="text-center slider-action-buttons">
                     <Link
                       href={localPath(slide.btn1Url)}

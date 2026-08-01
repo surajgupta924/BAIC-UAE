@@ -232,7 +232,7 @@
 }
 
 .model-color-wrap .color-item.active {
-  /* --swatch-border set inline to the selected color */
+  --swatch-border: #e31837;
   border-width: 1px !important;
   border-style: solid !important;
 }
